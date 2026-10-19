@@ -1,0 +1,1632 @@
+2026-03-15T12:00:20.690Z [INFO ] db.pool        : Payload serialized with size 1835 bytes
+2026-03-15T12:00:22.198Z [DEBUG] cache.redis    : Transaction tx_494115 committed with status code 200
+2026-03-15T12:00:23.162Z [DEBUG] payment.gateway: Query execution completed in 86.32 ms for table 'orders'
+2026-03-15T12:00:24.769Z [ERROR] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:24.182Z [INFO ] cache.redis    : Payload serialized with size 3538 bytes
+2026-03-15T12:00:26.216Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:28.230Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_187711', retrying...
+2026-03-15T12:00:28.102Z [WARN ] worker.celery  : Query execution completed in 80.32 ms for table 'orders'
+2026-03-15T12:00:28.567Z [ERROR] auth.service   : Query execution completed in 107.62 ms for table 'orders'
+2026-03-15T12:00:30.801Z [WARN ] payment.gateway: User 2522 authenticated successfully from IP 192.168.1.185
+2026-03-15T12:00:33.292Z [INFO ] cache.redis    : Transaction tx_921286 committed with status code 200
+2026-03-15T12:00:33.162Z [DEBUG] http.router    : Cache hit ratio: 81.5% on key 'session:4076'
+2026-03-15T12:00:36.617Z [DEBUG] auth.service   : Connection established to cluster node 1
+2026-03-15T12:00:36.324Z [DEBUG] http.router    : Cache hit ratio: 77.5% on key 'session:8354'
+2026-03-15T12:00:36.367Z [DEBUG] payment.gateway: Cache hit ratio: 81.2% on key 'session:7964'
+2026-03-15T12:00:37.763Z [DEBUG] db.pool        : Cache hit ratio: 84.3% on key 'session:4874'
+2026-03-15T12:00:37.392Z [INFO ] http.router    : Query execution completed in 109.47 ms for table 'orders'
+2026-03-15T12:00:40.630Z [INFO ] payment.gateway: Payload serialized with size 1840 bytes
+2026-03-15T12:00:40.768Z [INFO ] worker.celery  : Query execution completed in 132.28 ms for table 'orders'
+2026-03-15T12:00:41.569Z [INFO ] db.pool        : Connection established to cluster node 9
+2026-03-15T12:00:44.558Z [DEBUG] payment.gateway: Query execution completed in 49.99 ms for table 'orders'
+2026-03-15T12:00:46.400Z [INFO ] db.pool        : Cache hit ratio: 83.0% on key 'session:3984'
+2026-03-15T12:00:46.833Z [ERROR] http.router    : Query execution completed in 26.87 ms for table 'orders'
+2026-03-15T12:00:47.236Z [INFO ] payment.gateway: Transaction tx_640432 committed with status code 200
+2026-03-15T12:00:47.549Z [WARN ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.310Z [DEBUG] cache.redis    : User 8973 authenticated successfully from IP 192.168.1.125
+2026-03-15T12:00:53.143Z [DEBUG] worker.celery  : Transaction tx_377958 committed with status code 200
+2026-03-15T12:00:53.111Z [WARN ] http.router    : Query execution completed in 48.84 ms for table 'orders'
+2026-03-15T12:00:53.411Z [INFO ] auth.service   : Cache hit ratio: 71.2% on key 'session:5007'
+2026-03-15T12:00:53.428Z [INFO ] cache.redis    : Cache hit ratio: 93.7% on key 'session:5558'
+2026-03-15T12:00:56.952Z [DEBUG] payment.gateway: Transaction tx_558063 committed with status code 200
+2026-03-15T12:00:59.554Z [WARN ] cache.redis    : Query execution completed in 86.83 ms for table 'orders'
+2026-03-15T12:00:59.111Z [INFO ] auth.service   : Connection established to cluster node 9
+2026-03-15T12:00:00.990Z [INFO ] auth.service   : Transaction tx_787506 committed with status code 200
+2026-03-15T12:00:03.692Z [INFO ] auth.service   : Cache hit ratio: 70.7% on key 'session:8051'
+2026-03-15T12:00:05.120Z [INFO ] worker.celery  : Transaction tx_110892 committed with status code 200
+2026-03-15T12:00:08.409Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:10.389Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_697600', retrying...
+2026-03-15T12:00:10.838Z [INFO ] cache.redis    : Query execution completed in 65.00 ms for table 'orders'
+2026-03-15T12:00:12.623Z [INFO ] worker.celery  : Transaction tx_748366 committed with status code 200
+2026-03-15T12:00:15.273Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:17.376Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_707483', retrying...
+2026-03-15T12:00:18.863Z [DEBUG] http.router    : Connection established to cluster node 6
+2026-03-15T12:00:20.147Z [INFO ] worker.celery  : Cache hit ratio: 87.1% on key 'session:2498'
+2026-03-15T12:00:21.785Z [INFO ] http.router    : Query execution completed in 92.46 ms for table 'orders'
+2026-03-15T12:00:24.741Z [DEBUG] auth.service   : Query execution completed in 42.84 ms for table 'orders'
+2026-03-15T12:00:27.194Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_779480', retrying...
+2026-03-15T12:00:30.632Z [DEBUG] auth.service   : Transaction tx_677578 committed with status code 200
+2026-03-15T12:00:33.593Z [WARN ] db.pool        : Cache hit ratio: 78.6% on key 'session:4770'
+2026-03-15T12:00:35.858Z [INFO ] auth.service   : Connection established to cluster node 10
+2026-03-15T12:00:37.812Z [ERROR] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:40.835Z [WARN ] auth.service   : Cache hit ratio: 72.9% on key 'session:5519'
+2026-03-15T12:00:43.528Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_469268', retrying...
+2026-03-15T12:00:46.919Z [DEBUG] auth.service   : Connection established to cluster node 7
+2026-03-15T12:00:47.514Z [DEBUG] worker.celery  : User 3690 authenticated successfully from IP 192.168.1.8
+2026-03-15T12:00:49.523Z [INFO ] payment.gateway: Query execution completed in 17.70 ms for table 'orders'
+2026-03-15T12:00:49.492Z [WARN ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:51.481Z [DEBUG] cache.redis    : Transaction tx_770556 committed with status code 200
+2026-03-15T12:00:54.212Z [TRACE] cache.redis    : Connection established to cluster node 6
+2026-03-15T12:00:55.636Z [DEBUG] payment.gateway: Cache hit ratio: 74.5% on key 'session:8467'
+2026-03-15T12:00:56.600Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.186Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_412699', retrying...
+2026-03-15T12:00:59.721Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:02.725Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_945976', retrying...
+2026-03-15T12:00:03.206Z [INFO ] payment.gateway: Transaction tx_777654 committed with status code 200
+2026-03-15T12:00:03.781Z [INFO ] http.router    : Cache hit ratio: 87.7% on key 'session:7624'
+2026-03-15T12:00:05.707Z [INFO ] db.pool        : Connection established to cluster node 8
+2026-03-15T12:00:05.894Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_419895', retrying...
+2026-03-15T12:00:07.111Z [INFO ] worker.celery  : Query execution completed in 69.48 ms for table 'orders'
+2026-03-15T12:00:09.388Z [INFO ] worker.celery  : Cache hit ratio: 85.0% on key 'session:6164'
+2026-03-15T12:00:09.460Z [DEBUG] worker.celery  : Payload serialized with size 3703 bytes
+2026-03-15T12:00:11.863Z [INFO ] payment.gateway: User 8310 authenticated successfully from IP 192.168.1.4
+2026-03-15T12:00:13.120Z [DEBUG] payment.gateway: Transaction tx_867915 committed with status code 200
+2026-03-15T12:00:16.667Z [DEBUG] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:17.260Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_132662', retrying...
+2026-03-15T12:00:20.638Z [INFO ] db.pool        : Query execution completed in 2.06 ms for table 'orders'
+2026-03-15T12:00:20.300Z [DEBUG] http.router    : Cache hit ratio: 87.4% on key 'session:2668'
+2026-03-15T12:00:22.549Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:23.139Z [INFO ] auth.service   : Connection established to cluster node 15
+2026-03-15T12:00:26.965Z [INFO ] http.router    : Query execution completed in 48.80 ms for table 'orders'
+2026-03-15T12:00:28.707Z [WARN ] cache.redis    : Query execution completed in 14.34 ms for table 'orders'
+2026-03-15T12:00:29.146Z [INFO ] worker.celery  : Transaction tx_602629 committed with status code 200
+2026-03-15T12:00:29.973Z [INFO ] http.router    : Connection established to cluster node 15
+2026-03-15T12:00:31.302Z [INFO ] payment.gateway: Query execution completed in 49.14 ms for table 'orders'
+2026-03-15T12:00:32.721Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_979296', retrying...
+2026-03-15T12:00:32.705Z [INFO ] worker.celery  : Query execution completed in 63.04 ms for table 'orders'
+2026-03-15T12:00:32.186Z [INFO ] auth.service   : Cache hit ratio: 78.6% on key 'session:8210'
+2026-03-15T12:00:35.447Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_706862', retrying...
+2026-03-15T12:00:38.539Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:39.915Z [INFO ] cache.redis    : Query execution completed in 73.49 ms for table 'orders'
+2026-03-15T12:00:42.359Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:44.906Z [DEBUG] http.router    : Payload serialized with size 1864 bytes
+2026-03-15T12:00:47.591Z [DEBUG] cache.redis    : Payload serialized with size 2257 bytes
+2026-03-15T12:00:47.922Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.588Z [INFO ] auth.service   : Cache hit ratio: 79.4% on key 'session:8545'
+2026-03-15T12:00:50.172Z [INFO ] worker.celery  : Transaction tx_170850 committed with status code 200
+2026-03-15T12:00:50.810Z [TRACE] cache.redis    : Connection established to cluster node 15
+2026-03-15T12:00:52.795Z [ERROR] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:55.862Z [DEBUG] worker.celery  : Cache hit ratio: 95.4% on key 'session:4260'
+2026-03-15T12:00:58.194Z [INFO ] auth.service   : Connection established to cluster node 1
+2026-03-15T12:00:58.581Z [DEBUG] payment.gateway: Cache hit ratio: 80.5% on key 'session:6061'
+2026-03-15T12:00:01.617Z [DEBUG] worker.celery  : Query execution completed in 87.89 ms for table 'orders'
+2026-03-15T12:00:01.455Z [INFO ] payment.gateway: Payload serialized with size 1498 bytes
+2026-03-15T12:00:04.358Z [WARN ] auth.service   : User 8532 authenticated successfully from IP 192.168.1.12
+2026-03-15T12:00:06.560Z [WARN ] payment.gateway: Failed to acquire lock on resource 'txn:tx_976916', retrying...
+2026-03-15T12:00:09.225Z [DEBUG] worker.celery  : Query execution completed in 58.44 ms for table 'orders'
+2026-03-15T12:00:10.963Z [DEBUG] payment.gateway: Cache hit ratio: 72.5% on key 'session:4391'
+2026-03-15T12:00:12.670Z [INFO ] http.router    : Transaction tx_618924 committed with status code 200
+2026-03-15T12:00:14.469Z [INFO ] cache.redis    : Payload serialized with size 2431 bytes
+2026-03-15T12:00:14.477Z [WARN ] http.router    : User 5261 authenticated successfully from IP 192.168.1.186
+2026-03-15T12:00:16.177Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_705285', retrying...
+2026-03-15T12:00:18.426Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.691Z [INFO ] worker.celery  : Transaction tx_627373 committed with status code 200
+2026-03-15T12:00:23.507Z [INFO ] db.pool        : Query execution completed in 62.47 ms for table 'orders'
+2026-03-15T12:00:23.148Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_293433', retrying...
+2026-03-15T12:00:26.783Z [INFO ] auth.service   : Payload serialized with size 1158 bytes
+2026-03-15T12:00:26.270Z [WARN ] cache.redis    : Query execution completed in 7.94 ms for table 'orders'
+2026-03-15T12:00:27.287Z [TRACE] worker.celery  : Cache hit ratio: 72.9% on key 'session:3776'
+2026-03-15T12:00:27.715Z [INFO ] worker.celery  : Payload serialized with size 2329 bytes
+2026-03-15T12:00:28.754Z [INFO ] http.router    : Query execution completed in 108.50 ms for table 'orders'
+2026-03-15T12:00:31.705Z [DEBUG] db.pool        : Transaction tx_108325 committed with status code 200
+2026-03-15T12:00:31.340Z [DEBUG] db.pool        : Transaction tx_434654 committed with status code 200
+2026-03-15T12:00:34.660Z [INFO ] payment.gateway: Payload serialized with size 2331 bytes
+2026-03-15T12:00:37.419Z [INFO ] http.router    : Payload serialized with size 856 bytes
+2026-03-15T12:00:39.946Z [INFO ] auth.service   : Query execution completed in 24.44 ms for table 'orders'
+2026-03-15T12:00:41.677Z [WARN ] db.pool        : Transaction tx_414710 committed with status code 200
+2026-03-15T12:00:44.914Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:46.462Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:46.569Z [DEBUG] payment.gateway: Payload serialized with size 2205 bytes
+2026-03-15T12:00:49.738Z [INFO ] http.router    : Transaction tx_592031 committed with status code 200
+2026-03-15T12:00:51.186Z [DEBUG] http.router    : Transaction tx_886502 committed with status code 200
+2026-03-15T12:00:54.221Z [INFO ] auth.service   : User 5553 authenticated successfully from IP 192.168.1.53
+2026-03-15T12:00:57.400Z [TRACE] payment.gateway: Cache hit ratio: 94.1% on key 'session:2612'
+2026-03-15T12:00:59.425Z [INFO ] db.pool        : User 2439 authenticated successfully from IP 192.168.1.89
+2026-03-15T12:00:02.125Z [DEBUG] cache.redis    : User 1483 authenticated successfully from IP 192.168.1.231
+2026-03-15T12:00:04.679Z [INFO ] http.router    : Transaction tx_323760 committed with status code 200
+2026-03-15T12:00:06.884Z [DEBUG] worker.celery  : Payload serialized with size 1474 bytes
+2026-03-15T12:00:06.627Z [DEBUG] payment.gateway: Connection established to cluster node 14
+2026-03-15T12:00:08.562Z [INFO ] auth.service   : Payload serialized with size 2822 bytes
+2026-03-15T12:00:11.906Z [INFO ] worker.celery  : Cache hit ratio: 72.0% on key 'session:1587'
+2026-03-15T12:00:14.562Z [INFO ] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:14.886Z [DEBUG] cache.redis    : Cache hit ratio: 82.0% on key 'session:6505'
+2026-03-15T12:00:15.123Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_509526', retrying...
+2026-03-15T12:00:15.859Z [DEBUG] auth.service   : Cache hit ratio: 98.7% on key 'session:3128'
+2026-03-15T12:00:16.295Z [INFO ] worker.celery  : Cache hit ratio: 95.9% on key 'session:8168'
+2026-03-15T12:00:19.730Z [INFO ] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:21.204Z [INFO ] cache.redis    : Transaction tx_641638 committed with status code 200
+2026-03-15T12:00:24.240Z [DEBUG] worker.celery  : Transaction tx_329231 committed with status code 200
+2026-03-15T12:00:25.568Z [INFO ] db.pool        : Payload serialized with size 3396 bytes
+2026-03-15T12:00:28.578Z [INFO ] payment.gateway: User 9255 authenticated successfully from IP 192.168.1.192
+2026-03-15T12:00:29.524Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:30.735Z [INFO ] http.router    : Cache hit ratio: 96.2% on key 'session:1088'
+2026-03-15T12:00:32.189Z [INFO ] http.router    : Cache hit ratio: 92.3% on key 'session:3925'
+2026-03-15T12:00:35.633Z [DEBUG] db.pool        : Payload serialized with size 1541 bytes
+2026-03-15T12:00:36.992Z [INFO ] db.pool        : Payload serialized with size 2851 bytes
+2026-03-15T12:00:37.137Z [WARN ] worker.celery  : Query execution completed in 11.49 ms for table 'orders'
+2026-03-15T12:00:38.619Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:40.701Z [DEBUG] auth.service   : Payload serialized with size 2173 bytes
+2026-03-15T12:00:43.766Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.202Z [DEBUG] cache.redis    : Cache hit ratio: 76.9% on key 'session:7901'
+2026-03-15T12:00:45.954Z [DEBUG] payment.gateway: Transaction tx_955497 committed with status code 200
+2026-03-15T12:00:48.701Z [INFO ] worker.celery  : Payload serialized with size 4080 bytes
+2026-03-15T12:00:51.896Z [INFO ] worker.celery  : User 5921 authenticated successfully from IP 192.168.1.254
+2026-03-15T12:00:53.720Z [INFO ] cache.redis    : Transaction tx_265515 committed with status code 200
+2026-03-15T12:00:56.269Z [INFO ] cache.redis    : Payload serialized with size 2383 bytes
+2026-03-15T12:00:59.966Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_681199', retrying...
+2026-03-15T12:00:01.178Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_820381', retrying...
+2026-03-15T12:00:03.960Z [DEBUG] cache.redis    : Transaction tx_212656 committed with status code 200
+2026-03-15T12:00:03.450Z [DEBUG] cache.redis    : Connection established to cluster node 3
+2026-03-15T12:00:03.810Z [WARN ] db.pool        : Payload serialized with size 3889 bytes
+2026-03-15T12:00:05.630Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_282621', retrying...
+2026-03-15T12:00:05.293Z [INFO ] db.pool        : Payload serialized with size 2122 bytes
+2026-03-15T12:00:08.653Z [INFO ] payment.gateway: User 7648 authenticated successfully from IP 192.168.1.111
+2026-03-15T12:00:11.118Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_595283', retrying...
+2026-03-15T12:00:13.391Z [WARN ] payment.gateway: User 7879 authenticated successfully from IP 192.168.1.85
+2026-03-15T12:00:16.824Z [DEBUG] payment.gateway: Transaction tx_359752 committed with status code 200
+2026-03-15T12:00:19.963Z [TRACE] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:22.400Z [INFO ] db.pool        : Connection established to cluster node 10
+2026-03-15T12:00:22.576Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:24.613Z [INFO ] worker.celery  : Transaction tx_992110 committed with status code 200
+2026-03-15T12:00:25.183Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:26.114Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_259649', retrying...
+2026-03-15T12:00:29.181Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_526737', retrying...
+2026-03-15T12:00:30.926Z [INFO ] worker.celery  : Transaction tx_864343 committed with status code 200
+2026-03-15T12:00:30.595Z [INFO ] worker.celery  : Payload serialized with size 2288 bytes
+2026-03-15T12:00:30.924Z [INFO ] http.router    : Payload serialized with size 2129 bytes
+2026-03-15T12:00:30.432Z [INFO ] http.router    : Cache hit ratio: 81.3% on key 'session:1569'
+2026-03-15T12:00:32.445Z [INFO ] db.pool        : Query execution completed in 132.73 ms for table 'orders'
+2026-03-15T12:00:34.386Z [INFO ] db.pool        : Connection established to cluster node 1
+2026-03-15T12:00:35.997Z [DEBUG] worker.celery  : Query execution completed in 91.09 ms for table 'orders'
+2026-03-15T12:00:36.679Z [TRACE] cache.redis    : Query execution completed in 81.98 ms for table 'orders'
+2026-03-15T12:00:36.310Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_856358', retrying...
+2026-03-15T12:00:39.587Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_596273', retrying...
+2026-03-15T12:00:40.539Z [WARN ] payment.gateway: Payload serialized with size 2985 bytes
+2026-03-15T12:00:40.446Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_980478', retrying...
+2026-03-15T12:00:41.361Z [INFO ] cache.redis    : Query execution completed in 85.74 ms for table 'orders'
+2026-03-15T12:00:42.176Z [WARN ] cache.redis    : Connection established to cluster node 7
+2026-03-15T12:00:43.674Z [INFO ] cache.redis    : Payload serialized with size 1048 bytes
+2026-03-15T12:00:46.516Z [DEBUG] worker.celery  : Connection established to cluster node 12
+2026-03-15T12:00:48.204Z [DEBUG] payment.gateway: User 7966 authenticated successfully from IP 192.168.1.175
+2026-03-15T12:00:50.354Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_634162', retrying...
+2026-03-15T12:00:51.849Z [ERROR] cache.redis    : Connection established to cluster node 7
+2026-03-15T12:00:52.523Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_893869', retrying...
+2026-03-15T12:00:54.788Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:56.938Z [DEBUG] auth.service   : Cache hit ratio: 91.3% on key 'session:8833'
+2026-03-15T12:00:59.743Z [DEBUG] auth.service   : Transaction tx_464572 committed with status code 200
+2026-03-15T12:00:01.666Z [ERROR] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:04.600Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_639404', retrying...
+2026-03-15T12:00:05.483Z [INFO ] http.router    : Payload serialized with size 1076 bytes
+2026-03-15T12:00:07.680Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:10.622Z [INFO ] auth.service   : Connection established to cluster node 5
+2026-03-15T12:00:12.162Z [INFO ] auth.service   : Connection established to cluster node 2
+2026-03-15T12:00:15.690Z [DEBUG] db.pool        : Cache hit ratio: 82.9% on key 'session:3995'
+2026-03-15T12:00:18.158Z [WARN ] payment.gateway: Failed to acquire lock on resource 'txn:tx_274240', retrying...
+2026-03-15T12:00:20.516Z [INFO ] worker.celery  : Query execution completed in 56.15 ms for table 'orders'
+2026-03-15T12:00:22.449Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_975516', retrying...
+2026-03-15T12:00:25.667Z [INFO ] http.router    : Query execution completed in 114.82 ms for table 'orders'
+2026-03-15T12:00:28.278Z [INFO ] auth.service   : Query execution completed in 111.14 ms for table 'orders'
+2026-03-15T12:00:29.466Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_863607', retrying...
+2026-03-15T12:00:32.331Z [DEBUG] http.router    : Connection established to cluster node 5
+2026-03-15T12:00:34.460Z [INFO ] db.pool        : Cache hit ratio: 76.6% on key 'session:8707'
+2026-03-15T12:00:34.723Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:37.514Z [DEBUG] http.router    : Transaction tx_203130 committed with status code 200
+2026-03-15T12:00:37.163Z [TRACE] worker.celery  : Transaction tx_421584 committed with status code 200
+2026-03-15T12:00:37.386Z [DEBUG] auth.service   : Cache hit ratio: 72.2% on key 'session:3990'
+2026-03-15T12:00:37.930Z [WARN ] cache.redis    : Query execution completed in 34.48 ms for table 'orders'
+2026-03-15T12:00:38.187Z [INFO ] cache.redis    : Cache hit ratio: 72.1% on key 'session:7067'
+2026-03-15T12:00:39.481Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_726643', retrying...
+2026-03-15T12:00:39.280Z [DEBUG] http.router    : Transaction tx_174519 committed with status code 200
+2026-03-15T12:00:42.928Z [INFO ] auth.service   : Cache hit ratio: 98.4% on key 'session:4756'
+2026-03-15T12:00:43.799Z [WARN ] payment.gateway: Cache hit ratio: 93.5% on key 'session:8029'
+2026-03-15T12:00:44.448Z [DEBUG] auth.service   : Query execution completed in 106.82 ms for table 'orders'
+2026-03-15T12:00:46.525Z [INFO ] db.pool        : Query execution completed in 142.82 ms for table 'orders'
+2026-03-15T12:00:48.258Z [ERROR] db.pool        : User 4214 authenticated successfully from IP 192.168.1.127
+2026-03-15T12:00:49.612Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:49.769Z [INFO ] worker.celery  : Cache hit ratio: 87.2% on key 'session:3718'
+2026-03-15T12:00:51.364Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:53.492Z [INFO ] worker.celery  : Payload serialized with size 1581 bytes
+2026-03-15T12:00:53.615Z [INFO ] http.router    : Query execution completed in 51.11 ms for table 'orders'
+2026-03-15T12:00:53.188Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_865544', retrying...
+2026-03-15T12:00:54.381Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_293155', retrying...
+2026-03-15T12:00:56.112Z [INFO ] http.router    : Transaction tx_360253 committed with status code 200
+2026-03-15T12:00:56.968Z [INFO ] db.pool        : Transaction tx_931939 committed with status code 200
+2026-03-15T12:00:57.996Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.632Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:00.675Z [INFO ] worker.celery  : Connection established to cluster node 13
+2026-03-15T12:00:02.576Z [INFO ] cache.redis    : Transaction tx_175747 committed with status code 200
+2026-03-15T12:00:05.775Z [DEBUG] cache.redis    : Transaction tx_784851 committed with status code 200
+2026-03-15T12:00:08.466Z [INFO ] cache.redis    : Payload serialized with size 2589 bytes
+2026-03-15T12:00:10.365Z [DEBUG] http.router    : User 2763 authenticated successfully from IP 192.168.1.110
+2026-03-15T12:00:13.297Z [INFO ] auth.service   : Payload serialized with size 1291 bytes
+2026-03-15T12:00:16.267Z [INFO ] db.pool        : User 9216 authenticated successfully from IP 192.168.1.254
+2026-03-15T12:00:18.148Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_540242', retrying...
+2026-03-15T12:00:20.108Z [DEBUG] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:23.485Z [DEBUG] cache.redis    : Payload serialized with size 196 bytes
+2026-03-15T12:00:26.882Z [DEBUG] cache.redis    : Connection established to cluster node 15
+2026-03-15T12:00:26.725Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:29.635Z [ERROR] db.pool        : User 5445 authenticated successfully from IP 192.168.1.43
+2026-03-15T12:00:30.408Z [DEBUG] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:32.828Z [INFO ] cache.redis    : Connection established to cluster node 11
+2026-03-15T12:00:34.460Z [DEBUG] http.router    : User 7495 authenticated successfully from IP 192.168.1.172
+2026-03-15T12:00:34.457Z [DEBUG] auth.service   : Transaction tx_183591 committed with status code 200
+2026-03-15T12:00:37.283Z [INFO ] http.router    : Cache hit ratio: 80.0% on key 'session:9096'
+2026-03-15T12:00:37.479Z [INFO ] cache.redis    : Payload serialized with size 2015 bytes
+2026-03-15T12:00:39.404Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:40.238Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_241409', retrying...
+2026-03-15T12:00:43.376Z [INFO ] cache.redis    : Transaction tx_246119 committed with status code 200
+2026-03-15T12:00:44.981Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:46.593Z [DEBUG] worker.celery  : Cache hit ratio: 79.5% on key 'session:5279'
+2026-03-15T12:00:49.360Z [DEBUG] payment.gateway: Transaction tx_885964 committed with status code 200
+2026-03-15T12:00:52.503Z [DEBUG] auth.service   : Payload serialized with size 1763 bytes
+2026-03-15T12:00:53.752Z [INFO ] worker.celery  : Transaction tx_139022 committed with status code 200
+2026-03-15T12:00:54.464Z [INFO ] payment.gateway: Cache hit ratio: 86.2% on key 'session:4590'
+2026-03-15T12:00:55.513Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:56.408Z [DEBUG] auth.service   : Transaction tx_681376 committed with status code 200
+2026-03-15T12:00:59.208Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:01.922Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:02.178Z [INFO ] auth.service   : Query execution completed in 65.01 ms for table 'orders'
+2026-03-15T12:00:03.926Z [ERROR] auth.service   : Connection established to cluster node 7
+2026-03-15T12:00:03.812Z [ERROR] payment.gateway: Payload serialized with size 3393 bytes
+2026-03-15T12:00:03.310Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.363Z [INFO ] http.router    : Cache hit ratio: 98.0% on key 'session:8327'
+2026-03-15T12:00:05.699Z [DEBUG] worker.celery  : Query execution completed in 129.54 ms for table 'orders'
+2026-03-15T12:00:07.368Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:09.187Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_934020', retrying...
+2026-03-15T12:00:09.412Z [INFO ] db.pool        : Connection established to cluster node 11
+2026-03-15T12:00:10.209Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_463043', retrying...
+2026-03-15T12:00:12.645Z [DEBUG] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:13.804Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:13.419Z [DEBUG] auth.service   : Payload serialized with size 1407 bytes
+2026-03-15T12:00:16.503Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_739554', retrying...
+2026-03-15T12:00:18.251Z [DEBUG] auth.service   : Connection established to cluster node 13
+2026-03-15T12:00:21.248Z [INFO ] worker.celery  : Connection established to cluster node 11
+2026-03-15T12:00:22.918Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_129442', retrying...
+2026-03-15T12:00:24.795Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_225019', retrying...
+2026-03-15T12:00:26.252Z [INFO ] worker.celery  : User 2210 authenticated successfully from IP 192.168.1.85
+2026-03-15T12:00:29.280Z [INFO ] auth.service   : Cache hit ratio: 95.2% on key 'session:8976'
+2026-03-15T12:00:30.765Z [DEBUG] cache.redis    : User 6406 authenticated successfully from IP 192.168.1.34
+2026-03-15T12:00:33.450Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_391135', retrying...
+2026-03-15T12:00:34.998Z [INFO ] cache.redis    : Payload serialized with size 1564 bytes
+2026-03-15T12:00:36.332Z [DEBUG] worker.celery  : Query execution completed in 35.90 ms for table 'orders'
+2026-03-15T12:00:39.931Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:39.247Z [DEBUG] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:40.454Z [WARN ] payment.gateway: Cache hit ratio: 82.3% on key 'session:5571'
+2026-03-15T12:00:41.500Z [DEBUG] cache.redis    : Transaction tx_126517 committed with status code 200
+2026-03-15T12:00:44.264Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:44.833Z [INFO ] db.pool        : Cache hit ratio: 92.4% on key 'session:1921'
+2026-03-15T12:00:47.207Z [INFO ] http.router    : User 5741 authenticated successfully from IP 192.168.1.227
+2026-03-15T12:00:48.101Z [INFO ] payment.gateway: Cache hit ratio: 93.7% on key 'session:8776'
+2026-03-15T12:00:48.738Z [INFO ] payment.gateway: Transaction tx_887427 committed with status code 200
+2026-03-15T12:00:49.560Z [DEBUG] payment.gateway: User 3025 authenticated successfully from IP 192.168.1.194
+2026-03-15T12:00:52.363Z [INFO ] payment.gateway: Payload serialized with size 3067 bytes
+2026-03-15T12:00:52.964Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:55.433Z [INFO ] payment.gateway: User 8161 authenticated successfully from IP 192.168.1.140
+2026-03-15T12:00:55.636Z [WARN ] cache.redis    : Cache hit ratio: 72.2% on key 'session:7617'
+2026-03-15T12:00:56.442Z [TRACE] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.872Z [WARN ] auth.service   : Payload serialized with size 1293 bytes
+2026-03-15T12:00:01.158Z [ERROR] worker.celery  : Failed to acquire lock on resource 'txn:tx_524075', retrying...
+2026-03-15T12:00:04.817Z [WARN ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.806Z [TRACE] payment.gateway: Cache hit ratio: 84.5% on key 'session:7828'
+2026-03-15T12:00:08.254Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_561762', retrying...
+2026-03-15T12:00:08.471Z [WARN ] payment.gateway: User 8254 authenticated successfully from IP 192.168.1.41
+2026-03-15T12:00:11.484Z [DEBUG] worker.celery  : Query execution completed in 122.31 ms for table 'orders'
+2026-03-15T12:00:11.975Z [INFO ] http.router    : User 8185 authenticated successfully from IP 192.168.1.41
+2026-03-15T12:00:12.118Z [INFO ] payment.gateway: User 9887 authenticated successfully from IP 192.168.1.49
+2026-03-15T12:00:15.874Z [TRACE] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:16.287Z [INFO ] worker.celery  : User 1009 authenticated successfully from IP 192.168.1.148
+2026-03-15T12:00:18.648Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_467869', retrying...
+2026-03-15T12:00:19.939Z [TRACE] worker.celery  : Payload serialized with size 3953 bytes
+2026-03-15T12:00:19.392Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:22.272Z [DEBUG] db.pool        : Cache hit ratio: 95.6% on key 'session:9633'
+2026-03-15T12:00:22.393Z [INFO ] http.router    : Payload serialized with size 548 bytes
+2026-03-15T12:00:22.778Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:22.550Z [ERROR] http.router    : Connection established to cluster node 3
+2026-03-15T12:00:25.491Z [WARN ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:27.211Z [WARN ] worker.celery  : Cache hit ratio: 82.2% on key 'session:8747'
+2026-03-15T12:00:27.698Z [INFO ] payment.gateway: Cache hit ratio: 81.8% on key 'session:3171'
+2026-03-15T12:00:28.455Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_523594', retrying...
+2026-03-15T12:00:30.536Z [WARN ] cache.redis    : Failed to acquire lock on resource 'txn:tx_269605', retrying...
+2026-03-15T12:00:31.310Z [INFO ] worker.celery  : Payload serialized with size 1305 bytes
+2026-03-15T12:00:34.663Z [INFO ] cache.redis    : Transaction tx_680122 committed with status code 200
+2026-03-15T12:00:36.829Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_724886', retrying...
+2026-03-15T12:00:38.790Z [INFO ] http.router    : Query execution completed in 116.54 ms for table 'orders'
+2026-03-15T12:00:39.261Z [WARN ] cache.redis    : Query execution completed in 66.44 ms for table 'orders'
+2026-03-15T12:00:40.824Z [INFO ] db.pool        : Payload serialized with size 2845 bytes
+2026-03-15T12:00:41.854Z [INFO ] cache.redis    : Connection established to cluster node 10
+2026-03-15T12:00:43.596Z [DEBUG] cache.redis    : Payload serialized with size 2483 bytes
+2026-03-15T12:00:43.115Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:44.242Z [TRACE] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:45.511Z [INFO ] worker.celery  : User 1568 authenticated successfully from IP 192.168.1.186
+2026-03-15T12:00:47.244Z [DEBUG] cache.redis    : Query execution completed in 140.67 ms for table 'orders'
+2026-03-15T12:00:50.392Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.405Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:52.268Z [TRACE] worker.celery  : Payload serialized with size 773 bytes
+2026-03-15T12:00:52.610Z [DEBUG] worker.celery  : Connection established to cluster node 10
+2026-03-15T12:00:55.399Z [DEBUG] cache.redis    : Transaction tx_227898 committed with status code 200
+2026-03-15T12:00:56.453Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.824Z [INFO ] worker.celery  : Transaction tx_672482 committed with status code 200
+2026-03-15T12:00:59.862Z [DEBUG] payment.gateway: Payload serialized with size 2224 bytes
+2026-03-15T12:00:59.489Z [INFO ] http.router    : Payload serialized with size 1387 bytes
+2026-03-15T12:00:02.985Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.393Z [TRACE] payment.gateway: Failed to acquire lock on resource 'txn:tx_598923', retrying...
+2026-03-15T12:00:04.540Z [INFO ] http.router    : Cache hit ratio: 71.0% on key 'session:9048'
+2026-03-15T12:00:07.976Z [INFO ] cache.redis    : User 2186 authenticated successfully from IP 192.168.1.26
+2026-03-15T12:00:10.738Z [WARN ] cache.redis    : Transaction tx_816705 committed with status code 200
+2026-03-15T12:00:11.512Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_133095', retrying...
+2026-03-15T12:00:14.875Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:16.200Z [INFO ] worker.celery  : User 6364 authenticated successfully from IP 192.168.1.175
+2026-03-15T12:00:18.997Z [INFO ] cache.redis    : Connection established to cluster node 9
+2026-03-15T12:00:21.187Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_852322', retrying...
+2026-03-15T12:00:22.530Z [INFO ] http.router    : Cache hit ratio: 75.4% on key 'session:4833'
+2026-03-15T12:00:24.394Z [DEBUG] auth.service   : Query execution completed in 91.59 ms for table 'orders'
+2026-03-15T12:00:25.250Z [DEBUG] db.pool        : User 3773 authenticated successfully from IP 192.168.1.10
+2026-03-15T12:00:25.632Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:25.671Z [TRACE] cache.redis    : Failed to acquire lock on resource 'txn:tx_983770', retrying...
+2026-03-15T12:00:26.345Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_774069', retrying...
+2026-03-15T12:00:26.120Z [INFO ] payment.gateway: Payload serialized with size 3224 bytes
+2026-03-15T12:00:28.732Z [WARN ] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:31.994Z [DEBUG] cache.redis    : Transaction tx_948978 committed with status code 200
+2026-03-15T12:00:31.418Z [TRACE] http.router    : Cache hit ratio: 96.4% on key 'session:1747'
+2026-03-15T12:00:31.674Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:33.236Z [INFO ] auth.service   : User 9869 authenticated successfully from IP 192.168.1.129
+2026-03-15T12:00:33.871Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:36.522Z [DEBUG] cache.redis    : Transaction tx_484162 committed with status code 200
+2026-03-15T12:00:36.243Z [INFO ] auth.service   : Payload serialized with size 2407 bytes
+2026-03-15T12:00:39.293Z [INFO ] payment.gateway: Connection established to cluster node 12
+2026-03-15T12:00:40.440Z [INFO ] db.pool        : Cache hit ratio: 77.3% on key 'session:6027'
+2026-03-15T12:00:40.128Z [INFO ] auth.service   : User 9307 authenticated successfully from IP 192.168.1.249
+2026-03-15T12:00:40.871Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:41.756Z [INFO ] auth.service   : Payload serialized with size 1287 bytes
+2026-03-15T12:00:44.657Z [WARN ] cache.redis    : Failed to acquire lock on resource 'txn:tx_753030', retrying...
+2026-03-15T12:00:46.545Z [DEBUG] auth.service   : Connection established to cluster node 2
+2026-03-15T12:00:47.419Z [INFO ] worker.celery  : User 5670 authenticated successfully from IP 192.168.1.240
+2026-03-15T12:00:50.275Z [TRACE] auth.service   : Failed to acquire lock on resource 'txn:tx_876253', retrying...
+2026-03-15T12:00:51.332Z [TRACE] payment.gateway: Transaction tx_658105 committed with status code 200
+2026-03-15T12:00:54.933Z [INFO ] http.router    : Transaction tx_388736 committed with status code 200
+2026-03-15T12:00:56.677Z [WARN ] db.pool        : Connection established to cluster node 11
+2026-03-15T12:00:56.660Z [ERROR] cache.redis    : Transaction tx_377542 committed with status code 200
+2026-03-15T12:00:56.150Z [WARN ] http.router    : Payload serialized with size 416 bytes
+2026-03-15T12:00:56.362Z [ERROR] db.pool        : Connection established to cluster node 5
+2026-03-15T12:00:58.905Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.567Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_575655', retrying...
+2026-03-15T12:00:59.474Z [INFO ] cache.redis    : Connection established to cluster node 5
+2026-03-15T12:00:00.232Z [INFO ] http.router    : Cache hit ratio: 89.3% on key 'session:2932'
+2026-03-15T12:00:03.622Z [INFO ] payment.gateway: Transaction tx_913544 committed with status code 200
+2026-03-15T12:00:04.577Z [DEBUG] auth.service   : Connection established to cluster node 1
+2026-03-15T12:00:05.279Z [INFO ] http.router    : Query execution completed in 99.65 ms for table 'orders'
+2026-03-15T12:00:05.337Z [TRACE] cache.redis    : Query execution completed in 5.18 ms for table 'orders'
+2026-03-15T12:00:08.114Z [DEBUG] auth.service   : Cache hit ratio: 86.4% on key 'session:3058'
+2026-03-15T12:00:09.392Z [INFO ] auth.service   : Query execution completed in 131.56 ms for table 'orders'
+2026-03-15T12:00:12.552Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_522623', retrying...
+2026-03-15T12:00:13.304Z [DEBUG] worker.celery  : User 8527 authenticated successfully from IP 192.168.1.131
+2026-03-15T12:00:16.661Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_584137', retrying...
+2026-03-15T12:00:18.873Z [DEBUG] payment.gateway: User 5226 authenticated successfully from IP 192.168.1.126
+2026-03-15T12:00:21.707Z [INFO ] db.pool        : Cache hit ratio: 70.9% on key 'session:2371'
+2026-03-15T12:00:24.680Z [DEBUG] payment.gateway: Query execution completed in 0.59 ms for table 'orders'
+2026-03-15T12:00:26.846Z [DEBUG] cache.redis    : Transaction tx_172815 committed with status code 200
+2026-03-15T12:00:27.743Z [DEBUG] worker.celery  : User 9903 authenticated successfully from IP 192.168.1.237
+2026-03-15T12:00:27.750Z [INFO ] worker.celery  : Query execution completed in 149.25 ms for table 'orders'
+2026-03-15T12:00:27.967Z [DEBUG] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:30.238Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_615079', retrying...
+2026-03-15T12:00:33.642Z [WARN ] cache.redis    : Failed to acquire lock on resource 'txn:tx_467890', retrying...
+2026-03-15T12:00:33.134Z [TRACE] worker.celery  : Connection established to cluster node 12
+2026-03-15T12:00:33.183Z [DEBUG] auth.service   : Cache hit ratio: 72.0% on key 'session:8203'
+2026-03-15T12:00:35.706Z [INFO ] worker.celery  : Query execution completed in 91.58 ms for table 'orders'
+2026-03-15T12:00:37.820Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:38.704Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:39.110Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_176654', retrying...
+2026-03-15T12:00:42.770Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.305Z [INFO ] payment.gateway: Payload serialized with size 2345 bytes
+2026-03-15T12:00:46.779Z [INFO ] payment.gateway: Payload serialized with size 3481 bytes
+2026-03-15T12:00:47.572Z [INFO ] payment.gateway: Payload serialized with size 1027 bytes
+2026-03-15T12:00:48.143Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.126Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_756808', retrying...
+2026-03-15T12:00:52.971Z [INFO ] cache.redis    : User 4805 authenticated successfully from IP 192.168.1.100
+2026-03-15T12:00:55.983Z [INFO ] cache.redis    : Transaction tx_667487 committed with status code 200
+2026-03-15T12:00:55.198Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_671820', retrying...
+2026-03-15T12:00:56.386Z [INFO ] auth.service   : Query execution completed in 54.12 ms for table 'orders'
+2026-03-15T12:00:56.916Z [INFO ] auth.service   : Transaction tx_793637 committed with status code 200
+2026-03-15T12:00:59.701Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_135517', retrying...
+2026-03-15T12:00:00.744Z [TRACE] db.pool        : Cache hit ratio: 70.9% on key 'session:1958'
+2026-03-15T12:00:03.145Z [DEBUG] db.pool        : Payload serialized with size 1677 bytes
+2026-03-15T12:00:04.694Z [WARN ] worker.celery  : Query execution completed in 56.66 ms for table 'orders'
+2026-03-15T12:00:04.703Z [INFO ] auth.service   : Query execution completed in 98.86 ms for table 'orders'
+2026-03-15T12:00:05.659Z [INFO ] auth.service   : User 7487 authenticated successfully from IP 192.168.1.170
+2026-03-15T12:00:07.571Z [INFO ] db.pool        : Connection established to cluster node 15
+2026-03-15T12:00:10.409Z [DEBUG] worker.celery  : Query execution completed in 131.90 ms for table 'orders'
+2026-03-15T12:00:11.807Z [INFO ] http.router    : Transaction tx_272606 committed with status code 200
+2026-03-15T12:00:14.511Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_495974', retrying...
+2026-03-15T12:00:14.958Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:14.391Z [INFO ] worker.celery  : Cache hit ratio: 83.9% on key 'session:8848'
+2026-03-15T12:00:14.876Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:16.247Z [INFO ] auth.service   : Cache hit ratio: 98.5% on key 'session:4207'
+2026-03-15T12:00:16.569Z [INFO ] cache.redis    : Cache hit ratio: 75.9% on key 'session:9453'
+2026-03-15T12:00:18.874Z [WARN ] worker.celery  : Payload serialized with size 381 bytes
+2026-03-15T12:00:21.951Z [INFO ] auth.service   : User 4944 authenticated successfully from IP 192.168.1.186
+2026-03-15T12:00:24.420Z [DEBUG] http.router    : Connection established to cluster node 5
+2026-03-15T12:00:24.161Z [INFO ] http.router    : Cache hit ratio: 97.1% on key 'session:6816'
+2026-03-15T12:00:27.251Z [WARN ] cache.redis    : Query execution completed in 70.87 ms for table 'orders'
+2026-03-15T12:00:30.614Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_621430', retrying...
+2026-03-15T12:00:32.992Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_602538', retrying...
+2026-03-15T12:00:35.564Z [INFO ] payment.gateway: Cache hit ratio: 78.4% on key 'session:8510'
+2026-03-15T12:00:35.306Z [INFO ] http.router    : User 5404 authenticated successfully from IP 192.168.1.250
+2026-03-15T12:00:35.417Z [ERROR] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:36.616Z [INFO ] http.router    : Connection established to cluster node 11
+2026-03-15T12:00:36.764Z [WARN ] cache.redis    : User 2730 authenticated successfully from IP 192.168.1.227
+2026-03-15T12:00:39.685Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:40.898Z [WARN ] db.pool        : User 4731 authenticated successfully from IP 192.168.1.194
+2026-03-15T12:00:40.254Z [INFO ] worker.celery  : Cache hit ratio: 85.8% on key 'session:5759'
+2026-03-15T12:00:43.730Z [INFO ] worker.celery  : User 2938 authenticated successfully from IP 192.168.1.194
+2026-03-15T12:00:45.554Z [ERROR] payment.gateway: Transaction tx_207648 committed with status code 200
+2026-03-15T12:00:46.137Z [INFO ] http.router    : User 8754 authenticated successfully from IP 192.168.1.84
+2026-03-15T12:00:49.399Z [DEBUG] http.router    : Payload serialized with size 3368 bytes
+2026-03-15T12:00:50.243Z [INFO ] worker.celery  : Query execution completed in 47.93 ms for table 'orders'
+2026-03-15T12:00:51.192Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_648107', retrying...
+2026-03-15T12:00:51.609Z [INFO ] http.router    : Connection established to cluster node 3
+2026-03-15T12:00:51.521Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_997727', retrying...
+2026-03-15T12:00:53.739Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:53.547Z [INFO ] http.router    : Query execution completed in 122.06 ms for table 'orders'
+2026-03-15T12:00:55.227Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.802Z [INFO ] payment.gateway: Transaction tx_145255 committed with status code 200
+2026-03-15T12:00:58.898Z [DEBUG] worker.celery  : Cache hit ratio: 90.7% on key 'session:7597'
+2026-03-15T12:00:59.272Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_436001', retrying...
+2026-03-15T12:00:02.308Z [INFO ] payment.gateway: Transaction tx_439320 committed with status code 200
+2026-03-15T12:00:03.679Z [INFO ] auth.service   : Payload serialized with size 3587 bytes
+2026-03-15T12:00:06.387Z [ERROR] worker.celery  : User 6878 authenticated successfully from IP 192.168.1.117
+2026-03-15T12:00:06.382Z [INFO ] http.router    : Connection established to cluster node 2
+2026-03-15T12:00:06.789Z [INFO ] http.router    : Transaction tx_295192 committed with status code 200
+2026-03-15T12:00:08.277Z [DEBUG] http.router    : Connection established to cluster node 9
+2026-03-15T12:00:08.778Z [DEBUG] worker.celery  : User 6874 authenticated successfully from IP 192.168.1.56
+2026-03-15T12:00:08.241Z [DEBUG] worker.celery  : Transaction tx_204980 committed with status code 200
+2026-03-15T12:00:10.571Z [INFO ] auth.service   : Connection established to cluster node 11
+2026-03-15T12:00:13.373Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:14.226Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_345210', retrying...
+2026-03-15T12:00:16.260Z [INFO ] payment.gateway: User 5364 authenticated successfully from IP 192.168.1.201
+2026-03-15T12:00:18.309Z [WARN ] auth.service   : Transaction tx_671525 committed with status code 200
+2026-03-15T12:00:18.997Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:21.712Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_676196', retrying...
+2026-03-15T12:00:24.426Z [DEBUG] worker.celery  : Query execution completed in 27.78 ms for table 'orders'
+2026-03-15T12:00:26.799Z [DEBUG] payment.gateway: Query execution completed in 134.45 ms for table 'orders'
+2026-03-15T12:00:26.465Z [INFO ] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:26.837Z [DEBUG] db.pool        : Cache hit ratio: 72.7% on key 'session:8813'
+2026-03-15T12:00:27.751Z [DEBUG] db.pool        : Payload serialized with size 1529 bytes
+2026-03-15T12:00:29.649Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_650539', retrying...
+2026-03-15T12:00:31.702Z [INFO ] auth.service   : Payload serialized with size 998 bytes
+2026-03-15T12:00:33.320Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:34.423Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_613229', retrying...
+2026-03-15T12:00:34.235Z [INFO ] payment.gateway: Connection established to cluster node 11
+2026-03-15T12:00:37.638Z [INFO ] worker.celery  : Transaction tx_649796 committed with status code 200
+2026-03-15T12:00:40.530Z [TRACE] http.router    : User 9422 authenticated successfully from IP 192.168.1.24
+2026-03-15T12:00:43.499Z [ERROR] worker.celery  : Payload serialized with size 1994 bytes
+2026-03-15T12:00:44.127Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_617016', retrying...
+2026-03-15T12:00:45.904Z [DEBUG] cache.redis    : Cache hit ratio: 70.5% on key 'session:9751'
+2026-03-15T12:00:48.630Z [ERROR] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:51.792Z [DEBUG] http.router    : Payload serialized with size 2977 bytes
+2026-03-15T12:00:53.822Z [DEBUG] cache.redis    : Payload serialized with size 984 bytes
+2026-03-15T12:00:54.883Z [DEBUG] cache.redis    : Payload serialized with size 2522 bytes
+2026-03-15T12:00:57.644Z [DEBUG] payment.gateway: User 2372 authenticated successfully from IP 192.168.1.90
+2026-03-15T12:00:58.453Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_719380', retrying...
+2026-03-15T12:00:58.872Z [INFO ] db.pool        : User 2472 authenticated successfully from IP 192.168.1.161
+2026-03-15T12:00:59.827Z [WARN ] db.pool        : Query execution completed in 16.52 ms for table 'orders'
+2026-03-15T12:00:59.239Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:02.289Z [DEBUG] payment.gateway: Payload serialized with size 2989 bytes
+2026-03-15T12:00:02.880Z [INFO ] auth.service   : Transaction tx_733168 committed with status code 200
+2026-03-15T12:00:05.329Z [INFO ] cache.redis    : Payload serialized with size 1015 bytes
+2026-03-15T12:00:08.574Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_125975', retrying...
+2026-03-15T12:00:09.748Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:10.586Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.963Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.582Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_474332', retrying...
+2026-03-15T12:00:12.622Z [INFO ] cache.redis    : Cache hit ratio: 87.8% on key 'session:5701'
+2026-03-15T12:00:14.943Z [DEBUG] cache.redis    : Connection established to cluster node 1
+2026-03-15T12:00:17.841Z [DEBUG] auth.service   : Transaction tx_308764 committed with status code 200
+2026-03-15T12:00:20.544Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_907531', retrying...
+2026-03-15T12:00:23.935Z [INFO ] cache.redis    : Cache hit ratio: 83.8% on key 'session:5871'
+2026-03-15T12:00:24.695Z [INFO ] auth.service   : Transaction tx_292441 committed with status code 200
+2026-03-15T12:00:25.656Z [INFO ] worker.celery  : Payload serialized with size 3639 bytes
+2026-03-15T12:00:28.882Z [ERROR] auth.service   : Payload serialized with size 3009 bytes
+2026-03-15T12:00:28.575Z [ERROR] payment.gateway: User 8625 authenticated successfully from IP 192.168.1.230
+2026-03-15T12:00:30.180Z [WARN ] db.pool        : Cache hit ratio: 79.7% on key 'session:7765'
+2026-03-15T12:00:31.102Z [INFO ] cache.redis    : Cache hit ratio: 99.4% on key 'session:4923'
+2026-03-15T12:00:31.994Z [WARN ] payment.gateway: Failed to acquire lock on resource 'txn:tx_468752', retrying...
+2026-03-15T12:00:33.392Z [WARN ] payment.gateway: User 6297 authenticated successfully from IP 192.168.1.161
+2026-03-15T12:00:34.250Z [TRACE] cache.redis    : Query execution completed in 108.66 ms for table 'orders'
+2026-03-15T12:00:36.718Z [DEBUG] auth.service   : User 3192 authenticated successfully from IP 192.168.1.224
+2026-03-15T12:00:39.885Z [WARN ] auth.service   : User 3768 authenticated successfully from IP 192.168.1.236
+2026-03-15T12:00:42.148Z [DEBUG] http.router    : Connection established to cluster node 13
+2026-03-15T12:00:44.596Z [WARN ] db.pool        : Query execution completed in 119.65 ms for table 'orders'
+2026-03-15T12:00:47.142Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_436117', retrying...
+2026-03-15T12:00:48.298Z [INFO ] http.router    : Cache hit ratio: 93.7% on key 'session:1594'
+2026-03-15T12:00:49.459Z [INFO ] cache.redis    : Transaction tx_886012 committed with status code 200
+2026-03-15T12:00:50.755Z [INFO ] http.router    : Query execution completed in 44.72 ms for table 'orders'
+2026-03-15T12:00:51.979Z [INFO ] worker.celery  : Connection established to cluster node 11
+2026-03-15T12:00:52.481Z [INFO ] db.pool        : User 4561 authenticated successfully from IP 192.168.1.30
+2026-03-15T12:00:53.590Z [INFO ] payment.gateway: Transaction tx_539716 committed with status code 200
+2026-03-15T12:00:56.782Z [DEBUG] payment.gateway: Transaction tx_123036 committed with status code 200
+2026-03-15T12:00:59.639Z [DEBUG] cache.redis    : Cache hit ratio: 74.9% on key 'session:8997'
+2026-03-15T12:00:59.700Z [DEBUG] auth.service   : Connection established to cluster node 15
+2026-03-15T12:00:59.568Z [DEBUG] worker.celery  : User 5497 authenticated successfully from IP 192.168.1.165
+2026-03-15T12:00:01.832Z [ERROR] auth.service   : Transaction tx_376129 committed with status code 200
+2026-03-15T12:00:02.399Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_992582', retrying...
+2026-03-15T12:00:05.229Z [INFO ] payment.gateway: Payload serialized with size 2723 bytes
+2026-03-15T12:00:05.842Z [INFO ] cache.redis    : Transaction tx_296011 committed with status code 200
+2026-03-15T12:00:06.263Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.987Z [WARN ] cache.redis    : User 7453 authenticated successfully from IP 192.168.1.160
+2026-03-15T12:00:09.259Z [INFO ] worker.celery  : Query execution completed in 62.88 ms for table 'orders'
+2026-03-15T12:00:12.196Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:14.244Z [DEBUG] http.router    : Transaction tx_268729 committed with status code 200
+2026-03-15T12:00:16.409Z [INFO ] auth.service   : Payload serialized with size 3068 bytes
+2026-03-15T12:00:17.337Z [INFO ] payment.gateway: Transaction tx_763275 committed with status code 200
+2026-03-15T12:00:17.139Z [WARN ] http.router    : Cache hit ratio: 96.7% on key 'session:1535'
+2026-03-15T12:00:17.963Z [TRACE] cache.redis    : Failed to acquire lock on resource 'txn:tx_755042', retrying...
+2026-03-15T12:00:19.665Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_470100', retrying...
+2026-03-15T12:00:21.944Z [DEBUG] http.router    : Connection established to cluster node 15
+2026-03-15T12:00:21.686Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_364475', retrying...
+2026-03-15T12:00:22.726Z [DEBUG] db.pool        : User 4502 authenticated successfully from IP 192.168.1.136
+2026-03-15T12:00:23.197Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:24.629Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_228812', retrying...
+2026-03-15T12:00:25.981Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_775894', retrying...
+2026-03-15T12:00:26.222Z [INFO ] auth.service   : Query execution completed in 19.73 ms for table 'orders'
+2026-03-15T12:00:26.860Z [INFO ] auth.service   : Connection established to cluster node 3
+2026-03-15T12:00:26.958Z [INFO ] http.router    : User 5820 authenticated successfully from IP 192.168.1.205
+2026-03-15T12:00:27.949Z [INFO ] payment.gateway: Cache hit ratio: 96.8% on key 'session:7733'
+2026-03-15T12:00:30.385Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_971267', retrying...
+2026-03-15T12:00:33.358Z [INFO ] payment.gateway: Transaction tx_294627 committed with status code 200
+2026-03-15T12:00:35.383Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:37.329Z [INFO ] payment.gateway: Connection established to cluster node 12
+2026-03-15T12:00:37.835Z [INFO ] cache.redis    : User 7448 authenticated successfully from IP 192.168.1.121
+2026-03-15T12:00:38.783Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_666659', retrying...
+2026-03-15T12:00:41.563Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_614087', retrying...
+2026-03-15T12:00:43.346Z [DEBUG] db.pool        : Payload serialized with size 1763 bytes
+2026-03-15T12:00:44.780Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_349876', retrying...
+2026-03-15T12:00:45.444Z [DEBUG] worker.celery  : Payload serialized with size 1919 bytes
+2026-03-15T12:00:47.116Z [DEBUG] auth.service   : Cache hit ratio: 95.1% on key 'session:6437'
+2026-03-15T12:00:50.402Z [DEBUG] worker.celery  : Transaction tx_854110 committed with status code 200
+2026-03-15T12:00:53.832Z [INFO ] db.pool        : Connection established to cluster node 1
+2026-03-15T12:00:55.162Z [DEBUG] worker.celery  : Transaction tx_155701 committed with status code 200
+2026-03-15T12:00:56.847Z [INFO ] worker.celery  : Cache hit ratio: 94.6% on key 'session:9573'
+2026-03-15T12:00:56.384Z [INFO ] http.router    : Query execution completed in 13.11 ms for table 'orders'
+2026-03-15T12:00:57.882Z [INFO ] db.pool        : Payload serialized with size 2695 bytes
+2026-03-15T12:00:59.967Z [INFO ] auth.service   : Query execution completed in 75.71 ms for table 'orders'
+2026-03-15T12:00:02.351Z [WARN ] http.router    : Connection established to cluster node 10
+2026-03-15T12:00:05.960Z [ERROR] cache.redis    : Connection established to cluster node 7
+2026-03-15T12:00:05.323Z [INFO ] cache.redis    : Cache hit ratio: 73.3% on key 'session:8675'
+2026-03-15T12:00:08.801Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.251Z [WARN ] payment.gateway: Payload serialized with size 2666 bytes
+2026-03-15T12:00:08.785Z [INFO ] db.pool        : Query execution completed in 57.46 ms for table 'orders'
+2026-03-15T12:00:10.944Z [DEBUG] db.pool        : Transaction tx_356956 committed with status code 200
+2026-03-15T12:00:10.873Z [INFO ] db.pool        : Cache hit ratio: 81.1% on key 'session:2353'
+2026-03-15T12:00:11.407Z [INFO ] cache.redis    : Query execution completed in 128.56 ms for table 'orders'
+2026-03-15T12:00:12.635Z [INFO ] db.pool        : Query execution completed in 58.89 ms for table 'orders'
+2026-03-15T12:00:15.576Z [TRACE] http.router    : Query execution completed in 108.82 ms for table 'orders'
+2026-03-15T12:00:16.448Z [DEBUG] db.pool        : Cache hit ratio: 80.9% on key 'session:6720'
+2026-03-15T12:00:18.445Z [INFO ] http.router    : Connection established to cluster node 2
+2026-03-15T12:00:19.993Z [WARN ] http.router    : Payload serialized with size 1014 bytes
+2026-03-15T12:00:20.837Z [INFO ] cache.redis    : Payload serialized with size 1816 bytes
+2026-03-15T12:00:21.286Z [INFO ] payment.gateway: Transaction tx_964294 committed with status code 200
+2026-03-15T12:00:23.412Z [INFO ] http.router    : Query execution completed in 125.70 ms for table 'orders'
+2026-03-15T12:00:24.284Z [INFO ] worker.celery  : Query execution completed in 149.07 ms for table 'orders'
+2026-03-15T12:00:25.679Z [WARN ] cache.redis    : Transaction tx_957395 committed with status code 200
+2026-03-15T12:00:26.622Z [DEBUG] worker.celery  : User 9502 authenticated successfully from IP 192.168.1.9
+2026-03-15T12:00:27.216Z [WARN ] payment.gateway: Connection established to cluster node 11
+2026-03-15T12:00:28.625Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_266796', retrying...
+2026-03-15T12:00:28.921Z [DEBUG] auth.service   : User 5283 authenticated successfully from IP 192.168.1.195
+2026-03-15T12:00:31.335Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_427271', retrying...
+2026-03-15T12:00:32.128Z [WARN ] auth.service   : Cache hit ratio: 74.1% on key 'session:6152'
+2026-03-15T12:00:32.930Z [TRACE] db.pool        : Connection established to cluster node 13
+2026-03-15T12:00:32.695Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_530753', retrying...
+2026-03-15T12:00:32.975Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:35.955Z [INFO ] payment.gateway: Payload serialized with size 1570 bytes
+2026-03-15T12:00:38.337Z [DEBUG] auth.service   : Cache hit ratio: 84.8% on key 'session:6932'
+2026-03-15T12:00:40.246Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:42.407Z [INFO ] db.pool        : Query execution completed in 149.18 ms for table 'orders'
+2026-03-15T12:00:45.336Z [DEBUG] cache.redis    : Transaction tx_748455 committed with status code 200
+2026-03-15T12:00:47.750Z [INFO ] http.router    : Cache hit ratio: 77.4% on key 'session:1863'
+2026-03-15T12:00:50.171Z [INFO ] auth.service   : Payload serialized with size 4054 bytes
+2026-03-15T12:00:50.735Z [INFO ] worker.celery  : User 5810 authenticated successfully from IP 192.168.1.22
+2026-03-15T12:00:50.791Z [INFO ] http.router    : User 2760 authenticated successfully from IP 192.168.1.94
+2026-03-15T12:00:51.498Z [WARN ] worker.celery  : Cache hit ratio: 88.1% on key 'session:1794'
+2026-03-15T12:00:54.786Z [INFO ] auth.service   : Payload serialized with size 3429 bytes
+2026-03-15T12:00:57.850Z [DEBUG] cache.redis    : Connection established to cluster node 10
+2026-03-15T12:00:00.283Z [INFO ] payment.gateway: Connection established to cluster node 8
+2026-03-15T12:00:00.184Z [INFO ] http.router    : Query execution completed in 112.79 ms for table 'orders'
+2026-03-15T12:00:00.439Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_376056', retrying...
+2026-03-15T12:00:01.574Z [INFO ] http.router    : Cache hit ratio: 77.5% on key 'session:8404'
+2026-03-15T12:00:04.669Z [TRACE] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.299Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:07.648Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_840700', retrying...
+2026-03-15T12:00:07.364Z [DEBUG] db.pool        : Connection established to cluster node 3
+2026-03-15T12:00:07.763Z [INFO ] http.router    : User 7679 authenticated successfully from IP 192.168.1.11
+2026-03-15T12:00:07.754Z [ERROR] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:09.329Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.166Z [DEBUG] payment.gateway: Connection established to cluster node 6
+2026-03-15T12:00:14.326Z [WARN ] payment.gateway: Failed to acquire lock on resource 'txn:tx_612823', retrying...
+2026-03-15T12:00:15.422Z [INFO ] http.router    : Payload serialized with size 3945 bytes
+2026-03-15T12:00:16.597Z [DEBUG] http.router    : Query execution completed in 147.82 ms for table 'orders'
+2026-03-15T12:00:18.993Z [DEBUG] http.router    : Cache hit ratio: 72.5% on key 'session:7355'
+2026-03-15T12:00:18.192Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_675151', retrying...
+2026-03-15T12:00:18.970Z [ERROR] auth.service   : Failed to acquire lock on resource 'txn:tx_516157', retrying...
+2026-03-15T12:00:20.117Z [DEBUG] worker.celery  : Cache hit ratio: 77.2% on key 'session:7112'
+2026-03-15T12:00:23.722Z [DEBUG] cache.redis    : Connection established to cluster node 10
+2026-03-15T12:00:23.131Z [ERROR] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:26.763Z [INFO ] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:27.922Z [ERROR] db.pool        : Connection established to cluster node 3
+2026-03-15T12:00:29.669Z [INFO ] worker.celery  : Connection established to cluster node 4
+2026-03-15T12:00:32.998Z [INFO ] auth.service   : Query execution completed in 97.36 ms for table 'orders'
+2026-03-15T12:00:34.588Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_982437', retrying...
+2026-03-15T12:00:37.973Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_396183', retrying...
+2026-03-15T12:00:37.335Z [INFO ] cache.redis    : Query execution completed in 26.29 ms for table 'orders'
+2026-03-15T12:00:37.677Z [DEBUG] http.router    : User 7309 authenticated successfully from IP 192.168.1.207
+2026-03-15T12:00:40.330Z [INFO ] cache.redis    : Transaction tx_806121 committed with status code 200
+2026-03-15T12:00:40.159Z [INFO ] worker.celery  : Query execution completed in 125.54 ms for table 'orders'
+2026-03-15T12:00:41.980Z [INFO ] auth.service   : Payload serialized with size 226 bytes
+2026-03-15T12:00:41.510Z [DEBUG] db.pool        : User 2353 authenticated successfully from IP 192.168.1.242
+2026-03-15T12:00:42.688Z [INFO ] cache.redis    : Query execution completed in 118.47 ms for table 'orders'
+2026-03-15T12:00:45.970Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.291Z [DEBUG] auth.service   : Connection established to cluster node 12
+2026-03-15T12:00:49.992Z [INFO ] db.pool        : Cache hit ratio: 86.4% on key 'session:3337'
+2026-03-15T12:00:49.112Z [WARN ] auth.service   : Payload serialized with size 956 bytes
+2026-03-15T12:00:50.515Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:52.599Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:52.840Z [INFO ] db.pool        : Query execution completed in 102.02 ms for table 'orders'
+2026-03-15T12:00:53.692Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_192928', retrying...
+2026-03-15T12:00:53.956Z [DEBUG] db.pool        : Cache hit ratio: 86.8% on key 'session:8824'
+2026-03-15T12:00:53.369Z [INFO ] worker.celery  : Payload serialized with size 733 bytes
+2026-03-15T12:00:54.292Z [INFO ] cache.redis    : User 3229 authenticated successfully from IP 192.168.1.154
+2026-03-15T12:00:55.955Z [TRACE] cache.redis    : Query execution completed in 54.66 ms for table 'orders'
+2026-03-15T12:00:56.623Z [DEBUG] payment.gateway: User 3304 authenticated successfully from IP 192.168.1.106
+2026-03-15T12:00:58.673Z [INFO ] auth.service   : Transaction tx_729658 committed with status code 200
+2026-03-15T12:00:58.403Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:00.405Z [DEBUG] payment.gateway: Transaction tx_774395 committed with status code 200
+2026-03-15T12:00:02.132Z [INFO ] auth.service   : Transaction tx_624503 committed with status code 200
+2026-03-15T12:00:04.929Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_556089', retrying...
+2026-03-15T12:00:05.834Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_480554', retrying...
+2026-03-15T12:00:06.301Z [INFO ] worker.celery  : Transaction tx_193474 committed with status code 200
+2026-03-15T12:00:08.416Z [DEBUG] payment.gateway: Transaction tx_806912 committed with status code 200
+2026-03-15T12:00:11.543Z [ERROR] worker.celery  : Connection established to cluster node 16
+2026-03-15T12:00:11.947Z [TRACE] auth.service   : Query execution completed in 36.56 ms for table 'orders'
+2026-03-15T12:00:13.454Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:15.213Z [INFO ] http.router    : Payload serialized with size 2934 bytes
+2026-03-15T12:00:17.342Z [INFO ] auth.service   : Cache hit ratio: 89.7% on key 'session:5463'
+2026-03-15T12:00:17.561Z [TRACE] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:20.204Z [INFO ] payment.gateway: Payload serialized with size 3011 bytes
+2026-03-15T12:00:23.650Z [TRACE] worker.celery  : Query execution completed in 30.20 ms for table 'orders'
+2026-03-15T12:00:25.300Z [INFO ] http.router    : Query execution completed in 1.30 ms for table 'orders'
+2026-03-15T12:00:25.457Z [INFO ] http.router    : Cache hit ratio: 93.6% on key 'session:8072'
+2026-03-15T12:00:27.133Z [INFO ] db.pool        : Transaction tx_516656 committed with status code 200
+2026-03-15T12:00:29.673Z [DEBUG] cache.redis    : Connection established to cluster node 5
+2026-03-15T12:00:29.498Z [INFO ] http.router    : Query execution completed in 129.66 ms for table 'orders'
+2026-03-15T12:00:32.560Z [WARN ] http.router    : Transaction tx_321029 committed with status code 200
+2026-03-15T12:00:33.574Z [WARN ] auth.service   : Transaction tx_299036 committed with status code 200
+2026-03-15T12:00:35.664Z [DEBUG] auth.service   : Connection established to cluster node 15
+2026-03-15T12:00:35.594Z [DEBUG] payment.gateway: Transaction tx_395371 committed with status code 200
+2026-03-15T12:00:38.700Z [DEBUG] payment.gateway: User 3770 authenticated successfully from IP 192.168.1.116
+2026-03-15T12:00:39.919Z [INFO ] auth.service   : Connection established to cluster node 8
+2026-03-15T12:00:41.776Z [WARN ] auth.service   : Connection established to cluster node 2
+2026-03-15T12:00:43.880Z [INFO ] db.pool        : Query execution completed in 64.62 ms for table 'orders'
+2026-03-15T12:00:43.455Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_386573', retrying...
+2026-03-15T12:00:43.570Z [INFO ] worker.celery  : Query execution completed in 106.90 ms for table 'orders'
+2026-03-15T12:00:45.500Z [DEBUG] payment.gateway: Transaction tx_181033 committed with status code 200
+2026-03-15T12:00:46.277Z [INFO ] auth.service   : Connection established to cluster node 1
+2026-03-15T12:00:47.907Z [INFO ] db.pool        : Connection established to cluster node 7
+2026-03-15T12:00:50.996Z [DEBUG] auth.service   : User 7136 authenticated successfully from IP 192.168.1.66
+2026-03-15T12:00:50.983Z [INFO ] auth.service   : Transaction tx_277438 committed with status code 200
+2026-03-15T12:00:51.525Z [TRACE] http.router    : Query execution completed in 23.01 ms for table 'orders'
+2026-03-15T12:00:53.497Z [DEBUG] cache.redis    : Payload serialized with size 1402 bytes
+2026-03-15T12:00:55.477Z [INFO ] http.router    : Cache hit ratio: 74.5% on key 'session:1250'
+2026-03-15T12:00:55.363Z [INFO ] worker.celery  : Connection established to cluster node 5
+2026-03-15T12:00:55.585Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_927725', retrying...
+2026-03-15T12:00:56.481Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_806374', retrying...
+2026-03-15T12:00:56.945Z [WARN ] cache.redis    : User 7480 authenticated successfully from IP 192.168.1.65
+2026-03-15T12:00:57.334Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.353Z [INFO ] auth.service   : User 9811 authenticated successfully from IP 192.168.1.121
+2026-03-15T12:00:01.816Z [INFO ] auth.service   : Query execution completed in 138.82 ms for table 'orders'
+2026-03-15T12:00:03.229Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:05.979Z [INFO ] http.router    : Transaction tx_605934 committed with status code 200
+2026-03-15T12:00:08.442Z [INFO ] payment.gateway: Connection established to cluster node 7
+2026-03-15T12:00:11.386Z [DEBUG] cache.redis    : Query execution completed in 19.75 ms for table 'orders'
+2026-03-15T12:00:13.482Z [INFO ] auth.service   : User 1056 authenticated successfully from IP 192.168.1.164
+2026-03-15T12:00:13.373Z [DEBUG] worker.celery  : Payload serialized with size 1573 bytes
+2026-03-15T12:00:16.944Z [INFO ] worker.celery  : Connection established to cluster node 14
+2026-03-15T12:00:16.335Z [INFO ] http.router    : Payload serialized with size 463 bytes
+2026-03-15T12:00:19.637Z [WARN ] db.pool        : Payload serialized with size 1557 bytes
+2026-03-15T12:00:19.293Z [DEBUG] worker.celery  : Connection established to cluster node 13
+2026-03-15T12:00:19.912Z [INFO ] payment.gateway: Connection established to cluster node 8
+2026-03-15T12:00:19.544Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.425Z [TRACE] db.pool        : Connection established to cluster node 14
+2026-03-15T12:00:23.745Z [INFO ] db.pool        : Query execution completed in 92.29 ms for table 'orders'
+2026-03-15T12:00:23.435Z [WARN ] auth.service   : Transaction tx_561997 committed with status code 200
+2026-03-15T12:00:25.600Z [INFO ] cache.redis    : Connection established to cluster node 13
+2026-03-15T12:00:27.937Z [INFO ] http.router    : Query execution completed in 8.62 ms for table 'orders'
+2026-03-15T12:00:28.407Z [DEBUG] http.router    : Cache hit ratio: 84.8% on key 'session:4294'
+2026-03-15T12:00:31.704Z [DEBUG] db.pool        : Query execution completed in 10.37 ms for table 'orders'
+2026-03-15T12:00:31.886Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:31.967Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:31.638Z [INFO ] cache.redis    : Cache hit ratio: 95.4% on key 'session:1131'
+2026-03-15T12:00:32.252Z [DEBUG] auth.service   : Transaction tx_589458 committed with status code 200
+2026-03-15T12:00:32.914Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:34.972Z [ERROR] cache.redis    : Transaction tx_592413 committed with status code 200
+2026-03-15T12:00:37.711Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_748830', retrying...
+2026-03-15T12:00:37.419Z [WARN ] http.router    : Failed to acquire lock on resource 'txn:tx_488467', retrying...
+2026-03-15T12:00:39.255Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_460135', retrying...
+2026-03-15T12:00:39.506Z [INFO ] db.pool        : Query execution completed in 123.11 ms for table 'orders'
+2026-03-15T12:00:41.242Z [TRACE] worker.celery  : Failed to acquire lock on resource 'txn:tx_192548', retrying...
+2026-03-15T12:00:41.972Z [INFO ] worker.celery  : Payload serialized with size 3078 bytes
+2026-03-15T12:00:42.526Z [ERROR] db.pool        : Failed to acquire lock on resource 'txn:tx_582788', retrying...
+2026-03-15T12:00:44.922Z [DEBUG] http.router    : Cache hit ratio: 86.1% on key 'session:8609'
+2026-03-15T12:00:47.393Z [INFO ] auth.service   : User 9022 authenticated successfully from IP 192.168.1.117
+2026-03-15T12:00:49.961Z [INFO ] worker.celery  : Transaction tx_834520 committed with status code 200
+2026-03-15T12:00:50.812Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:52.892Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_543785', retrying...
+2026-03-15T12:00:55.489Z [INFO ] cache.redis    : User 8662 authenticated successfully from IP 192.168.1.194
+2026-03-15T12:00:55.894Z [DEBUG] http.router    : Query execution completed in 87.58 ms for table 'orders'
+2026-03-15T12:00:56.608Z [INFO ] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:56.663Z [WARN ] payment.gateway: Transaction tx_698960 committed with status code 200
+2026-03-15T12:00:56.427Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_884218', retrying...
+2026-03-15T12:00:59.634Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:02.269Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.189Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:05.494Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.847Z [ERROR] auth.service   : Payload serialized with size 2477 bytes
+2026-03-15T12:00:11.142Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:12.897Z [INFO ] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:12.332Z [INFO ] auth.service   : Transaction tx_863560 committed with status code 200
+2026-03-15T12:00:14.692Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_496752', retrying...
+2026-03-15T12:00:14.999Z [INFO ] auth.service   : Query execution completed in 132.10 ms for table 'orders'
+2026-03-15T12:00:16.795Z [INFO ] payment.gateway: Cache hit ratio: 93.4% on key 'session:5962'
+2026-03-15T12:00:19.747Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.745Z [INFO ] http.router    : Cache hit ratio: 90.0% on key 'session:5392'
+2026-03-15T12:00:21.316Z [INFO ] db.pool        : Payload serialized with size 153 bytes
+2026-03-15T12:00:23.846Z [WARN ] auth.service   : User 9276 authenticated successfully from IP 192.168.1.139
+2026-03-15T12:00:26.132Z [INFO ] auth.service   : Payload serialized with size 2708 bytes
+2026-03-15T12:00:27.515Z [DEBUG] http.router    : Cache hit ratio: 96.4% on key 'session:5223'
+2026-03-15T12:00:28.499Z [DEBUG] cache.redis    : Cache hit ratio: 82.6% on key 'session:9712'
+2026-03-15T12:00:31.961Z [INFO ] db.pool        : Query execution completed in 72.75 ms for table 'orders'
+2026-03-15T12:00:33.789Z [ERROR] db.pool        : Query execution completed in 61.23 ms for table 'orders'
+2026-03-15T12:00:36.466Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:39.983Z [INFO ] db.pool        : Query execution completed in 101.01 ms for table 'orders'
+2026-03-15T12:00:42.937Z [INFO ] worker.celery  : User 5849 authenticated successfully from IP 192.168.1.138
+2026-03-15T12:00:43.592Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_962024', retrying...
+2026-03-15T12:00:43.891Z [TRACE] http.router    : User 4554 authenticated successfully from IP 192.168.1.216
+2026-03-15T12:00:46.238Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_300823', retrying...
+2026-03-15T12:00:47.633Z [TRACE] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.736Z [DEBUG] auth.service   : Transaction tx_292245 committed with status code 200
+2026-03-15T12:00:48.981Z [DEBUG] http.router    : Query execution completed in 132.75 ms for table 'orders'
+2026-03-15T12:00:51.861Z [DEBUG] payment.gateway: User 5846 authenticated successfully from IP 192.168.1.88
+2026-03-15T12:00:51.213Z [DEBUG] worker.celery  : Transaction tx_498683 committed with status code 200
+2026-03-15T12:00:52.352Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_371299', retrying...
+2026-03-15T12:00:55.108Z [INFO ] db.pool        : User 8713 authenticated successfully from IP 192.168.1.2
+2026-03-15T12:00:56.982Z [INFO ] cache.redis    : Query execution completed in 79.82 ms for table 'orders'
+2026-03-15T12:00:56.806Z [INFO ] cache.redis    : Cache hit ratio: 84.0% on key 'session:4257'
+2026-03-15T12:00:59.569Z [INFO ] http.router    : Payload serialized with size 3658 bytes
+2026-03-15T12:00:59.285Z [INFO ] worker.celery  : User 2588 authenticated successfully from IP 192.168.1.132
+2026-03-15T12:00:01.391Z [TRACE] auth.service   : Cache hit ratio: 72.3% on key 'session:7624'
+2026-03-15T12:00:03.891Z [INFO ] cache.redis    : Transaction tx_542166 committed with status code 200
+2026-03-15T12:00:06.213Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_572786', retrying...
+2026-03-15T12:00:09.908Z [DEBUG] worker.celery  : Connection established to cluster node 13
+2026-03-15T12:00:09.458Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_468618', retrying...
+2026-03-15T12:00:09.852Z [INFO ] payment.gateway: Payload serialized with size 505 bytes
+2026-03-15T12:00:09.574Z [INFO ] auth.service   : Connection established to cluster node 13
+2026-03-15T12:00:10.790Z [INFO ] payment.gateway: User 8435 authenticated successfully from IP 192.168.1.64
+2026-03-15T12:00:12.497Z [DEBUG] db.pool        : Payload serialized with size 469 bytes
+2026-03-15T12:00:15.538Z [DEBUG] cache.redis    : Payload serialized with size 1203 bytes
+2026-03-15T12:00:18.646Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:19.505Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_439626', retrying...
+2026-03-15T12:00:21.398Z [INFO ] http.router    : Transaction tx_987808 committed with status code 200
+2026-03-15T12:00:21.622Z [DEBUG] db.pool        : Cache hit ratio: 83.2% on key 'session:5710'
+2026-03-15T12:00:22.311Z [INFO ] cache.redis    : Connection established to cluster node 2
+2026-03-15T12:00:24.810Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:24.583Z [INFO ] http.router    : Transaction tx_511342 committed with status code 200
+2026-03-15T12:00:24.303Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:25.413Z [WARN ] http.router    : Transaction tx_802153 committed with status code 200
+2026-03-15T12:00:27.492Z [INFO ] payment.gateway: Cache hit ratio: 79.7% on key 'session:1984'
+2026-03-15T12:00:30.781Z [ERROR] worker.celery  : User 3502 authenticated successfully from IP 192.168.1.20
+2026-03-15T12:00:32.332Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_715539', retrying...
+2026-03-15T12:00:35.250Z [INFO ] worker.celery  : Payload serialized with size 2306 bytes
+2026-03-15T12:00:36.995Z [INFO ] cache.redis    : Cache hit ratio: 76.0% on key 'session:4970'
+2026-03-15T12:00:37.798Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_239023', retrying...
+2026-03-15T12:00:40.700Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:42.903Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_436570', retrying...
+2026-03-15T12:00:44.678Z [INFO ] cache.redis    : Cache hit ratio: 99.1% on key 'session:7768'
+2026-03-15T12:00:47.935Z [WARN ] worker.celery  : Payload serialized with size 2269 bytes
+2026-03-15T12:00:48.625Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:49.899Z [INFO ] cache.redis    : User 8012 authenticated successfully from IP 192.168.1.241
+2026-03-15T12:00:49.517Z [WARN ] payment.gateway: Cache hit ratio: 72.1% on key 'session:6761'
+2026-03-15T12:00:50.156Z [INFO ] auth.service   : Connection established to cluster node 9
+2026-03-15T12:00:53.795Z [DEBUG] cache.redis    : Connection established to cluster node 16
+2026-03-15T12:00:56.523Z [INFO ] auth.service   : Query execution completed in 140.22 ms for table 'orders'
+2026-03-15T12:00:57.984Z [WARN ] http.router    : Transaction tx_283942 committed with status code 200
+2026-03-15T12:00:00.154Z [INFO ] cache.redis    : Connection established to cluster node 2
+2026-03-15T12:00:01.306Z [INFO ] payment.gateway: Query execution completed in 8.07 ms for table 'orders'
+2026-03-15T12:00:02.897Z [TRACE] payment.gateway: Cache hit ratio: 97.0% on key 'session:3107'
+2026-03-15T12:00:03.444Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.233Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:07.700Z [INFO ] cache.redis    : Query execution completed in 135.03 ms for table 'orders'
+2026-03-15T12:00:08.289Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_480385', retrying...
+2026-03-15T12:00:08.586Z [INFO ] cache.redis    : Transaction tx_551512 committed with status code 200
+2026-03-15T12:00:09.854Z [INFO ] payment.gateway: Transaction tx_271175 committed with status code 200
+2026-03-15T12:00:10.351Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:10.350Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_789174', retrying...
+2026-03-15T12:00:13.968Z [DEBUG] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:15.693Z [DEBUG] db.pool        : User 8625 authenticated successfully from IP 192.168.1.121
+2026-03-15T12:00:16.627Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:16.724Z [INFO ] db.pool        : Transaction tx_414207 committed with status code 200
+2026-03-15T12:00:19.782Z [DEBUG] worker.celery  : Transaction tx_702663 committed with status code 200
+2026-03-15T12:00:21.863Z [ERROR] worker.celery  : Failed to acquire lock on resource 'txn:tx_445253', retrying...
+2026-03-15T12:00:21.210Z [WARN ] auth.service   : Payload serialized with size 536 bytes
+2026-03-15T12:00:22.872Z [INFO ] db.pool        : Connection established to cluster node 11
+2026-03-15T12:00:22.520Z [WARN ] payment.gateway: Query execution completed in 19.88 ms for table 'orders'
+2026-03-15T12:00:23.486Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_186403', retrying...
+2026-03-15T12:00:24.861Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_627959', retrying...
+2026-03-15T12:00:25.461Z [ERROR] auth.service   : Cache hit ratio: 90.7% on key 'session:7261'
+2026-03-15T12:00:28.128Z [INFO ] cache.redis    : Transaction tx_676285 committed with status code 200
+2026-03-15T12:00:30.978Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_990814', retrying...
+2026-03-15T12:00:30.213Z [TRACE] http.router    : User 6225 authenticated successfully from IP 192.168.1.53
+2026-03-15T12:00:31.408Z [DEBUG] auth.service   : Query execution completed in 23.75 ms for table 'orders'
+2026-03-15T12:00:31.932Z [TRACE] worker.celery  : Payload serialized with size 1831 bytes
+2026-03-15T12:00:33.474Z [ERROR] auth.service   : Cache hit ratio: 97.5% on key 'session:1088'
+2026-03-15T12:00:34.933Z [DEBUG] worker.celery  : Payload serialized with size 2691 bytes
+2026-03-15T12:00:34.156Z [TRACE] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:34.983Z [DEBUG] db.pool        : Connection established to cluster node 12
+2026-03-15T12:00:34.746Z [INFO ] db.pool        : Cache hit ratio: 73.5% on key 'session:7215'
+2026-03-15T12:00:36.637Z [WARN ] worker.celery  : Transaction tx_530262 committed with status code 200
+2026-03-15T12:00:36.634Z [DEBUG] worker.celery  : Connection established to cluster node 4
+2026-03-15T12:00:36.221Z [WARN ] db.pool        : Query execution completed in 74.71 ms for table 'orders'
+2026-03-15T12:00:39.808Z [DEBUG] auth.service   : Cache hit ratio: 87.0% on key 'session:8302'
+2026-03-15T12:00:40.129Z [DEBUG] worker.celery  : Query execution completed in 46.01 ms for table 'orders'
+2026-03-15T12:00:40.872Z [WARN ] db.pool        : Transaction tx_586541 committed with status code 200
+2026-03-15T12:00:43.254Z [DEBUG] payment.gateway: Cache hit ratio: 70.9% on key 'session:9254'
+2026-03-15T12:00:43.825Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:44.812Z [ERROR] http.router    : User 8292 authenticated successfully from IP 192.168.1.188
+2026-03-15T12:00:45.899Z [DEBUG] payment.gateway: User 3847 authenticated successfully from IP 192.168.1.248
+2026-03-15T12:00:45.170Z [INFO ] http.router    : User 8682 authenticated successfully from IP 192.168.1.37
+2026-03-15T12:00:45.250Z [TRACE] worker.celery  : Connection established to cluster node 7
+2026-03-15T12:00:48.420Z [INFO ] worker.celery  : User 3439 authenticated successfully from IP 192.168.1.170
+2026-03-15T12:00:48.144Z [DEBUG] http.router    : Query execution completed in 32.25 ms for table 'orders'
+2026-03-15T12:00:49.377Z [DEBUG] db.pool        : Payload serialized with size 974 bytes
+2026-03-15T12:00:50.109Z [INFO ] auth.service   : User 3819 authenticated successfully from IP 192.168.1.215
+2026-03-15T12:00:53.747Z [ERROR] worker.celery  : Failed to acquire lock on resource 'txn:tx_773863', retrying...
+2026-03-15T12:00:55.904Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_299753', retrying...
+2026-03-15T12:00:58.578Z [ERROR] payment.gateway: Failed to acquire lock on resource 'txn:tx_572745', retrying...
+2026-03-15T12:00:58.962Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_192962', retrying...
+2026-03-15T12:00:00.342Z [TRACE] auth.service   : Failed to acquire lock on resource 'txn:tx_453771', retrying...
+2026-03-15T12:00:00.513Z [INFO ] worker.celery  : User 4295 authenticated successfully from IP 192.168.1.2
+2026-03-15T12:00:00.293Z [DEBUG] cache.redis    : Connection established to cluster node 1
+2026-03-15T12:00:03.742Z [DEBUG] auth.service   : Connection established to cluster node 2
+2026-03-15T12:00:05.460Z [INFO ] worker.celery  : Connection established to cluster node 8
+2026-03-15T12:00:08.567Z [DEBUG] db.pool        : Cache hit ratio: 82.8% on key 'session:7334'
+2026-03-15T12:00:08.288Z [DEBUG] db.pool        : Payload serialized with size 1250 bytes
+2026-03-15T12:00:10.418Z [DEBUG] auth.service   : User 3433 authenticated successfully from IP 192.168.1.61
+2026-03-15T12:00:11.887Z [INFO ] http.router    : Connection established to cluster node 16
+2026-03-15T12:00:12.892Z [DEBUG] cache.redis    : Connection established to cluster node 5
+2026-03-15T12:00:15.608Z [DEBUG] worker.celery  : Cache hit ratio: 76.9% on key 'session:1419'
+2026-03-15T12:00:16.861Z [WARN ] worker.celery  : Query execution completed in 76.30 ms for table 'orders'
+2026-03-15T12:00:16.281Z [INFO ] payment.gateway: Connection established to cluster node 10
+2026-03-15T12:00:19.839Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.374Z [INFO ] worker.celery  : Transaction tx_652744 committed with status code 200
+2026-03-15T12:00:20.971Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_365643', retrying...
+2026-03-15T12:00:21.975Z [DEBUG] payment.gateway: Connection established to cluster node 12
+2026-03-15T12:00:23.625Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:26.537Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:28.741Z [DEBUG] worker.celery  : Cache hit ratio: 97.8% on key 'session:1203'
+2026-03-15T12:00:30.981Z [WARN ] worker.celery  : Failed to acquire lock on resource 'txn:tx_322518', retrying...
+2026-03-15T12:00:33.607Z [INFO ] payment.gateway: Payload serialized with size 3765 bytes
+2026-03-15T12:00:34.484Z [DEBUG] db.pool        : Connection established to cluster node 7
+2026-03-15T12:00:34.332Z [DEBUG] cache.redis    : Payload serialized with size 1042 bytes
+2026-03-15T12:00:35.326Z [INFO ] payment.gateway: Connection established to cluster node 12
+2026-03-15T12:00:36.489Z [INFO ] worker.celery  : Query execution completed in 51.84 ms for table 'orders'
+2026-03-15T12:00:38.393Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_447498', retrying...
+2026-03-15T12:00:41.521Z [INFO ] payment.gateway: Transaction tx_905245 committed with status code 200
+2026-03-15T12:00:44.634Z [DEBUG] worker.celery  : Payload serialized with size 1447 bytes
+2026-03-15T12:00:44.499Z [DEBUG] payment.gateway: Transaction tx_137366 committed with status code 200
+2026-03-15T12:00:44.824Z [DEBUG] cache.redis    : Connection established to cluster node 6
+2026-03-15T12:00:47.583Z [INFO ] cache.redis    : Cache hit ratio: 78.7% on key 'session:4598'
+2026-03-15T12:00:48.847Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_766921', retrying...
+2026-03-15T12:00:51.234Z [WARN ] db.pool        : Transaction tx_861920 committed with status code 200
+2026-03-15T12:00:54.964Z [INFO ] auth.service   : Cache hit ratio: 83.9% on key 'session:7967'
+2026-03-15T12:00:57.785Z [INFO ] cache.redis    : Payload serialized with size 3620 bytes
+2026-03-15T12:00:00.851Z [DEBUG] cache.redis    : Connection established to cluster node 2
+2026-03-15T12:00:00.768Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:00.115Z [DEBUG] auth.service   : Query execution completed in 136.19 ms for table 'orders'
+2026-03-15T12:00:02.399Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:03.607Z [ERROR] cache.redis    : Query execution completed in 112.61 ms for table 'orders'
+2026-03-15T12:00:05.870Z [ERROR] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.605Z [DEBUG] worker.celery  : Connection established to cluster node 7
+2026-03-15T12:00:08.621Z [ERROR] payment.gateway: Transaction tx_357666 committed with status code 200
+2026-03-15T12:00:08.685Z [INFO ] db.pool        : Cache hit ratio: 99.4% on key 'session:7136'
+2026-03-15T12:00:09.946Z [INFO ] db.pool        : Transaction tx_414813 committed with status code 200
+2026-03-15T12:00:10.207Z [INFO ] payment.gateway: Payload serialized with size 1497 bytes
+2026-03-15T12:00:11.219Z [INFO ] worker.celery  : Transaction tx_491721 committed with status code 200
+2026-03-15T12:00:11.245Z [WARN ] http.router    : Cache hit ratio: 70.9% on key 'session:3098'
+2026-03-15T12:00:12.972Z [WARN ] payment.gateway: Payload serialized with size 1875 bytes
+2026-03-15T12:00:15.132Z [INFO ] payment.gateway: User 8838 authenticated successfully from IP 192.168.1.29
+2026-03-15T12:00:15.291Z [INFO ] db.pool        : Transaction tx_848831 committed with status code 200
+2026-03-15T12:00:16.325Z [INFO ] db.pool        : Cache hit ratio: 94.4% on key 'session:3475'
+2026-03-15T12:00:17.798Z [INFO ] auth.service   : User 2123 authenticated successfully from IP 192.168.1.42
+2026-03-15T12:00:17.721Z [INFO ] auth.service   : Query execution completed in 2.90 ms for table 'orders'
+2026-03-15T12:00:20.667Z [DEBUG] db.pool        : User 7313 authenticated successfully from IP 192.168.1.230
+2026-03-15T12:00:21.320Z [DEBUG] cache.redis    : User 1511 authenticated successfully from IP 192.168.1.169
+2026-03-15T12:00:24.202Z [ERROR] auth.service   : Payload serialized with size 466 bytes
+2026-03-15T12:00:27.574Z [DEBUG] worker.celery  : User 1447 authenticated successfully from IP 192.168.1.196
+2026-03-15T12:00:29.717Z [WARN ] cache.redis    : Failed to acquire lock on resource 'txn:tx_384320', retrying...
+2026-03-15T12:00:32.207Z [WARN ] payment.gateway: Cache hit ratio: 89.5% on key 'session:3058'
+2026-03-15T12:00:34.134Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:37.798Z [DEBUG] auth.service   : Cache hit ratio: 92.5% on key 'session:3746'
+2026-03-15T12:00:38.659Z [DEBUG] http.router    : Query execution completed in 41.37 ms for table 'orders'
+2026-03-15T12:00:41.547Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_414251', retrying...
+2026-03-15T12:00:44.992Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:47.953Z [DEBUG] cache.redis    : Transaction tx_627374 committed with status code 200
+2026-03-15T12:00:48.583Z [WARN ] auth.service   : Cache hit ratio: 85.6% on key 'session:1564'
+2026-03-15T12:00:48.862Z [WARN ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.925Z [INFO ] cache.redis    : Connection established to cluster node 3
+2026-03-15T12:00:51.860Z [INFO ] payment.gateway: Query execution completed in 8.36 ms for table 'orders'
+2026-03-15T12:00:54.184Z [INFO ] auth.service   : Connection established to cluster node 4
+2026-03-15T12:00:56.327Z [DEBUG] cache.redis    : Payload serialized with size 328 bytes
+2026-03-15T12:00:56.170Z [INFO ] auth.service   : Query execution completed in 90.13 ms for table 'orders'
+2026-03-15T12:00:58.238Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.836Z [WARN ] worker.celery  : Cache hit ratio: 83.5% on key 'session:3500'
+2026-03-15T12:00:01.435Z [INFO ] cache.redis    : Query execution completed in 89.63 ms for table 'orders'
+2026-03-15T12:00:01.819Z [DEBUG] auth.service   : User 2265 authenticated successfully from IP 192.168.1.131
+2026-03-15T12:00:02.495Z [WARN ] http.router    : Connection established to cluster node 6
+2026-03-15T12:00:02.219Z [TRACE] cache.redis    : Cache hit ratio: 98.7% on key 'session:8531'
+2026-03-15T12:00:03.452Z [INFO ] payment.gateway: Payload serialized with size 959 bytes
+2026-03-15T12:00:04.449Z [INFO ] worker.celery  : Transaction tx_326814 committed with status code 200
+2026-03-15T12:00:07.769Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_334964', retrying...
+2026-03-15T12:00:08.668Z [INFO ] payment.gateway: Payload serialized with size 4038 bytes
+2026-03-15T12:00:08.458Z [INFO ] db.pool        : Payload serialized with size 3171 bytes
+2026-03-15T12:00:11.830Z [INFO ] worker.celery  : Query execution completed in 69.77 ms for table 'orders'
+2026-03-15T12:00:14.913Z [DEBUG] cache.redis    : Payload serialized with size 4028 bytes
+2026-03-15T12:00:15.982Z [INFO ] auth.service   : Connection established to cluster node 5
+2026-03-15T12:00:16.382Z [DEBUG] auth.service   : Transaction tx_661355 committed with status code 200
+2026-03-15T12:00:19.223Z [INFO ] payment.gateway: Query execution completed in 142.24 ms for table 'orders'
+2026-03-15T12:00:19.412Z [INFO ] worker.celery  : Payload serialized with size 285 bytes
+2026-03-15T12:00:19.490Z [INFO ] payment.gateway: Transaction tx_275510 committed with status code 200
+2026-03-15T12:00:19.525Z [INFO ] auth.service   : Transaction tx_175498 committed with status code 200
+2026-03-15T12:00:21.171Z [DEBUG] http.router    : Payload serialized with size 2239 bytes
+2026-03-15T12:00:24.559Z [DEBUG] cache.redis    : User 2251 authenticated successfully from IP 192.168.1.252
+2026-03-15T12:00:24.231Z [DEBUG] payment.gateway: Transaction tx_641410 committed with status code 200
+2026-03-15T12:00:26.638Z [INFO ] worker.celery  : Connection established to cluster node 8
+2026-03-15T12:00:29.541Z [DEBUG] http.router    : User 5994 authenticated successfully from IP 192.168.1.159
+2026-03-15T12:00:31.881Z [INFO ] cache.redis    : Connection established to cluster node 12
+2026-03-15T12:00:31.225Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_601518', retrying...
+2026-03-15T12:00:32.945Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:34.773Z [INFO ] payment.gateway: Payload serialized with size 1213 bytes
+2026-03-15T12:00:36.654Z [TRACE] auth.service   : User 7606 authenticated successfully from IP 192.168.1.135
+2026-03-15T12:00:37.181Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:40.713Z [INFO ] db.pool        : User 8099 authenticated successfully from IP 192.168.1.13
+2026-03-15T12:00:40.815Z [WARN ] payment.gateway: Cache hit ratio: 86.6% on key 'session:7700'
+2026-03-15T12:00:40.637Z [DEBUG] worker.celery  : Transaction tx_325567 committed with status code 200
+2026-03-15T12:00:40.369Z [INFO ] payment.gateway: Payload serialized with size 3904 bytes
+2026-03-15T12:00:40.193Z [INFO ] http.router    : Query execution completed in 17.69 ms for table 'orders'
+2026-03-15T12:00:41.839Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_865284', retrying...
+2026-03-15T12:00:43.793Z [INFO ] worker.celery  : Payload serialized with size 3009 bytes
+2026-03-15T12:00:44.454Z [INFO ] payment.gateway: Query execution completed in 138.00 ms for table 'orders'
+2026-03-15T12:00:45.268Z [INFO ] db.pool        : Query execution completed in 10.27 ms for table 'orders'
+2026-03-15T12:00:46.264Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_297139', retrying...
+2026-03-15T12:00:46.806Z [ERROR] cache.redis    : Query execution completed in 37.69 ms for table 'orders'
+2026-03-15T12:00:48.556Z [ERROR] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.972Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:51.149Z [INFO ] http.router    : Cache hit ratio: 78.1% on key 'session:4292'
+2026-03-15T12:00:52.242Z [WARN ] worker.celery  : Failed to acquire lock on resource 'txn:tx_807135', retrying...
+2026-03-15T12:00:53.246Z [INFO ] worker.celery  : Query execution completed in 65.54 ms for table 'orders'
+2026-03-15T12:00:56.637Z [INFO ] auth.service   : Connection established to cluster node 16
+2026-03-15T12:00:59.876Z [INFO ] worker.celery  : User 3952 authenticated successfully from IP 192.168.1.184
+2026-03-15T12:00:01.475Z [ERROR] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:04.581Z [DEBUG] worker.celery  : User 4121 authenticated successfully from IP 192.168.1.125
+2026-03-15T12:00:06.700Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.728Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:10.225Z [DEBUG] payment.gateway: Connection established to cluster node 2
+2026-03-15T12:00:12.267Z [ERROR] worker.celery  : Payload serialized with size 4042 bytes
+2026-03-15T12:00:14.753Z [DEBUG] worker.celery  : Connection established to cluster node 10
+2026-03-15T12:00:17.331Z [INFO ] db.pool        : Cache hit ratio: 73.3% on key 'session:4097'
+2026-03-15T12:00:19.438Z [INFO ] worker.celery  : Payload serialized with size 3890 bytes
+2026-03-15T12:00:20.152Z [INFO ] auth.service   : Query execution completed in 60.29 ms for table 'orders'
+2026-03-15T12:00:22.781Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_688596', retrying...
+2026-03-15T12:00:24.288Z [WARN ] worker.celery  : Transaction tx_199802 committed with status code 200
+2026-03-15T12:00:25.474Z [INFO ] auth.service   : Connection established to cluster node 7
+2026-03-15T12:00:26.889Z [DEBUG] db.pool        : User 5240 authenticated successfully from IP 192.168.1.129
+2026-03-15T12:00:27.670Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_358382', retrying...
+2026-03-15T12:00:28.256Z [INFO ] http.router    : Payload serialized with size 1475 bytes
+2026-03-15T12:00:29.893Z [DEBUG] cache.redis    : Payload serialized with size 2806 bytes
+2026-03-15T12:00:29.504Z [INFO ] worker.celery  : Payload serialized with size 3167 bytes
+2026-03-15T12:00:30.173Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:32.969Z [INFO ] worker.celery  : Transaction tx_778196 committed with status code 200
+2026-03-15T12:00:32.325Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:32.654Z [INFO ] http.router    : Payload serialized with size 2334 bytes
+2026-03-15T12:00:34.327Z [TRACE] worker.celery  : Failed to acquire lock on resource 'txn:tx_754001', retrying...
+2026-03-15T12:00:37.508Z [INFO ] auth.service   : Query execution completed in 15.77 ms for table 'orders'
+2026-03-15T12:00:40.303Z [TRACE] http.router    : Failed to acquire lock on resource 'txn:tx_908200', retrying...
+2026-03-15T12:00:41.404Z [DEBUG] worker.celery  : User 7427 authenticated successfully from IP 192.168.1.75
+2026-03-15T12:00:44.565Z [INFO ] auth.service   : Query execution completed in 66.92 ms for table 'orders'
+2026-03-15T12:00:44.361Z [TRACE] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:46.497Z [WARN ] worker.celery  : Query execution completed in 139.16 ms for table 'orders'
+2026-03-15T12:00:46.355Z [INFO ] worker.celery  : User 8036 authenticated successfully from IP 192.168.1.44
+2026-03-15T12:00:47.155Z [INFO ] db.pool        : Query execution completed in 92.23 ms for table 'orders'
+2026-03-15T12:00:50.436Z [DEBUG] cache.redis    : Query execution completed in 136.92 ms for table 'orders'
+2026-03-15T12:00:51.971Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:53.687Z [DEBUG] cache.redis    : User 2507 authenticated successfully from IP 192.168.1.54
+2026-03-15T12:00:56.878Z [WARN ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:57.878Z [WARN ] auth.service   : User 1271 authenticated successfully from IP 192.168.1.113
+2026-03-15T12:00:00.625Z [INFO ] payment.gateway: Connection established to cluster node 16
+2026-03-15T12:00:02.642Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:02.795Z [TRACE] http.router    : Transaction tx_814139 committed with status code 200
+2026-03-15T12:00:03.644Z [WARN ] auth.service   : Connection established to cluster node 9
+2026-03-15T12:00:03.587Z [WARN ] db.pool        : User 8945 authenticated successfully from IP 192.168.1.70
+2026-03-15T12:00:05.382Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_603788', retrying...
+2026-03-15T12:00:06.649Z [INFO ] http.router    : Payload serialized with size 914 bytes
+2026-03-15T12:00:08.966Z [INFO ] db.pool        : User 3275 authenticated successfully from IP 192.168.1.63
+2026-03-15T12:00:11.742Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:12.754Z [WARN ] db.pool        : Connection established to cluster node 6
+2026-03-15T12:00:12.158Z [INFO ] auth.service   : Connection established to cluster node 13
+2026-03-15T12:00:14.887Z [DEBUG] cache.redis    : User 7617 authenticated successfully from IP 192.168.1.131
+2026-03-15T12:00:15.846Z [WARN ] db.pool        : User 7795 authenticated successfully from IP 192.168.1.56
+2026-03-15T12:00:16.370Z [DEBUG] cache.redis    : Payload serialized with size 3822 bytes
+2026-03-15T12:00:16.356Z [WARN ] worker.celery  : Transaction tx_153895 committed with status code 200
+2026-03-15T12:00:16.878Z [DEBUG] http.router    : Connection established to cluster node 8
+2026-03-15T12:00:16.894Z [WARN ] worker.celery  : Payload serialized with size 4066 bytes
+2026-03-15T12:00:18.660Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.414Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:21.547Z [INFO ] auth.service   : Payload serialized with size 2931 bytes
+2026-03-15T12:00:22.785Z [INFO ] cache.redis    : Cache hit ratio: 96.2% on key 'session:9125'
+2026-03-15T12:00:22.762Z [INFO ] http.router    : Connection established to cluster node 11
+2026-03-15T12:00:24.589Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_212621', retrying...
+2026-03-15T12:00:25.538Z [DEBUG] db.pool        : Payload serialized with size 3312 bytes
+2026-03-15T12:00:28.460Z [INFO ] db.pool        : Cache hit ratio: 79.8% on key 'session:2313'
+2026-03-15T12:00:28.344Z [TRACE] http.router    : Connection established to cluster node 14
+2026-03-15T12:00:30.974Z [INFO ] http.router    : Cache hit ratio: 79.2% on key 'session:1026'
+2026-03-15T12:00:32.846Z [DEBUG] db.pool        : Connection established to cluster node 11
+2026-03-15T12:00:34.688Z [DEBUG] worker.celery  : Transaction tx_877024 committed with status code 200
+2026-03-15T12:00:36.171Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_386184', retrying...
+2026-03-15T12:00:39.208Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_176959', retrying...
+2026-03-15T12:00:42.127Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_970918', retrying...
+2026-03-15T12:00:45.233Z [DEBUG] payment.gateway: Connection established to cluster node 14
+2026-03-15T12:00:46.182Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_628950', retrying...
+2026-03-15T12:00:49.565Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.976Z [INFO ] payment.gateway: User 3880 authenticated successfully from IP 192.168.1.65
+2026-03-15T12:00:52.746Z [DEBUG] payment.gateway: User 5400 authenticated successfully from IP 192.168.1.230
+2026-03-15T12:00:53.269Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_484642', retrying...
+2026-03-15T12:00:56.133Z [INFO ] auth.service   : Connection established to cluster node 10
+2026-03-15T12:00:57.724Z [DEBUG] worker.celery  : Connection established to cluster node 2
+2026-03-15T12:00:59.611Z [INFO ] cache.redis    : Connection established to cluster node 2
+2026-03-15T12:00:59.424Z [WARN ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:01.300Z [INFO ] db.pool        : User 1544 authenticated successfully from IP 192.168.1.42
+2026-03-15T12:00:04.982Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.390Z [INFO ] cache.redis    : Connection established to cluster node 4
+2026-03-15T12:00:06.199Z [ERROR] http.router    : Connection established to cluster node 11
+2026-03-15T12:00:08.642Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.195Z [ERROR] worker.celery  : Connection established to cluster node 3
+2026-03-15T12:00:13.232Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:16.408Z [INFO ] auth.service   : Connection established to cluster node 10
+2026-03-15T12:00:18.422Z [INFO ] worker.celery  : User 7342 authenticated successfully from IP 192.168.1.212
+2026-03-15T12:00:18.560Z [INFO ] worker.celery  : Payload serialized with size 924 bytes
+2026-03-15T12:00:20.274Z [WARN ] payment.gateway: Failed to acquire lock on resource 'txn:tx_388552', retrying...
+2026-03-15T12:00:20.565Z [DEBUG] auth.service   : Query execution completed in 49.72 ms for table 'orders'
+2026-03-15T12:00:21.580Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:24.901Z [DEBUG] cache.redis    : Cache hit ratio: 71.4% on key 'session:6614'
+2026-03-15T12:00:27.870Z [DEBUG] db.pool        : User 8290 authenticated successfully from IP 192.168.1.164
+2026-03-15T12:00:28.536Z [TRACE] db.pool        : Connection established to cluster node 7
+2026-03-15T12:00:31.965Z [INFO ] worker.celery  : Payload serialized with size 3874 bytes
+2026-03-15T12:00:33.379Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:35.965Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_986409', retrying...
+2026-03-15T12:00:36.266Z [INFO ] db.pool        : Transaction tx_675286 committed with status code 200
+2026-03-15T12:00:39.775Z [DEBUG] payment.gateway: Cache hit ratio: 90.6% on key 'session:3806'
+2026-03-15T12:00:41.740Z [INFO ] cache.redis    : Transaction tx_978888 committed with status code 200
+2026-03-15T12:00:43.306Z [INFO ] db.pool        : User 1745 authenticated successfully from IP 192.168.1.219
+2026-03-15T12:00:45.988Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:46.784Z [INFO ] db.pool        : Query execution completed in 30.42 ms for table 'orders'
+2026-03-15T12:00:49.952Z [INFO ] db.pool        : Connection established to cluster node 5
+2026-03-15T12:00:51.862Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:54.521Z [INFO ] db.pool        : User 9822 authenticated successfully from IP 192.168.1.100
+2026-03-15T12:00:57.829Z [DEBUG] cache.redis    : User 5555 authenticated successfully from IP 192.168.1.189
+2026-03-15T12:00:58.525Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_729502', retrying...
+2026-03-15T12:00:59.403Z [DEBUG] payment.gateway: Cache hit ratio: 73.8% on key 'session:2984'
+2026-03-15T12:00:02.191Z [INFO ] http.router    : Payload serialized with size 3755 bytes
+2026-03-15T12:00:02.752Z [INFO ] cache.redis    : Cache hit ratio: 99.6% on key 'session:5830'
+2026-03-15T12:00:05.510Z [INFO ] http.router    : Cache hit ratio: 85.9% on key 'session:3652'
+2026-03-15T12:00:06.140Z [DEBUG] payment.gateway: Query execution completed in 0.99 ms for table 'orders'
+2026-03-15T12:00:09.204Z [INFO ] payment.gateway: Cache hit ratio: 88.1% on key 'session:8144'
+2026-03-15T12:00:09.547Z [WARN ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.711Z [DEBUG] db.pool        : Cache hit ratio: 74.7% on key 'session:2346'
+2026-03-15T12:00:14.502Z [INFO ] auth.service   : Transaction tx_395623 committed with status code 200
+2026-03-15T12:00:17.553Z [DEBUG] db.pool        : Query execution completed in 114.87 ms for table 'orders'
+2026-03-15T12:00:17.637Z [INFO ] db.pool        : Transaction tx_280704 committed with status code 200
+2026-03-15T12:00:18.313Z [WARN ] db.pool        : Transaction tx_252800 committed with status code 200
+2026-03-15T12:00:20.781Z [INFO ] db.pool        : Connection established to cluster node 1
+2026-03-15T12:00:23.146Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:25.343Z [DEBUG] http.router    : Transaction tx_824311 committed with status code 200
+2026-03-15T12:00:26.238Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:27.908Z [INFO ] payment.gateway: Cache hit ratio: 96.5% on key 'session:8005'
+2026-03-15T12:00:27.659Z [INFO ] payment.gateway: Query execution completed in 126.43 ms for table 'orders'
+2026-03-15T12:00:29.743Z [WARN ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:30.232Z [DEBUG] http.router    : Cache hit ratio: 82.1% on key 'session:2785'
+2026-03-15T12:00:33.452Z [INFO ] cache.redis    : Transaction tx_269727 committed with status code 200
+2026-03-15T12:00:36.635Z [INFO ] cache.redis    : Connection established to cluster node 13
+2026-03-15T12:00:39.153Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_277169', retrying...
+2026-03-15T12:00:39.337Z [DEBUG] worker.celery  : Connection established to cluster node 9
+2026-03-15T12:00:39.693Z [INFO ] db.pool        : Cache hit ratio: 78.6% on key 'session:3869'
+2026-03-15T12:00:39.383Z [INFO ] auth.service   : Transaction tx_544837 committed with status code 200
+2026-03-15T12:00:41.341Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:41.354Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.298Z [DEBUG] auth.service   : Cache hit ratio: 79.5% on key 'session:4218'
+2026-03-15T12:00:43.868Z [INFO ] payment.gateway: Payload serialized with size 2059 bytes
+2026-03-15T12:00:45.359Z [INFO ] db.pool        : Transaction tx_483946 committed with status code 200
+2026-03-15T12:00:47.753Z [WARN ] http.router    : Payload serialized with size 2385 bytes
+2026-03-15T12:00:49.781Z [INFO ] db.pool        : Transaction tx_983717 committed with status code 200
+2026-03-15T12:00:50.962Z [WARN ] auth.service   : Query execution completed in 87.72 ms for table 'orders'
+2026-03-15T12:00:50.583Z [WARN ] payment.gateway: User 3829 authenticated successfully from IP 192.168.1.29
+2026-03-15T12:00:53.216Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:55.854Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:58.328Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_494363', retrying...
+2026-03-15T12:00:00.457Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:01.469Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:04.388Z [WARN ] http.router    : User 8384 authenticated successfully from IP 192.168.1.156
+2026-03-15T12:00:04.649Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.170Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_995963', retrying...
+2026-03-15T12:00:09.462Z [DEBUG] http.router    : Transaction tx_804159 committed with status code 200
+2026-03-15T12:00:10.737Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:13.490Z [INFO ] payment.gateway: Query execution completed in 5.56 ms for table 'orders'
+2026-03-15T12:00:13.230Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_454719', retrying...
+2026-03-15T12:00:16.493Z [INFO ] worker.celery  : User 1957 authenticated successfully from IP 192.168.1.161
+2026-03-15T12:00:17.693Z [ERROR] worker.celery  : Payload serialized with size 394 bytes
+2026-03-15T12:00:18.293Z [DEBUG] worker.celery  : Cache hit ratio: 70.2% on key 'session:2109'
+2026-03-15T12:00:19.156Z [DEBUG] auth.service   : Transaction tx_823032 committed with status code 200
+2026-03-15T12:00:22.657Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:23.149Z [DEBUG] db.pool        : Cache hit ratio: 74.2% on key 'session:9202'
+2026-03-15T12:00:24.261Z [INFO ] payment.gateway: Cache hit ratio: 74.7% on key 'session:4937'
+2026-03-15T12:00:27.319Z [INFO ] cache.redis    : Transaction tx_485391 committed with status code 200
+2026-03-15T12:00:29.360Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_249840', retrying...
+2026-03-15T12:00:30.896Z [DEBUG] cache.redis    : Transaction tx_187192 committed with status code 200
+2026-03-15T12:00:31.586Z [DEBUG] payment.gateway: Transaction tx_242467 committed with status code 200
+2026-03-15T12:00:34.857Z [DEBUG] worker.celery  : Query execution completed in 88.01 ms for table 'orders'
+2026-03-15T12:00:35.937Z [DEBUG] db.pool        : Connection established to cluster node 12
+2026-03-15T12:00:36.572Z [INFO ] auth.service   : Connection established to cluster node 14
+2026-03-15T12:00:38.849Z [INFO ] db.pool        : Transaction tx_328359 committed with status code 200
+2026-03-15T12:00:41.729Z [TRACE] cache.redis    : Failed to acquire lock on resource 'txn:tx_864684', retrying...
+2026-03-15T12:00:42.885Z [ERROR] db.pool        : Cache hit ratio: 99.0% on key 'session:9547'
+2026-03-15T12:00:44.508Z [TRACE] worker.celery  : Cache hit ratio: 97.0% on key 'session:7112'
+2026-03-15T12:00:46.505Z [DEBUG] cache.redis    : Query execution completed in 70.11 ms for table 'orders'
+2026-03-15T12:00:46.207Z [INFO ] cache.redis    : Cache hit ratio: 82.6% on key 'session:8839'
+2026-03-15T12:00:47.690Z [DEBUG] worker.celery  : Failed to acquire lock on resource 'txn:tx_379278', retrying...
+2026-03-15T12:00:49.236Z [TRACE] payment.gateway: Transaction tx_387438 committed with status code 200
+2026-03-15T12:00:50.833Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:50.519Z [WARN ] http.router    : Payload serialized with size 990 bytes
+2026-03-15T12:00:53.637Z [INFO ] http.router    : Query execution completed in 48.35 ms for table 'orders'
+2026-03-15T12:00:54.878Z [WARN ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:56.428Z [INFO ] db.pool        : Cache hit ratio: 80.1% on key 'session:5613'
+2026-03-15T12:00:56.834Z [INFO ] db.pool        : Connection established to cluster node 14
+2026-03-15T12:00:56.204Z [INFO ] auth.service   : Cache hit ratio: 70.3% on key 'session:8434'
+2026-03-15T12:00:58.100Z [INFO ] worker.celery  : Cache hit ratio: 78.0% on key 'session:9673'
+2026-03-15T12:00:59.250Z [INFO ] payment.gateway: Payload serialized with size 262 bytes
+2026-03-15T12:00:02.869Z [WARN ] db.pool        : Transaction tx_670140 committed with status code 200
+2026-03-15T12:00:02.156Z [WARN ] cache.redis    : Transaction tx_877701 committed with status code 200
+2026-03-15T12:00:04.651Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:05.100Z [DEBUG] payment.gateway: Connection established to cluster node 9
+2026-03-15T12:00:07.202Z [INFO ] http.router    : User 8030 authenticated successfully from IP 192.168.1.93
+2026-03-15T12:00:10.401Z [INFO ] payment.gateway: Payload serialized with size 2299 bytes
+2026-03-15T12:00:11.243Z [INFO ] payment.gateway: Query execution completed in 88.87 ms for table 'orders'
+2026-03-15T12:00:14.877Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:15.196Z [INFO ] worker.celery  : Transaction tx_533319 committed with status code 200
+2026-03-15T12:00:18.769Z [DEBUG] worker.celery  : Query execution completed in 62.90 ms for table 'orders'
+2026-03-15T12:00:21.202Z [INFO ] worker.celery  : Connection established to cluster node 2
+2026-03-15T12:00:21.945Z [INFO ] auth.service   : Cache hit ratio: 91.5% on key 'session:6041'
+2026-03-15T12:00:22.219Z [DEBUG] payment.gateway: Transaction tx_967827 committed with status code 200
+2026-03-15T12:00:25.781Z [INFO ] auth.service   : Connection established to cluster node 9
+2026-03-15T12:00:28.925Z [TRACE] cache.redis    : Query execution completed in 40.86 ms for table 'orders'
+2026-03-15T12:00:28.392Z [INFO ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:30.205Z [INFO ] cache.redis    : User 3969 authenticated successfully from IP 192.168.1.94
+2026-03-15T12:00:31.230Z [WARN ] cache.redis    : Cache hit ratio: 75.6% on key 'session:1058'
+2026-03-15T12:00:33.175Z [DEBUG] payment.gateway: Payload serialized with size 76 bytes
+2026-03-15T12:00:36.523Z [DEBUG] cache.redis    : Connection established to cluster node 10
+2026-03-15T12:00:39.260Z [INFO ] http.router    : Payload serialized with size 1183 bytes
+2026-03-15T12:00:42.559Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.719Z [DEBUG] worker.celery  : Cache hit ratio: 73.6% on key 'session:6647'
+2026-03-15T12:00:44.887Z [INFO ] payment.gateway: User 7332 authenticated successfully from IP 192.168.1.105
+2026-03-15T12:00:46.415Z [DEBUG] db.pool        : Cache hit ratio: 88.7% on key 'session:6308'
+2026-03-15T12:00:46.431Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.240Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_559728', retrying...
+2026-03-15T12:00:51.158Z [WARN ] db.pool        : Transaction tx_215981 committed with status code 200
+2026-03-15T12:00:54.144Z [DEBUG] db.pool        : Connection established to cluster node 15
+2026-03-15T12:00:55.898Z [ERROR] http.router    : User 6109 authenticated successfully from IP 192.168.1.160
+2026-03-15T12:00:58.306Z [INFO ] db.pool        : Connection established to cluster node 9
+2026-03-15T12:00:00.909Z [INFO ] http.router    : User 9040 authenticated successfully from IP 192.168.1.78
+2026-03-15T12:00:00.281Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:01.832Z [INFO ] payment.gateway: User 3918 authenticated successfully from IP 192.168.1.31
+2026-03-15T12:00:04.723Z [INFO ] db.pool        : User 2497 authenticated successfully from IP 192.168.1.12
+2026-03-15T12:00:04.474Z [INFO ] http.router    : User 2899 authenticated successfully from IP 192.168.1.89
+2026-03-15T12:00:05.304Z [DEBUG] worker.celery  : Cache hit ratio: 94.9% on key 'session:3781'
+2026-03-15T12:00:05.482Z [INFO ] http.router    : Payload serialized with size 1352 bytes
+2026-03-15T12:00:08.116Z [DEBUG] auth.service   : Payload serialized with size 2454 bytes
+2026-03-15T12:00:09.398Z [INFO ] http.router    : Payload serialized with size 1493 bytes
+2026-03-15T12:00:12.639Z [DEBUG] auth.service   : Payload serialized with size 2558 bytes
+2026-03-15T12:00:13.613Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:13.901Z [TRACE] auth.service   : Transaction tx_378693 committed with status code 200
+2026-03-15T12:00:16.159Z [INFO ] payment.gateway: Cache hit ratio: 73.5% on key 'session:4022'
+2026-03-15T12:00:16.418Z [INFO ] auth.service   : Connection established to cluster node 9
+2026-03-15T12:00:17.204Z [DEBUG] payment.gateway: Transaction tx_308586 committed with status code 200
+2026-03-15T12:00:20.573Z [INFO ] auth.service   : Payload serialized with size 2910 bytes
+2026-03-15T12:00:22.831Z [WARN ] auth.service   : Cache hit ratio: 82.1% on key 'session:1677'
+2026-03-15T12:00:22.216Z [INFO ] db.pool        : Transaction tx_968834 committed with status code 200
+2026-03-15T12:00:22.222Z [INFO ] worker.celery  : Transaction tx_520864 committed with status code 200
+2026-03-15T12:00:25.825Z [INFO ] auth.service   : User 5683 authenticated successfully from IP 192.168.1.229
+2026-03-15T12:00:26.328Z [WARN ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:27.581Z [WARN ] db.pool        : Failed to acquire lock on resource 'txn:tx_665052', retrying...
+2026-03-15T12:00:29.692Z [DEBUG] payment.gateway: Cache hit ratio: 80.8% on key 'session:2693'
+2026-03-15T12:00:31.730Z [DEBUG] auth.service   : Cache hit ratio: 77.1% on key 'session:8039'
+2026-03-15T12:00:32.833Z [INFO ] cache.redis    : Transaction tx_765412 committed with status code 200
+2026-03-15T12:00:34.267Z [INFO ] http.router    : User 2802 authenticated successfully from IP 192.168.1.13
+2026-03-15T12:00:35.816Z [INFO ] cache.redis    : Cache hit ratio: 96.5% on key 'session:1324'
+2026-03-15T12:00:36.517Z [INFO ] payment.gateway: Connection established to cluster node 6
+2026-03-15T12:00:38.266Z [DEBUG] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:41.251Z [INFO ] http.router    : Transaction tx_735116 committed with status code 200
+2026-03-15T12:00:41.825Z [INFO ] auth.service   : User 3248 authenticated successfully from IP 192.168.1.199
+2026-03-15T12:00:44.498Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_257355', retrying...
+2026-03-15T12:00:44.884Z [INFO ] worker.celery  : Connection established to cluster node 13
+2026-03-15T12:00:47.657Z [INFO ] auth.service   : Query execution completed in 128.78 ms for table 'orders'
+2026-03-15T12:00:49.454Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:51.684Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:54.745Z [INFO ] worker.celery  : Cache hit ratio: 84.8% on key 'session:6355'
+2026-03-15T12:00:56.716Z [WARN ] payment.gateway: Payload serialized with size 1305 bytes
+2026-03-15T12:00:56.302Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:57.814Z [DEBUG] cache.redis    : Transaction tx_736423 committed with status code 200
+2026-03-15T12:00:59.678Z [WARN ] cache.redis    : Payload serialized with size 3250 bytes
+2026-03-15T12:00:02.777Z [INFO ] worker.celery  : Cache hit ratio: 83.6% on key 'session:8551'
+2026-03-15T12:00:04.658Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.363Z [WARN ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:09.192Z [TRACE] http.router    : User 5111 authenticated successfully from IP 192.168.1.8
+2026-03-15T12:00:10.905Z [INFO ] http.router    : Connection established to cluster node 8
+2026-03-15T12:00:10.606Z [DEBUG] http.router    : Cache hit ratio: 77.2% on key 'session:9231'
+2026-03-15T12:00:12.517Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:13.877Z [INFO ] auth.service   : Payload serialized with size 3356 bytes
+2026-03-15T12:00:15.485Z [INFO ] http.router    : Connection established to cluster node 2
+2026-03-15T12:00:16.345Z [WARN ] worker.celery  : Transaction tx_808576 committed with status code 200
+2026-03-15T12:00:16.778Z [DEBUG] worker.celery  : User 4520 authenticated successfully from IP 192.168.1.49
+2026-03-15T12:00:17.757Z [INFO ] db.pool        : Query execution completed in 143.25 ms for table 'orders'
+2026-03-15T12:00:18.328Z [DEBUG] worker.celery  : User 4379 authenticated successfully from IP 192.168.1.116
+2026-03-15T12:00:20.234Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_380489', retrying...
+2026-03-15T12:00:20.202Z [WARN ] payment.gateway: Transaction tx_175261 committed with status code 200
+2026-03-15T12:00:21.747Z [WARN ] db.pool        : Query execution completed in 57.87 ms for table 'orders'
+2026-03-15T12:00:22.412Z [INFO ] worker.celery  : User 8948 authenticated successfully from IP 192.168.1.42
+2026-03-15T12:00:22.562Z [INFO ] db.pool        : Cache hit ratio: 76.6% on key 'session:8190'
+2026-03-15T12:00:23.325Z [INFO ] worker.celery  : Connection established to cluster node 5
+2026-03-15T12:00:23.518Z [INFO ] db.pool        : Transaction tx_253547 committed with status code 200
+2026-03-15T12:00:25.243Z [INFO ] payment.gateway: Connection established to cluster node 6
+2026-03-15T12:00:28.542Z [TRACE] http.router    : Payload serialized with size 1290 bytes
+2026-03-15T12:00:28.407Z [INFO ] auth.service   : Query execution completed in 117.00 ms for table 'orders'
+2026-03-15T12:00:29.107Z [INFO ] worker.celery  : Connection established to cluster node 10
+2026-03-15T12:00:31.661Z [WARN ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:32.886Z [INFO ] auth.service   : Transaction tx_349196 committed with status code 200
+2026-03-15T12:00:33.336Z [INFO ] worker.celery  : Transaction tx_601034 committed with status code 200
+2026-03-15T12:00:35.915Z [DEBUG] db.pool        : Query execution completed in 125.08 ms for table 'orders'
+2026-03-15T12:00:38.618Z [TRACE] auth.service   : Connection established to cluster node 14
+2026-03-15T12:00:39.760Z [INFO ] worker.celery  : User 2661 authenticated successfully from IP 192.168.1.21
+2026-03-15T12:00:39.112Z [DEBUG] db.pool        : Cache hit ratio: 70.7% on key 'session:8683'
+2026-03-15T12:00:40.249Z [INFO ] cache.redis    : Transaction tx_479466 committed with status code 200
+2026-03-15T12:00:41.506Z [TRACE] http.router    : Query execution completed in 126.98 ms for table 'orders'
+2026-03-15T12:00:42.822Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_883360', retrying...
+2026-03-15T12:00:44.553Z [INFO ] http.router    : Query execution completed in 9.64 ms for table 'orders'
+2026-03-15T12:00:46.186Z [TRACE] worker.celery  : Payload serialized with size 1813 bytes
+2026-03-15T12:00:46.650Z [INFO ] auth.service   : Query execution completed in 4.71 ms for table 'orders'
+2026-03-15T12:00:47.444Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_646249', retrying...
+2026-03-15T12:00:49.698Z [WARN ] cache.redis    : User 2539 authenticated successfully from IP 192.168.1.212
+2026-03-15T12:00:50.167Z [INFO ] payment.gateway: Payload serialized with size 3905 bytes
+2026-03-15T12:00:52.317Z [WARN ] cache.redis    : Failed to acquire lock on resource 'txn:tx_118038', retrying...
+2026-03-15T12:00:53.175Z [INFO ] db.pool        : Failed to acquire lock on resource 'txn:tx_548334', retrying...
+2026-03-15T12:00:55.419Z [DEBUG] worker.celery  : Transaction tx_752142 committed with status code 200
+2026-03-15T12:00:56.734Z [DEBUG] auth.service   : Payload serialized with size 1046 bytes
+2026-03-15T12:00:57.272Z [WARN ] payment.gateway: User 7245 authenticated successfully from IP 192.168.1.31
+2026-03-15T12:00:00.154Z [INFO ] http.router    : Cache hit ratio: 76.6% on key 'session:4991'
+2026-03-15T12:00:02.763Z [ERROR] auth.service   : Query execution completed in 54.81 ms for table 'orders'
+2026-03-15T12:00:02.784Z [INFO ] auth.service   : Transaction tx_843717 committed with status code 200
+2026-03-15T12:00:05.748Z [DEBUG] payment.gateway: Connection established to cluster node 10
+2026-03-15T12:00:07.754Z [DEBUG] cache.redis    : Transaction tx_890722 committed with status code 200
+2026-03-15T12:00:10.702Z [DEBUG] payment.gateway: Connection established to cluster node 12
+2026-03-15T12:00:12.353Z [INFO ] worker.celery  : Query execution completed in 64.50 ms for table 'orders'
+2026-03-15T12:00:14.173Z [INFO ] auth.service   : Connection established to cluster node 4
+2026-03-15T12:00:17.673Z [DEBUG] worker.celery  : Payload serialized with size 1305 bytes
+2026-03-15T12:00:20.804Z [INFO ] payment.gateway: Payload serialized with size 3598 bytes
+2026-03-15T12:00:23.793Z [ERROR] auth.service   : User 7086 authenticated successfully from IP 192.168.1.231
+2026-03-15T12:00:23.681Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_515634', retrying...
+2026-03-15T12:00:26.429Z [INFO ] http.router    : Cache hit ratio: 82.5% on key 'session:4690'
+2026-03-15T12:00:28.610Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_204916', retrying...
+2026-03-15T12:00:30.845Z [INFO ] worker.celery  : Payload serialized with size 2837 bytes
+2026-03-15T12:00:32.383Z [INFO ] db.pool        : Connection established to cluster node 15
+2026-03-15T12:00:35.765Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_656786', retrying...
+2026-03-15T12:00:35.974Z [INFO ] auth.service   : Payload serialized with size 1136 bytes
+2026-03-15T12:00:38.621Z [WARN ] cache.redis    : Payload serialized with size 893 bytes
+2026-03-15T12:00:38.862Z [INFO ] payment.gateway: User 6614 authenticated successfully from IP 192.168.1.21
+2026-03-15T12:00:40.870Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:41.615Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_272144', retrying...
+2026-03-15T12:00:41.314Z [INFO ] payment.gateway: Payload serialized with size 3402 bytes
+2026-03-15T12:00:41.357Z [DEBUG] worker.celery  : Connection established to cluster node 2
+2026-03-15T12:00:43.410Z [INFO ] db.pool        : Payload serialized with size 3609 bytes
+2026-03-15T12:00:46.490Z [DEBUG] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.446Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:51.897Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_657454', retrying...
+2026-03-15T12:00:53.912Z [DEBUG] cache.redis    : Transaction tx_450555 committed with status code 200
+2026-03-15T12:00:56.733Z [INFO ] payment.gateway: Connection established to cluster node 5
+2026-03-15T12:00:56.169Z [INFO ] db.pool        : Connection established to cluster node 16
+2026-03-15T12:00:58.998Z [TRACE] worker.celery  : Payload serialized with size 3729 bytes
+2026-03-15T12:00:59.143Z [DEBUG] auth.service   : Cache hit ratio: 91.7% on key 'session:7481'
+2026-03-15T12:00:59.296Z [INFO ] db.pool        : Connection established to cluster node 8
+2026-03-15T12:00:00.636Z [INFO ] db.pool        : User 5053 authenticated successfully from IP 192.168.1.13
+2026-03-15T12:00:03.542Z [DEBUG] http.router    : Cache hit ratio: 78.2% on key 'session:9748'
+2026-03-15T12:00:06.253Z [INFO ] worker.celery  : Payload serialized with size 936 bytes
+2026-03-15T12:00:08.512Z [DEBUG] http.router    : User 1511 authenticated successfully from IP 192.168.1.252
+2026-03-15T12:00:08.341Z [DEBUG] auth.service   : Connection established to cluster node 14
+2026-03-15T12:00:10.388Z [DEBUG] http.router    : User 8723 authenticated successfully from IP 192.168.1.249
+2026-03-15T12:00:12.380Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_537758', retrying...
+2026-03-15T12:00:12.749Z [WARN ] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:13.432Z [INFO ] auth.service   : Transaction tx_584093 committed with status code 200
+2026-03-15T12:00:13.225Z [DEBUG] cache.redis    : Payload serialized with size 3332 bytes
+2026-03-15T12:00:13.743Z [INFO ] http.router    : Query execution completed in 101.01 ms for table 'orders'
+2026-03-15T12:00:16.524Z [INFO ] http.router    : Transaction tx_993841 committed with status code 200
+2026-03-15T12:00:19.306Z [INFO ] worker.celery  : Query execution completed in 56.76 ms for table 'orders'
+2026-03-15T12:00:20.727Z [WARN ] cache.redis    : Payload serialized with size 3665 bytes
+2026-03-15T12:00:22.365Z [INFO ] db.pool        : Connection established to cluster node 14
+2026-03-15T12:00:22.211Z [INFO ] http.router    : Query execution completed in 123.74 ms for table 'orders'
+2026-03-15T12:00:22.685Z [INFO ] worker.celery  : Query execution completed in 63.85 ms for table 'orders'
+2026-03-15T12:00:25.826Z [INFO ] worker.celery  : User 2420 authenticated successfully from IP 192.168.1.120
+2026-03-15T12:00:27.290Z [INFO ] auth.service   : Query execution completed in 120.46 ms for table 'orders'
+2026-03-15T12:00:29.430Z [DEBUG] payment.gateway: Connection established to cluster node 9
+2026-03-15T12:00:32.761Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_702710', retrying...
+2026-03-15T12:00:35.280Z [ERROR] payment.gateway: Query execution completed in 85.77 ms for table 'orders'
+2026-03-15T12:00:36.618Z [INFO ] payment.gateway: User 2242 authenticated successfully from IP 192.168.1.69
+2026-03-15T12:00:38.850Z [TRACE] worker.celery  : Connection established to cluster node 8
+2026-03-15T12:00:41.792Z [INFO ] db.pool        : Payload serialized with size 1546 bytes
+2026-03-15T12:00:43.624Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_466444', retrying...
+2026-03-15T12:00:43.120Z [DEBUG] http.router    : Transaction tx_155939 committed with status code 200
+2026-03-15T12:00:45.714Z [WARN ] db.pool        : Failed to acquire lock on resource 'txn:tx_997601', retrying...
+2026-03-15T12:00:47.165Z [DEBUG] worker.celery  : Query execution completed in 129.37 ms for table 'orders'
+2026-03-15T12:00:49.218Z [DEBUG] http.router    : Query execution completed in 73.32 ms for table 'orders'
+2026-03-15T12:00:49.385Z [ERROR] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:52.810Z [DEBUG] cache.redis    : Cache hit ratio: 71.3% on key 'session:5553'
+2026-03-15T12:00:53.654Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_867534', retrying...
+2026-03-15T12:00:55.750Z [DEBUG] db.pool        : User 2158 authenticated successfully from IP 192.168.1.119
+2026-03-15T12:00:55.525Z [WARN ] db.pool        : Query execution completed in 107.20 ms for table 'orders'
+2026-03-15T12:00:55.756Z [DEBUG] worker.celery  : User 1579 authenticated successfully from IP 192.168.1.133
+2026-03-15T12:00:55.970Z [WARN ] auth.service   : Transaction tx_273645 committed with status code 200
+2026-03-15T12:00:55.419Z [INFO ] db.pool        : User 5417 authenticated successfully from IP 192.168.1.134
+2026-03-15T12:00:57.346Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_321088', retrying...
+2026-03-15T12:00:00.514Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:03.635Z [DEBUG] cache.redis    : Failed to acquire lock on resource 'txn:tx_678131', retrying...
+2026-03-15T12:00:03.925Z [INFO ] worker.celery  : Payload serialized with size 1074 bytes
+2026-03-15T12:00:06.190Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_820868', retrying...
+2026-03-15T12:00:08.487Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.334Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:08.851Z [DEBUG] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.145Z [INFO ] payment.gateway: Query execution completed in 100.67 ms for table 'orders'
+2026-03-15T12:00:14.126Z [INFO ] auth.service   : User 6608 authenticated successfully from IP 192.168.1.159
+2026-03-15T12:00:16.263Z [INFO ] cache.redis    : Cache hit ratio: 74.6% on key 'session:3107'
+2026-03-15T12:00:19.832Z [INFO ] http.router    : Transaction tx_754808 committed with status code 200
+2026-03-15T12:00:19.589Z [DEBUG] db.pool        : Connection established to cluster node 14
+2026-03-15T12:00:21.809Z [INFO ] http.router    : User 3069 authenticated successfully from IP 192.168.1.208
+2026-03-15T12:00:21.382Z [INFO ] cache.redis    : Connection established to cluster node 7
+2026-03-15T12:00:21.636Z [INFO ] payment.gateway: Transaction tx_168211 committed with status code 200
+2026-03-15T12:00:24.316Z [WARN ] http.router    : Cache hit ratio: 74.3% on key 'session:2373'
+2026-03-15T12:00:24.790Z [ERROR] payment.gateway: Cache hit ratio: 99.4% on key 'session:5358'
+2026-03-15T12:00:25.409Z [INFO ] cache.redis    : Payload serialized with size 3028 bytes
+2026-03-15T12:00:27.615Z [INFO ] payment.gateway: Cache hit ratio: 75.5% on key 'session:3931'
+2026-03-15T12:00:30.840Z [DEBUG] auth.service   : User 3853 authenticated successfully from IP 192.168.1.138
+2026-03-15T12:00:32.776Z [WARN ] worker.celery  : Failed to acquire lock on resource 'txn:tx_491640', retrying...
+2026-03-15T12:00:32.117Z [INFO ] db.pool        : Connection established to cluster node 11
+2026-03-15T12:00:33.730Z [DEBUG] http.router    : Cache hit ratio: 97.3% on key 'session:5663'
+2026-03-15T12:00:34.260Z [DEBUG] cache.redis    : Query execution completed in 77.99 ms for table 'orders'
+2026-03-15T12:00:36.609Z [TRACE] payment.gateway: Failed to acquire lock on resource 'txn:tx_978642', retrying...
+2026-03-15T12:00:39.101Z [TRACE] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:39.609Z [INFO ] payment.gateway: User 6259 authenticated successfully from IP 192.168.1.239
+2026-03-15T12:00:39.683Z [ERROR] cache.redis    : Cache hit ratio: 92.3% on key 'session:1191'
+2026-03-15T12:00:39.553Z [DEBUG] cache.redis    : Connection established to cluster node 8
+2026-03-15T12:00:41.750Z [ERROR] db.pool        : Connection established to cluster node 9
+2026-03-15T12:00:43.413Z [INFO ] payment.gateway: Cache hit ratio: 95.3% on key 'session:7545'
+2026-03-15T12:00:46.208Z [DEBUG] db.pool        : Transaction tx_606683 committed with status code 200
+2026-03-15T12:00:49.744Z [ERROR] auth.service   : User 9386 authenticated successfully from IP 192.168.1.37
+2026-03-15T12:00:52.952Z [INFO ] worker.celery  : Transaction tx_975944 committed with status code 200
+2026-03-15T12:00:52.159Z [DEBUG] worker.celery  : Cache hit ratio: 96.0% on key 'session:4440'
+2026-03-15T12:00:55.282Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_640276', retrying...
+2026-03-15T12:00:56.453Z [WARN ] http.router    : Connection established to cluster node 8
+2026-03-15T12:00:59.932Z [TRACE] db.pool        : User 7467 authenticated successfully from IP 192.168.1.67
+2026-03-15T12:00:59.354Z [TRACE] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:01.253Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_106007', retrying...
+2026-03-15T12:00:03.307Z [INFO ] auth.service   : Query execution completed in 91.64 ms for table 'orders'
+2026-03-15T12:00:04.451Z [INFO ] worker.celery  : Transaction tx_145064 committed with status code 200
+2026-03-15T12:00:04.147Z [INFO ] cache.redis    : Query execution completed in 98.76 ms for table 'orders'
+2026-03-15T12:00:04.361Z [DEBUG] worker.celery  : User 3421 authenticated successfully from IP 192.168.1.66
+2026-03-15T12:00:04.185Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:05.694Z [ERROR] db.pool        : Cache hit ratio: 80.3% on key 'session:2873'
+2026-03-15T12:00:07.472Z [DEBUG] auth.service   : Cache hit ratio: 81.6% on key 'session:5567'
+2026-03-15T12:00:07.295Z [INFO ] http.router    : Payload serialized with size 2229 bytes
+2026-03-15T12:00:10.823Z [INFO ] db.pool        : Connection established to cluster node 5
+2026-03-15T12:00:11.985Z [INFO ] payment.gateway: Transaction tx_911076 committed with status code 200
+2026-03-15T12:00:12.771Z [TRACE] cache.redis    : Failed to acquire lock on resource 'txn:tx_272185', retrying...
+2026-03-15T12:00:12.927Z [ERROR] cache.redis    : Transaction tx_983548 committed with status code 200
+2026-03-15T12:00:15.514Z [DEBUG] http.router    : User 3167 authenticated successfully from IP 192.168.1.144
+2026-03-15T12:00:15.667Z [DEBUG] worker.celery  : User 4651 authenticated successfully from IP 192.168.1.124
+2026-03-15T12:00:17.818Z [ERROR] worker.celery  : Connection established to cluster node 13
+2026-03-15T12:00:18.239Z [INFO ] payment.gateway: Query execution completed in 90.80 ms for table 'orders'
+2026-03-15T12:00:21.198Z [ERROR] auth.service   : Connection established to cluster node 13
+2026-03-15T12:00:22.900Z [DEBUG] http.router    : Failed to acquire lock on resource 'txn:tx_584929', retrying...
+2026-03-15T12:00:22.757Z [INFO ] payment.gateway: Connection established to cluster node 11
+2026-03-15T12:00:22.927Z [INFO ] http.router    : Transaction tx_879714 committed with status code 200
+2026-03-15T12:00:22.876Z [INFO ] db.pool        : Cache hit ratio: 89.0% on key 'session:5505'
+2026-03-15T12:00:24.119Z [WARN ] payment.gateway: Connection established to cluster node 6
+2026-03-15T12:00:24.732Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_203064', retrying...
+2026-03-15T12:00:24.316Z [INFO ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:26.197Z [TRACE] cache.redis    : Cache hit ratio: 76.4% on key 'session:2493'
+2026-03-15T12:00:28.282Z [INFO ] auth.service   : Transaction tx_785477 committed with status code 200
+2026-03-15T12:00:30.697Z [DEBUG] http.router    : User 7750 authenticated successfully from IP 192.168.1.115
+2026-03-15T12:00:30.110Z [TRACE] db.pool        : User 9537 authenticated successfully from IP 192.168.1.17
+2026-03-15T12:00:31.379Z [INFO ] http.router    : Query execution completed in 21.28 ms for table 'orders'
+2026-03-15T12:00:34.833Z [DEBUG] cache.redis    : User 2444 authenticated successfully from IP 192.168.1.153
+2026-03-15T12:00:37.689Z [WARN ] db.pool        : Payload serialized with size 2856 bytes
+2026-03-15T12:00:40.289Z [DEBUG] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.617Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_359506', retrying...
+2026-03-15T12:00:43.581Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:43.415Z [DEBUG] http.router    : Query execution completed in 114.35 ms for table 'orders'
+2026-03-15T12:00:43.392Z [INFO ] payment.gateway: Transaction tx_315579 committed with status code 200
+2026-03-15T12:00:45.471Z [WARN ] auth.service   : Cache hit ratio: 84.8% on key 'session:1021'
+2026-03-15T12:00:45.416Z [INFO ] cache.redis    : User 4744 authenticated successfully from IP 192.168.1.74
+2026-03-15T12:00:46.758Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:48.850Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:49.744Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_204159', retrying...
+2026-03-15T12:00:50.679Z [DEBUG] cache.redis    : User 7692 authenticated successfully from IP 192.168.1.182
+2026-03-15T12:00:53.600Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_968103', retrying...
+2026-03-15T12:00:54.272Z [DEBUG] payment.gateway: Cache hit ratio: 86.1% on key 'session:5617'
+2026-03-15T12:00:55.760Z [INFO ] auth.service   : Connection established to cluster node 6
+2026-03-15T12:00:55.243Z [INFO ] cache.redis    : Query execution completed in 143.37 ms for table 'orders'
+2026-03-15T12:00:57.585Z [DEBUG] payment.gateway: Transaction tx_948831 committed with status code 200
+2026-03-15T12:00:00.537Z [INFO ] http.router    : User 2923 authenticated successfully from IP 192.168.1.147
+2026-03-15T12:00:01.397Z [INFO ] cache.redis    : Cache hit ratio: 80.9% on key 'session:3469'
+2026-03-15T12:00:03.466Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_689322', retrying...
+2026-03-15T12:00:04.168Z [INFO ] cache.redis    : User 3887 authenticated successfully from IP 192.168.1.28
+2026-03-15T12:00:04.935Z [INFO ] worker.celery  : Query execution completed in 120.97 ms for table 'orders'
+2026-03-15T12:00:07.535Z [INFO ] db.pool        : Transaction tx_775188 committed with status code 200
+2026-03-15T12:00:07.345Z [INFO ] worker.celery  : Payload serialized with size 3337 bytes
+2026-03-15T12:00:07.749Z [DEBUG] auth.service   : Query execution completed in 105.23 ms for table 'orders'
+2026-03-15T12:00:07.430Z [TRACE] payment.gateway: Payload serialized with size 169 bytes
+2026-03-15T12:00:10.505Z [DEBUG] cache.redis    : Cache hit ratio: 91.2% on key 'session:6430'
+2026-03-15T12:00:10.713Z [INFO ] worker.celery  : Connection established to cluster node 2
+2026-03-15T12:00:11.698Z [INFO ] http.router    : Payload serialized with size 167 bytes
+2026-03-15T12:00:14.828Z [ERROR] auth.service   : Connection established to cluster node 4
+2026-03-15T12:00:17.928Z [DEBUG] cache.redis    : Cache hit ratio: 98.9% on key 'session:6794'
+2026-03-15T12:00:17.307Z [WARN ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:20.553Z [DEBUG] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:22.866Z [INFO ] worker.celery  : Query execution completed in 22.47 ms for table 'orders'
+2026-03-15T12:00:24.342Z [INFO ] auth.service   : Connection established to cluster node 11
+2026-03-15T12:00:24.532Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_395411', retrying...
+2026-03-15T12:00:27.597Z [WARN ] http.router    : Cache hit ratio: 81.8% on key 'session:3153'
+2026-03-15T12:00:30.817Z [INFO ] cache.redis    : Query execution completed in 118.88 ms for table 'orders'
+2026-03-15T12:00:33.938Z [INFO ] cache.redis    : Transaction tx_386011 committed with status code 200
+2026-03-15T12:00:36.810Z [INFO ] http.router    : Connection established to cluster node 3
+2026-03-15T12:00:38.420Z [INFO ] worker.celery  : Transaction tx_505300 committed with status code 200
+2026-03-15T12:00:39.222Z [DEBUG] payment.gateway: Query execution completed in 0.61 ms for table 'orders'
+2026-03-15T12:00:41.689Z [INFO ] http.router    : Cache hit ratio: 85.8% on key 'session:6661'
+2026-03-15T12:00:42.589Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_960657', retrying...
+2026-03-15T12:00:45.998Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_564220', retrying...
+2026-03-15T12:00:45.387Z [DEBUG] cache.redis    : Cache hit ratio: 94.8% on key 'session:1997'
+2026-03-15T12:00:48.168Z [INFO ] payment.gateway: Payload serialized with size 327 bytes
+2026-03-15T12:00:48.842Z [WARN ] auth.service   : Query execution completed in 138.17 ms for table 'orders'
+2026-03-15T12:00:48.997Z [INFO ] db.pool        : Query execution completed in 88.33 ms for table 'orders'
+2026-03-15T12:00:50.450Z [DEBUG] worker.celery  : Cache hit ratio: 85.2% on key 'session:1279'
+2026-03-15T12:00:51.725Z [INFO ] auth.service   : Query execution completed in 130.35 ms for table 'orders'
+2026-03-15T12:00:53.462Z [DEBUG] payment.gateway: Connection established to cluster node 10
+2026-03-15T12:00:56.865Z [WARN ] payment.gateway: Transaction tx_922517 committed with status code 200
+2026-03-15T12:00:58.227Z [TRACE] cache.redis    : Query execution completed in 23.55 ms for table 'orders'
+2026-03-15T12:00:00.586Z [WARN ] cache.redis    : User 4690 authenticated successfully from IP 192.168.1.173
+2026-03-15T12:00:00.902Z [DEBUG] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:03.420Z [INFO ] cache.redis    : Transaction tx_405607 committed with status code 200
+2026-03-15T12:00:04.845Z [INFO ] http.router    : User 4942 authenticated successfully from IP 192.168.1.227
+2026-03-15T12:00:06.113Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:07.133Z [INFO ] auth.service   : Query execution completed in 122.15 ms for table 'orders'
+2026-03-15T12:00:09.130Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_544753', retrying...
+2026-03-15T12:00:11.740Z [DEBUG] cache.redis    : Payload serialized with size 633 bytes
+2026-03-15T12:00:11.582Z [INFO ] db.pool        : Connection established to cluster node 15
+2026-03-15T12:00:14.151Z [INFO ] db.pool        : Connection established to cluster node 8
+2026-03-15T12:00:16.331Z [INFO ] http.router    : Connection established to cluster node 15
+2026-03-15T12:00:19.516Z [INFO ] cache.redis    : Transaction tx_225209 committed with status code 200
+2026-03-15T12:00:22.258Z [WARN ] worker.celery  : User 9933 authenticated successfully from IP 192.168.1.17
+2026-03-15T12:00:24.190Z [INFO ] payment.gateway: Query execution completed in 68.21 ms for table 'orders'
+2026-03-15T12:00:24.602Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:27.757Z [INFO ] payment.gateway: Cache hit ratio: 71.4% on key 'session:9329'
+2026-03-15T12:00:28.187Z [DEBUG] http.router    : Transaction tx_368015 committed with status code 200
+2026-03-15T12:00:29.537Z [INFO ] http.router    : Cache hit ratio: 86.6% on key 'session:1488'
+2026-03-15T12:00:30.156Z [DEBUG] auth.service   : User 4306 authenticated successfully from IP 192.168.1.229
+2026-03-15T12:00:31.771Z [INFO ] payment.gateway: User 2143 authenticated successfully from IP 192.168.1.227
+2026-03-15T12:00:33.806Z [WARN ] worker.celery  : Payload serialized with size 2313 bytes
+2026-03-15T12:00:34.150Z [INFO ] db.pool        : Payload serialized with size 2028 bytes
+2026-03-15T12:00:35.394Z [INFO ] worker.celery  : Transaction tx_666427 committed with status code 200
+2026-03-15T12:00:37.289Z [INFO ] worker.celery  : Transaction tx_142523 committed with status code 200
+2026-03-15T12:00:37.361Z [INFO ] db.pool        : Connection established to cluster node 3
+2026-03-15T12:00:40.334Z [INFO ] worker.celery  : Transaction tx_351287 committed with status code 200
+2026-03-15T12:00:40.593Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_485091', retrying...
+2026-03-15T12:00:40.255Z [DEBUG] payment.gateway: Failed to acquire lock on resource 'txn:tx_509551', retrying...
+2026-03-15T12:00:40.328Z [DEBUG] worker.celery  : Transaction tx_177276 committed with status code 200
+2026-03-15T12:00:41.497Z [INFO ] auth.service   : User 2768 authenticated successfully from IP 192.168.1.147
+2026-03-15T12:00:43.856Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_859074', retrying...
+2026-03-15T12:00:46.519Z [DEBUG] http.router    : User 1214 authenticated successfully from IP 192.168.1.229
+2026-03-15T12:00:47.968Z [TRACE] http.router    : Payload serialized with size 1532 bytes
+2026-03-15T12:00:47.245Z [TRACE] auth.service   : Failed to acquire lock on resource 'txn:tx_940512', retrying...
+2026-03-15T12:00:48.966Z [INFO ] auth.service   : Cache hit ratio: 87.4% on key 'session:8839'
+2026-03-15T12:00:51.239Z [INFO ] worker.celery  : Connection established to cluster node 2
+2026-03-15T12:00:51.598Z [INFO ] db.pool        : Connection established to cluster node 13
+2026-03-15T12:00:52.533Z [WARN ] worker.celery  : Query execution completed in 6.71 ms for table 'orders'
+2026-03-15T12:00:53.404Z [INFO ] payment.gateway: User 3694 authenticated successfully from IP 192.168.1.215
+2026-03-15T12:00:53.313Z [INFO ] cache.redis    : Transaction tx_509084 committed with status code 200
+2026-03-15T12:00:55.762Z [INFO ] http.router    : Payload serialized with size 3853 bytes
+2026-03-15T12:00:55.646Z [INFO ] http.router    : Cache hit ratio: 99.6% on key 'session:2856'
+2026-03-15T12:00:57.931Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_768516', retrying...
+2026-03-15T12:00:58.873Z [DEBUG] cache.redis    : Transaction tx_948496 committed with status code 200
+2026-03-15T12:00:01.185Z [WARN ] worker.celery  : Query execution completed in 23.37 ms for table 'orders'
+2026-03-15T12:00:01.191Z [WARN ] worker.celery  : Failed to acquire lock on resource 'txn:tx_217891', retrying...
+2026-03-15T12:00:03.808Z [WARN ] db.pool        : Heartbeat probe received from monitor agent
+2026-03-15T12:00:06.724Z [INFO ] worker.celery  : User 4801 authenticated successfully from IP 192.168.1.121
+2026-03-15T12:00:06.305Z [WARN ] auth.service   : User 5685 authenticated successfully from IP 192.168.1.230
+2026-03-15T12:00:06.256Z [INFO ] http.router    : User 5396 authenticated successfully from IP 192.168.1.157
+2026-03-15T12:00:06.476Z [INFO ] auth.service   : Cache hit ratio: 90.8% on key 'session:3750'
+2026-03-15T12:00:08.456Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.551Z [WARN ] auth.service   : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.623Z [DEBUG] db.pool        : Failed to acquire lock on resource 'txn:tx_190066', retrying...
+2026-03-15T12:00:14.874Z [INFO ] auth.service   : Payload serialized with size 3414 bytes
+2026-03-15T12:00:16.250Z [WARN ] auth.service   : Query execution completed in 90.78 ms for table 'orders'
+2026-03-15T12:00:19.104Z [DEBUG] db.pool        : Query execution completed in 104.18 ms for table 'orders'
+2026-03-15T12:00:20.573Z [WARN ] worker.celery  : Query execution completed in 25.39 ms for table 'orders'
+2026-03-15T12:00:20.967Z [DEBUG] worker.celery  : User 2248 authenticated successfully from IP 192.168.1.63
+2026-03-15T12:00:21.831Z [DEBUG] db.pool        : Connection established to cluster node 5
+2026-03-15T12:00:24.707Z [DEBUG] db.pool        : Transaction tx_822620 committed with status code 200
+2026-03-15T12:00:27.230Z [INFO ] http.router    : Query execution completed in 57.94 ms for table 'orders'
+2026-03-15T12:00:27.963Z [INFO ] worker.celery  : Cache hit ratio: 94.4% on key 'session:9442'
+2026-03-15T12:00:29.364Z [DEBUG] auth.service   : Failed to acquire lock on resource 'txn:tx_502776', retrying...
+2026-03-15T12:00:31.972Z [ERROR] auth.service   : Cache hit ratio: 83.7% on key 'session:7759'
+2026-03-15T12:00:32.274Z [INFO ] db.pool        : Cache hit ratio: 76.0% on key 'session:4099'
+2026-03-15T12:00:35.727Z [DEBUG] payment.gateway: Transaction tx_533315 committed with status code 200
+2026-03-15T12:00:35.295Z [WARN ] payment.gateway: User 2164 authenticated successfully from IP 192.168.1.161
+2026-03-15T12:00:38.642Z [INFO ] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:40.481Z [INFO ] http.router    : Connection established to cluster node 11
+2026-03-15T12:00:43.182Z [INFO ] cache.redis    : Connection established to cluster node 3
+2026-03-15T12:00:44.278Z [DEBUG] worker.celery  : Cache hit ratio: 83.1% on key 'session:8182'
+2026-03-15T12:00:47.469Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_596768', retrying...
+2026-03-15T12:00:47.660Z [INFO ] auth.service   : Failed to acquire lock on resource 'txn:tx_711144', retrying...
+2026-03-15T12:00:49.719Z [INFO ] db.pool        : Payload serialized with size 2346 bytes
+2026-03-15T12:00:51.707Z [WARN ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:54.701Z [DEBUG] cache.redis    : User 3624 authenticated successfully from IP 192.168.1.251
+2026-03-15T12:00:57.684Z [DEBUG] worker.celery  : Query execution completed in 140.23 ms for table 'orders'
+2026-03-15T12:00:00.997Z [INFO ] worker.celery  : Payload serialized with size 1226 bytes
+2026-03-15T12:00:01.615Z [INFO ] cache.redis    : Failed to acquire lock on resource 'txn:tx_782000', retrying...
+2026-03-15T12:00:02.800Z [DEBUG] http.router    : User 7965 authenticated successfully from IP 192.168.1.51
+2026-03-15T12:00:05.356Z [INFO ] http.router    : Payload serialized with size 1925 bytes
+2026-03-15T12:00:05.394Z [WARN ] payment.gateway: Query execution completed in 84.97 ms for table 'orders'
+2026-03-15T12:00:07.424Z [ERROR] db.pool        : Payload serialized with size 3922 bytes
+2026-03-15T12:00:08.956Z [INFO ] worker.celery  : Heartbeat probe received from monitor agent
+2026-03-15T12:00:11.928Z [INFO ] cache.redis    : Payload serialized with size 2567 bytes
+2026-03-15T12:00:12.247Z [DEBUG] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:15.505Z [ERROR] http.router    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:17.819Z [INFO ] auth.service   : Payload serialized with size 238 bytes
+2026-03-15T12:00:20.858Z [INFO ] http.router    : Query execution completed in 134.46 ms for table 'orders'
+2026-03-15T12:00:23.721Z [INFO ] http.router    : Cache hit ratio: 74.4% on key 'session:4168'
+2026-03-15T12:00:24.445Z [ERROR] auth.service   : Connection established to cluster node 15
+2026-03-15T12:00:25.355Z [ERROR] cache.redis    : Failed to acquire lock on resource 'txn:tx_124294', retrying...
+2026-03-15T12:00:28.449Z [INFO ] http.router    : Query execution completed in 148.50 ms for table 'orders'
+2026-03-15T12:00:30.198Z [INFO ] cache.redis    : Heartbeat probe received from monitor agent
+2026-03-15T12:00:32.218Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_237733', retrying...
+2026-03-15T12:00:32.461Z [INFO ] cache.redis    : Payload serialized with size 1890 bytes
+2026-03-15T12:00:33.981Z [DEBUG] cache.redis    : Query execution completed in 132.04 ms for table 'orders'
+2026-03-15T12:00:34.412Z [INFO ] http.router    : Query execution completed in 135.59 ms for table 'orders'
+2026-03-15T12:00:34.104Z [INFO ] payment.gateway: Failed to acquire lock on resource 'txn:tx_946852', retrying...
+2026-03-15T12:00:36.627Z [INFO ] payment.gateway: Payload serialized with size 1214 bytes
+2026-03-15T12:00:36.963Z [INFO ] http.router    : User 8831 authenticated successfully from IP 192.168.1.85
+2026-03-15T12:00:38.960Z [INFO ] payment.gateway: Heartbeat probe received from monitor agent
+2026-03-15T12:00:38.220Z [INFO ] worker.celery  : Failed to acquire lock on resource 'txn:tx_567338', retrying...
+2026-03-15T12:00:39.305Z [INFO ] cache.redis    : Transaction tx_954924 committed with status code 200
+2026-03-15T12:00:41.174Z [INFO ] auth.service   : Payload serialized with size 3341 bytes
+2026-03-15T12:00:42.135Z [INFO ] http.router    : Failed to acquire lock on resource 'txn:tx_702976', retrying...
+2026-03-15T12:00:44.640Z [INFO ] http.router    : Payload serialized with si

@@ -1,0 +1,5 @@
+# Core Compression Engine and Tests: Standard Library Only (Zero External Dependencies)
+
+# Benchmarking, Statistical Analysis, and Chart Generation Only:
+numpy>=2.0.0
+matplotlib>=3.8.0
