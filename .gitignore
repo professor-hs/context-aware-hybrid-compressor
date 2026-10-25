@@ -36,3 +36,27 @@ htmlcov/
 *.cacz
 .Rhistory
 restored_*.py
+
+# C++ Build & binary artifacts
+build/
+bin/
+*.exe
+*.a
+*.lib
+*.obj
+*.o
+*.pdb
+
+# Web build artifacts
+web/node_modules/
+web/dist/
+
+# Model download cache
+models/.cache/
+
+# Large local AI models
+*.gguf
+
+# Generated restoration and temporary test files
+*_restored.py
+*.tmp.*

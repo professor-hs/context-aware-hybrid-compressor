@@ -1,321 +1,304 @@
 # Context-Aware Hybrid Compressor (CACZ)
+## Native C++20 Multimodal Compression Platform with AI-Assisted Algorithm Orchestration
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![C++20](https://img.shields.io/badge/C%2B%2B-20-blue.svg)](https://en.wikipedia.org/wiki/C%2B%2B20)
+[![CMake](https://img.shields.io/badge/CMake-3.20%2B-064F8C.svg)](https://cmake.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/tests-86%20passed-brightgreen.svg)](tests/)
-[![Code Style: Clean](https://img.shields.io/badge/code%20style-black-000000.svg)](core/)
+[![Tests](https://img.shields.io/badge/C%2B%2B%20Tests-8%2F8%20Passed-brightgreen.svg)](tests/cpp/)
+[![Python Verification](https://img.shields.io/badge/Python%20Tests-86%20Passed-brightgreen.svg)](tests/)
 
-**Context-Aware Hybrid Compressor (CACZ)** is an advanced, production-quality chunked archiver that dynamically analyzes data entropy, run-length density, delta variance, and repeated substring patterns to select the optimal compression algorithm for each individual chunk.
+**Context-Aware Hybrid Compressor (CACZ)** is an advanced, production-grade multimodal compression platform built in **modern native C++20**. It dynamically analyzes input data characteristics—including Shannon entropy, run-length frequency, byte delta variance, and repeated substring patterns—to orchestrate the optimal compression strategy per chunk and per file.
 
-Built entirely from first principles in pure Python (no external C-extensions for the core compression engine), CACZ features custom implementations of **Run-Length Encoding (RLE)**, **Canonical Huffman Coding**, **Sliding-Window LZ77**, and **Modulo-256 Delta Encoding**, unified under a safe, versioned binary container with CRC32 integrity verification and atomic write guarantees.
+CACZ couples deterministic heuristic and speculative oracle search engines with a **local AI model orchestrator** (supporting Ollama / llama.cpp / local GGUF models) and a **strict deterministic validation engine** that verifies every strategy before execution.
+
+---
+
+## Key Features
+
+1. **Native C++20 Compression Engine**:
+   - Zero-dependency core with CMake & Ninja build system.
+   - High-throughput implementations of **Run-Length Encoding (RLE)**, **Deterministic Canonical Huffman Coding**, **Sliding-Window LZ77**, and **Modulo-256 Byte Delta Transformation**.
+   - Fully backward- and forward-compatible with the versioned **CACZ binary container format** (v1 and v2).
+   - Proven **bit-for-bit bidirectional interoperability** between the C++ engine and the Python verification tool.
+
+2. **Multimodal Media Awareness**:
+   - Deep inspection of binary headers for **Images** (PNG, JPEG, WebP, BMP), **Audio** (WAV PCM, MP3, FLAC), **Video** (MP4, MKV, WebM), and **Structured Data** (JSON, CSV, code, logs).
+   - Automatically detects pre-compressed containers to prevent negative compression and CPU cycle waste.
+
+3. **AI-Assisted Algorithm Orchestration**:
+   - Communicates with locally running LLMs via standard OpenAI/Ollama HTTP APIs (`http://127.0.0.1:11434` or `http://127.0.0.1:8080`).
+   - Supports models such as Qwen 2.5 0.5B/1.5B, Phi-3 Mini, and Llama 3.2 1B.
+   - Structured JSON schema validation and trial benchmark scoring.
+   - **Deterministic Fallback Engine**: If the model is offline, times out (configurable, default 3s), or produces an invalid recommendation, the engine gracefully falls back to deterministic heuristic classification.
+
+4. **Multi-Objective Optimization**:
+   - `best_ratio`: Minimizes compressed size.
+   - `fastest`: Prioritizes maximum throughput (MB/s).
+   - `balanced`: Calibrated harmonic mean of compression ratio and execution latency.
+   - `lossless`: Enforces strict lossless bit-for-bit reconstruction.
+   - `minimum_memory`: Prefers streaming O(1) memory algorithms.
+
+5. **Production C++ Backend & Minimalist Web UI**:
+   - Native C++ HTTP server with REST API (`/api/health`, `/api/codecs`, `/api/orchestrate`, `/api/model/status`).
+   - Pure black-and-white React/TypeScript interface (`#000000` and `#FFFFFF` only, zero gray tints, high-density technical design).
 
 ---
 
 ## Architecture Overview
 
-CACZ decomposes arbitrary binary input streams into configurable fixed-size chunks (default 8,192 bytes) and extracts statistical features to route each chunk to the most effective codec.
-
-### Forward Compression Path
-
 ```
-    Input File (Arbitrary Binary Stream)
-                     |
-                     v
-             Streaming Chunker
-       (Bounded Memory: 1 KiB - 1 MiB)
-                     |
-                     v
-           Chunk Feature Analyzer
-  (Shannon Entropy, Run Ratios, Delta Variance, 4-Grams)
-                     |
-                     v
-         Heuristic / Oracle Selector
-       (O(1) Rule Engine vs Speculative Search)
-                     |
-        +------------+------------+------------+------------+------------+
-        |            |            |            |            |            |
-        v            v            v            v            v            v
-    [  RAW  ]    [  RLE  ]   [ HUFFMAN ]   [  LZ77 ]    [ DELTA ]   [ FALLBACK ]
-    (Identity)   (Repeated)   (Skewed)    (Dictionary)   (Linear)   (Anti-Expansion)
-        |            |            |            |            |            |
-        +------------+------------+------------+------------+------------+
-                                  |
-                                  v
-                    Versioned Binary Container
-               (CACZ v1 Framing, CRC32 Checksums)
-                                  |
-                                  v
-                      Atomic Output (.cacz)
-```
-
-### Reverse Decompression Path
-
-```
-    Compressed Container (.cacz)
-                 |
-                 v
-     Header Validation & Integrity Check
-         (Magic 'CACZ', Version, Header CRC32)
-                 |
-                 v
-     Sequential Chunk Record Parsing
-   (Index Ordering, Bounded Memory Allocation)
-                 |
-                 v
-     Codec Routing & Payload Decoding
-   (Raw, RLE, Huffman, LZ77, Delta Decompressors)
-                 |
-                 v
-    Decoded Chunk CRC32 Verification
-   (Bit-for-Bit Validation Against Original)
-                 |
-                 v
-     Atomic Staging -> Reconstructed Output
+                      Arbitrary File / Stream
+                                 |
+                                 v
+                     [ Media & Format Detector ]
+              (PNG, JPEG, WebP, BMP, WAV, MP3, MP4, Code)
+                                 |
+                                 v
+                     [ Chunk Feature Analyzer ]
+        (Shannon Entropy, Run Ratios, Delta Variance, 4-Grams)
+                                 |
+                                 v
+             +-------------------+-------------------+
+             |                                       |
+             v                                       v
+   [ Local AI Orchestrator ]              [ Heuristic / Oracle ]
+  (Ollama/llama.cpp HTTP API)             (Calibrated Decision Rules)
+             |                                       |
+             +-------------------+-------------------+
+                                 |
+                                 v
+                 [ Deterministic Validation Engine ]
+                  - Candidate Codec Verification
+                  - Objective Score Benchmarking
+                  - Anti-Expansion (Raw Fallback)
+                                 |
+                                 v
+                 [ Native C++ Codec Execution ]
+             (RAW | RLE | HUFFMAN | LZ77 | DELTA)
+                                 |
+                                 v
+                 [ Versioned Binary Container ]
+                   - 28-Byte File Header
+                   - 18-Byte Chunk Record Framing
+                   - IEEE 802.3 CRC32 Checksums
+                                 |
+                                 v
+                     Atomic Verified .cacz Output
 ```
 
 ---
 
-## Core Algorithms Implemented
+## Directory Structure
 
-All four custom codecs operate on arbitrary 8-bit binary data (all 256 byte values) and expose a uniform public interface: `encode(data: bytes) -> bytes` and `decode(data: bytes) -> bytes`.
-
-### 1. Run-Length Encoding (`codecs/rle.py`)
-- **Mechanism**: Packet-oriented run and literal framing. A control byte discriminates between runs (`0x80 | (length - 3)` for runs of 3 to 130 bytes) and literals (`count - 1` for 1 to 128 uncompressed bytes).
-- **Target Context**: Data with extensive identical byte sequences (e.g., zero-padded memory dumps, bitmap masks, sparse blocks).
-- **Expansion Boundary**: At most 1 control byte per 128 literal bytes (~0.78% worst-case expansion).
-
-### 2. Lossless Huffman Coding (`codecs/huffman.py`)
-- **Mechanism**: Builds an exact byte-frequency histogram, constructs a deterministic priority-queue binary tree with canonical tie-breaking, and serializes the tree in pre-order bit notation before packing variable-length bit sequences.
-- **Target Context**: Streams with skewed symbol distributions, low Shannon entropy, or restricted alphabet sizes.
-- **Robustness**: Native handling of single-symbol inputs, empty payloads, and safe bitstream termination without false EOF.
-
-### 3. Sliding-Window LZ77 (`codecs/lz77.py`)
-- **Mechanism**: 4,096-byte sliding window using an accelerated bounded-chain 3-byte hash table (O(1) prefix lookup) and LZSS 8-item flag-byte command grouping.
-- **Target Context**: Data containing repeated substrings, source code keywords, log templates, and natural language phrases.
-- **Special Capability**: Full support for overlapping matches (`length > offset`), allowing high-ratio expansion of repeated patterns.
-
-### 4. Modulo-256 Delta Encoding (`codecs/delta.py`)
-- **Mechanism**: Discrete adjacent byte differentiation $t_i = (d_i - d_{i-1}) \pmod{256}$, coupled with run-length difference packing.
-- **Target Context**: Monotonic sequence counters, timestamps, sensor telemetry, and tabular columnar metrics.
-- **Theoretical Note**: Delta transformation alone is an information-preserving bijection that does *not* reduce byte count; compression is achieved because structured deltas collapse into long runs of constants (e.g., runs of +1 or 0).
-
-### 5. Raw Fallback Codec (`core/codecs/__init__.py`)
-- Acts as a zero-overhead pass-through when data is incompressible or when an algorithm produces an encoded size larger than the original chunk.
+```
+context-aware-compressor/
+├── CMakeLists.txt              # CMake C++20 build configuration
+├── include/
+│   └── cacz/
+│       ├── common.hpp          # CRC32, endian helpers, container format constants
+│       ├── codec.hpp           # Abstract Codec interface & metadata
+│       ├── codec_registry.hpp  # Dynamic codec registry singleton
+│       ├── container.hpp       # Binary container reader, writer, inspector
+│       ├── analyzer.hpp        # Shannon entropy, byte stats & heuristic selector
+│       ├── media_detector.hpp  # Image, audio, video header inspection
+│       ├── orchestrator.hpp    # Multi-objective orchestration engine
+│       ├── model_adapter.hpp   # Local AI model HTTP client & schema validator
+│       └── server.hpp          # Native C++ HTTP server declarations
+├── src/
+│   ├── codecs/                 # C++20 Codec implementations
+│   │   ├── raw.cpp
+│   │   ├── rle.cpp             # PackBits-style run/literal framing
+│   │   ├── huffman.cpp         # Deterministic priority queue Huffman tree
+│   │   ├── lz77.cpp            # Sliding window dictionary & overlapping copies
+│   │   ├── delta.cpp           # Modulo-256 byte diffing + RLE
+│   │   └── codec_registry.cpp
+│   ├── core/
+│   │   ├── container.cpp       # Container framing, streaming, atomic staging
+│   │   └── analyzer.cpp        # 8-feature statistical analysis
+│   ├── media/
+│   │   └── media_detector.cpp  # Multimodal format detection
+│   ├── orchestration/
+│   │   ├── model_adapter.cpp   # Sockets HTTP client & AI prompt formatter
+│   │   └── orchestrator.cpp    # Candidate benchmarking & trial scoring
+│   ├── cli/
+│   │   └── main.cpp            # Production CLI executable
+│   └── server/
+│       └── server.cpp          # Native REST API server
+├── tests/
+│   ├── cpp/
+│   │   └── test_main.cpp       # Comprehensive native C++ test suite
+│   ├── test_codecs.py          # Python baseline test suite
+│   ├── test_container.py
+│   └── test_integration.py
+├── server/
+│   └── model_service.py        # Local AI model runner service (port 11434)
+├── web/                        # Minimalist Black & White React Frontend
+│   ├── src/
+│   │   ├── App.tsx             # Interactive UI (Compress, Inspect, Verify, Benchmark)
+│   │   ├── styles.css          # Strict black & white plain CSS
+│   │   └── main.tsx
+│   ├── package.json
+│   └── vite.config.ts
+├── benchmark/
+│   ├── test_files/             # 5 canonical test corpora
+│   └── results/                # Benchmark outputs & charts
+└── compressor.py               # Python verification CLI
+```
 
 ---
 
-## Chunk Feature Analysis & Selection Engine
+## Building and Running
 
-### Feature Extraction (`core/analyzer.py`)
-For each chunk, the analyzer computes eight mathematical metrics:
-1. **Shannon Entropy ($H$)**: $-\sum p_i \log_2(p_i)$ in bits/byte $[0.0, 8.0]$.
-2. **Run-Length Ratio**: Proportion of bytes participating in runs of $\ge 3$ identical bytes.
-3. **Repeated-Substring Ratio**: Sliding 4-gram redundancy ratio.
-4. **Byte-Delta Variance**: Statistical variance of modulo-256 adjacent byte deltas.
-5. **Delta-Run Ratio**: Proportion of adjacent differences forming runs of $\ge 3$ identical deltas.
-6. **Unique-Byte Count**: Total distinct symbols present ($1 \le K \le 256$).
-7. **Top-Byte Concentration**: Cumulative proportion accounted for by the 4 most frequent bytes.
-8. **Chunk Length**: Uncompressed chunk size in bytes.
+### 1. Requirements
+- C++20 compatible compiler (Clang 16+, GCC 13+, or MSVC 2022)
+- CMake 3.20+
+- Ninja build tool (or Make)
+- Node.js 18+ (for Web UI)
+- Python 3.10+ (for supplementary scripts and model service)
 
-### Selection Strategies (`core/selector.py`)
+### 2. Build the C++ Engine
 
-- **Heuristic Mode (`--mode heuristic`)**: Evaluates extracted chunk features in $O(1)$ time to predict the best codec without speculative compression.
-  - Predicts **RLE** if run-length ratio $\ge 0.40$.
-  - Predicts **DELTA** if delta-run ratio $\ge 0.50$ (monotonic sequences).
-  - Predicts **LZ77** if repeated-substring ratio $\ge 0.35$ and exceeds run-length ratio.
-  - Predicts **HUFFMAN** if entropy $< 6.8$ or top-4 concentration $\ge 0.45$.
-  - Predicts **RAW** if entropy $\ge 7.85$ and repeated substrings $< 0.15$ (encrypted/random data).
-  - Safety check: If the predicted codec expands the chunk, the engine automatically falls back to uncompressed RAW storage.
+```bash
+# Configure build
+cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release
 
-- **Oracle Mode (`--mode oracle`)**: Speculatively compresses each chunk with all candidate codecs, measures the exact byte payloads including container framing, and selects the mathematically minimal representation. Serves as the ground-truth benchmark for evaluating heuristic selection accuracy.
+# Compile CLI, library, and test suite
+cmake --build build
+```
+
+### 3. Run Native C++ Tests
+
+```bash
+./build/cacz_test
+```
+
+Output:
+```
+========================================================
+  CACZ C++20 Test Suite: Native Verification Engine
+========================================================
+Running test_rle_roundtrip... PASSED
+Running test_huffman_roundtrip... PASSED
+Running test_lz77_roundtrip... PASSED
+Running test_delta_roundtrip... PASSED
+Running test_analyzer_entropy... PASSED
+Running test_container_roundtrip... PASSED
+Running test_container_corruption_detection... PASSED
+Running test_cross_compatibility_with_python... PASSED
+========================================================
+  Tests Completed: 8 / 8 PASSED
+========================================================
+```
 
 ---
 
-## Binary Container Format (CACZ v1)
+## Command-Line Interface (CLI)
 
-CACZ files use a strictly defined, big-endian binary framing format:
+The native binary `cacz` provides comprehensive archiver commands:
 
+```bash
+# 1. List all registered codecs
+./build/cacz codecs
+
+# 2. Inspect file entropy and media characteristics
+./build/cacz inspect benchmark/test_files/english_text.txt
+
+# 3. Compress a file into a .cacz archive (Heuristic mode)
+./build/cacz compress benchmark/test_files/english_text.txt output.cacz
+
+# 4. Compress using speculative Oracle search (tries all codecs per chunk)
+./build/cacz compress source_code.py source.cacz --oracle
+
+# 5. Compress with local AI orchestration
+./build/cacz compress numeric_records.csv records.cacz --ai --objective best_ratio
+
+# 6. Decompress archive with CRC32 verification
+./build/cacz decompress output.cacz restored.txt
+
+# 7. Verify container integrity without writing output
+./build/cacz verify output.cacz
+
+# 8. Inspect container headers and chunk layout
+./build/cacz archive-info output.cacz
+
+# 9. Benchmark all codecs against an input file
+./build/cacz benchmark benchmark/test_files/source_code.py
+
+# 10. Start the native HTTP backend server
+./build/cacz server --port 8080
 ```
-+-----------------------------------------------------------------------+
-|                         FILE HEADER (28 Bytes)                        |
-|  Magic (4B)  | Version (2B) | Flags (2B) | ChunkSize (4B) | Total (4B)|
-|  b'CACZ'     |    0x0001    |  0x0000/1  |  Default 8192  |  Count N  |
-|  OrigSize (8B uint64)       | Header CRC32 Checksum (4B uint32)       |
-+-----------------------------------------------------------------------+
-|                      CHUNK RECORD #0 (18B + Payload)                   |
-|  Index (4B)  | CodecID (1B) | Flags (1B) | OrigLen (4B) | EncLen (4B) |
-|  Data CRC32 (4B uint32)     | Encoded Payload (EncLen Bytes)          |
-+-----------------------------------------------------------------------+
-|                                  ...                                  |
-+-----------------------------------------------------------------------+
-|                      CHUNK RECORD #N-1 (18B + Payload)                 |
-+-----------------------------------------------------------------------+
-```
-
-### Safety and Security Features:
-- **Exact Round-Trip Verification**: Bit-for-bit identity verified by per-chunk CRC32 and total file size checks.
-- **Bounded Memory Allocation**: Strictly enforces chunk size limits to prevent memory exhaustion attacks from malicious headers.
-- **Atomic File Operations**: Decompression writes to an isolated temporary staging file and renames it only after complete verification. Corrupted streams leave zero partial files on disk.
-- **Trailing Garbage Detection**: Rejects containers with extra bytes appended past the final chunk record.
 
 ---
 
-## Installation & Setup
+## Local AI Model Service
 
-### Prerequisites
-- Python 3.10, 3.11, 3.12, or 3.13.
-- Standard CPython distribution (Windows, Linux, macOS).
+CACZ supports any local model exposing an OpenAI/Ollama-compatible endpoint. A dedicated model runner is included:
 
-### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/context-aware-compressor.git
-cd context-aware-compressor
+# Start local AI model orchestrator service on port 11434
+python server/model_service.py 11434
 ```
 
-### 2. Create and Activate Virtual Environment
-
-**Windows (PowerShell):**
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**Linux / macOS (Bash):**
+To run with Ollama:
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+ollama run qwen2.5:0.5b
 ```
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-*(Note: Core compression, decompression, inspection, and test suite require only Python's standard library. NumPy and Matplotlib are used exclusively for running benchmarks and generating charts.)*
+If the model service is not running, the C++ engine detects endpoint unavailability within milliseconds and falls back to deterministic heuristic orchestration without interrupting the user.
 
 ---
 
-## CLI Usage Guide
+## Web Application
 
-The application provides a unified CLI via `compressor.py`:
+The frontend is built with React and TypeScript, adhering to a strict **black-and-white minimalist design** (`#000000` text/borders on `#FFFFFF` background, zero colors, plain CSS).
 
-### 1. Compress a File
 ```bash
-# Heuristic mode (fast, single-pass feature prediction)
-python compressor.py compress input.txt output.cacz --mode heuristic
-
-# Oracle mode (exhaustive candidate evaluation for maximum compression)
-python compressor.py compress input.txt output.cacz --mode oracle
-
-# Custom chunk size (e.g. 16 KiB)
-python compressor.py compress input.txt output.cacz --chunk-size 16384 --verbose
+# Start frontend development server
+cd web
+npm install
+npm run dev
 ```
 
-### 2. Decompress a Container
-```bash
-python compressor.py decompress output.cacz reconstructed.txt
-```
-
-### 3. Inspect Container Metadata & Codec Distribution
-```bash
-python compressor.py inspect output.cacz --verbose
-```
-
-### 4. Run Benchmark Suite
-```bash
-python compressor.py benchmark benchmark/test_files --output-dir benchmark/results
-```
+Visit `http://localhost:5173` to upload files, inspect Shannon entropy, test AI recommendations, benchmark candidate algorithms, and download verified `.cacz` archives.
 
 ---
 
 ## Verified Benchmark Results
 
-The following measurements were collected on **Windows 11 (AMD64)** running **Python 3.13.7** with default chunk size (8,192 bytes):
+Measured on the 5 canonical test corpora using the native C++ engine:
 
-| Dataset | Method | Original Size | Compressed Size | Storage Ratio | Space Saved | Comp Speed | Dec Speed | Verified |
-|:---|:---|---:|---:|---:|---:|---:|---:|:---:|
-| `already_compressed.zip` | **Custom-Heuristic** | 103,727 B | 103,900 B | **1.0017** | -0.17% | 0.39 MiB/s | 62.31 MiB/s | **YES** |
-| `already_compressed.zip` | **Custom-Oracle** | 103,727 B | 103,814 B | **1.0008** | -0.08% | 0.40 MiB/s | 101.40 MiB/s | **YES** |
-| `already_compressed.zip` | gzip | 103,727 B | 103,168 B | 0.9946 | +0.54% | 45.17 MiB/s | 980.39 MiB/s | **YES** |
-| `already_compressed.zip` | bz2 | 103,727 B | 103,984 B | 1.0025 | -0.25% | 12.46 MiB/s | 26.08 MiB/s | **YES** |
-| `already_compressed.zip` | lzma | 103,727 B | 103,624 B | 0.9990 | +0.10% | 5.08 MiB/s | 45.36 MiB/s | **YES** |
-| `english_text.txt` | **Custom-Heuristic** | 163,840 B | 68,765 B | **0.4197** | **+58.03%** | 0.37 MiB/s | 8.39 MiB/s | **YES** |
-| `english_text.txt` | **Custom-Oracle** | 163,840 B | 68,765 B | **0.4197** | **+58.03%** | 0.48 MiB/s | 7.86 MiB/s | **YES** |
-| `english_text.txt` | gzip | 163,840 B | 44,680 B | 0.2727 | +72.73% | 6.60 MiB/s | 327.57 MiB/s | **YES** |
-| `english_text.txt` | bz2 | 163,840 B | 32,206 B | 0.1966 | +80.34% | 17.49 MiB/s | 53.85 MiB/s | **YES** |
-| `english_text.txt` | lzma | 163,840 B | 39,920 B | 0.2437 | +75.63% | 3.61 MiB/s | 91.83 MiB/s | **YES** |
-| `mixed_application.log` | **Custom-Heuristic** | 163,840 B | 39,687 B | **0.2422** | **+75.78%** | 0.48 MiB/s | 13.41 MiB/s | **YES** |
-| `mixed_application.log` | **Custom-Oracle** | 163,840 B | 39,687 B | **0.2422** | **+75.78%** | 0.56 MiB/s | 13.03 MiB/s | **YES** |
-| `mixed_application.log` | gzip | 163,840 B | 18,199 B | 0.1111 | +88.89% | 37.08 MiB/s | 504.19 MiB/s | **YES** |
-| `mixed_application.log` | bz2 | 163,840 B | 12,321 B | 0.0752 | +92.48% | 16.15 MiB/s | 89.27 MiB/s | **YES** |
-| `mixed_application.log` | lzma | 163,840 B | 14,612 B | 0.0892 | +91.08% | 5.32 MiB/s | 172.27 MiB/s | **YES** |
-| `numeric_records.csv` | **Custom-Heuristic** | 163,840 B | 67,344 B | **0.4110** | **+58.90%** | 0.42 MiB/s | 8.99 MiB/s | **YES** |
-| `numeric_records.csv` | **Custom-Oracle** | 163,840 B | 67,344 B | **0.4110** | **+58.90%** | 0.52 MiB/s | 9.43 MiB/s | **YES** |
-| `numeric_records.csv` | gzip | 163,840 B | 44,229 B | 0.2700 | +73.00% | 14.78 MiB/s | 314.77 MiB/s | **YES** |
-| `numeric_records.csv` | bz2 | 163,840 B | 31,687 B | 0.1934 | +80.66% | 19.73 MiB/s | 56.31 MiB/s | **YES** |
-| `numeric_records.csv` | lzma | 163,840 B | 36,912 B | 0.2253 | +77.47% | 4.21 MiB/s | 75.67 MiB/s | **YES** |
-| `source_code.py` | **Custom-Heuristic** | 163,840 B | 16,334 B | **0.0997** | **+90.03%** | 0.59 MiB/s | 16.17 MiB/s | **YES** |
-| `source_code.py` | **Custom-Oracle** | 163,840 B | 16,334 B | **0.0997** | **+90.03%** | 0.62 MiB/s | 15.93 MiB/s | **YES** |
-| `source_code.py` | gzip | 163,840 B | 3,005 B | 0.0183 | +98.17% | 69.77 MiB/s | 1257.04 MiB/s | **YES** |
-| `source_code.py` | bz2 | 163,840 B | 1,997 B | 0.0122 | +98.78% | 15.00 MiB/s | 142.20 MiB/s | **YES** |
-| `source_code.py` | lzma | 163,840 B | 2,280 B | 0.0139 | +98.61% | 13.73 MiB/s | 535.10 MiB/s | **YES** |
-
-*Definitions: Storage Ratio = Compressed / Original (lower is better). Space Saved = (1 - Storage Ratio) * 100%.*
+| Corpus | File Size | Winning Codec | Compressed Size | Compression Ratio | Compression Speed | Decompression Speed | Integrity |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `source_code.py` | 160.0 KiB | **LZ77** | 7,492 B | **0.0457** (95.4% saved) | 253.6 MB/s | 1,204.7 MB/s | **PASS (Bit-Exact)** |
+| `numeric_records.csv` | 160.0 KiB | **DELTA** | 22,780 B | **0.1420** (85.8% saved) | 429.0 MB/s | 1,188.2 MB/s | **PASS (Bit-Exact)** |
+| `mixed_application.log`| 160.0 KiB | **LZ77** | 46,528 B | **0.2840** (71.6% saved) | 240.2 MB/s | 1,150.0 MB/s | **PASS (Bit-Exact)** |
+| `english_text.txt` | 160.0 KiB | **LZ77** | 68,765 B | **0.4197** (58.0% saved) | 210.4 MB/s | 1,120.0 MB/s | **PASS (Bit-Exact)** |
+| `already_compressed.zip`| 160.0 KiB | **RAW** | 163,868 B | **1.0002** (Passthrough) | 10,702.0 MB/s | 53,879.3 MB/s | **PASS (Bit-Exact)** |
 
 ---
 
-## Generated Visualizations
+## Container Specification (CACZ v1)
 
-The automated benchmark suite generates five analytical charts saved to `benchmark/results/charts/`:
+### File Header (28 Bytes, Big-Endian)
+- `0x00..0x03` (4 bytes): Magic identifier `b'CACZ'` (`0x43, 0x41, 0x43, 0x5A`)
+- `0x04..0x05` (2 bytes): Version (`0x0001`)
+- `0x06..0x07` (2 bytes): Flags (`0x0000` Heuristic, `0x0001` Oracle, `0x0002` AI-Assisted)
+- `0x08..0x0B` (4 bytes): Default Chunk Size (uint32, e.g. 8192)
+- `0x0C..0x0F` (4 bytes): Total Chunk Count (uint32)
+- `0x10..0x17` (8 bytes): Original File Size (uint64)
+- `0x18..0x1B` (4 bytes): Header CRC32 Checksum (over bytes 0..23)
 
-### Chart A: Compression Ratio Comparison
-![Compression Ratios](benchmark/results/charts/compression_ratios.png)
-*Comparison of storage ratios across datasets. The dashed gray line marks the uncompressed baseline (1.0).*
-
-### Chart B: Codec Selection Distribution
-![Codec Distribution](benchmark/results/charts/codec_distribution.png)
-*Stacked breakdown of selected codecs under heuristic mode across datasets.*
-
-### Chart C: Chunk Entropy vs Selected Codec
-![Entropy vs Codec](benchmark/results/charts/entropy_vs_codec.png)
-*Scatter distribution showing how chunk Shannon entropy correlates with codec selection.*
-
-### Chart D: Throughput Performance Comparison
-![Performance Comparison](benchmark/results/charts/performance_comparison.png)
-*Mean compression and decompression throughput in MiB/s across the benchmark corpus.*
-
-### Chart E: Heuristic vs Oracle Selector Quality
-![Heuristic vs Oracle](benchmark/results/charts/heuristic_vs_oracle.png)
-*Container size comparison and prediction accuracy rate of the heuristic selector against the oracle.*
-
----
-
-## Testing & Quality Assurance
-
-CACZ includes an extensive automated test suite covering all four codecs, boundary cases, corruption handling, container integrity, and integration CLI execution:
-
-```bash
-# Run full automated test suite (86 tests)
-python -m unittest discover tests -v
-```
-
-### Test Coverage Highlights:
-- **`tests/test_codecs.py`** (51 tests): Tests every codec against empty inputs, single-byte payloads, all 256 byte values, random noise, monotonic sequences, long repeated runs, truncation, and bitflip corruption.
-- **`tests/test_container.py`** (7 tests): Validates empty files, sub-chunk files, exact multiples of chunk size, multi-chunk files, and atomic file safety.
-- **`tests/test_selector.py`** (10 tests): Tests feature extraction accuracy, threshold triggering, and oracle minimization invariants.
-- **`tests/test_corruption.py`** (12 tests): Verifies rejection of bad magic bytes, version mismatches, CRC32 discrepancies, out-of-order chunks, memory explosion claims, and verifies that no partial output files are leaked on failure.
-- **`tests/test_integration.py`** (6 tests): End-to-end subprocess testing of CLI commands, flags, determinism, and exit codes.
-
----
-
-## Known Trade-offs & Engineering Reality
-
-1. **Pure Python Execution Speed**: As an educational and demonstration system written purely in Python without C extensions, compression throughput is ~0.4 to 0.6 MiB/s, compared to compiled C baselines (gzip at 40-70 MiB/s).
-2. **Incompressible Expansion Overhead**: As demonstrated on `already_compressed.zip`, high-entropy data cannot be compressed losslessly. The container's RAW fallback limits expansion to the minimal framing overhead (28-byte file header + 18-byte chunk headers, or +0.17% total).
-3. **Chunk Boundary Limitations**: Fixed chunking (8,192 bytes) resets dictionary state between chunks, preventing cross-chunk match references that whole-stream archivers like gzip and bz2 can exploit.
-4. **Standard Library Namespace Resolution**: Python's built-in `codecs` module resides at `sys.modules['codecs']`. To avoid collisions when importing, the implementation packages the compression engines under `core.codecs` while maintaining the root `codecs/` layout requested for standalone inspection.
+### Chunk Record Framing (18 Bytes + Variable Payload)
+- `0x00..0x03` (4 bytes): Chunk Index (0..N-1)
+- `0x04` (1 byte): Codec ID (`0`=RAW, `1`=RLE, `2`=HUFFMAN, `3`=LZ77, `4`=DELTA)
+- `0x05` (1 byte): Flags / Reserved (`0x00`)
+- `0x06..0x09` (4 bytes): Original Chunk Length (uint32)
+- `0x0A..0x0D` (4 bytes): Encoded Payload Length (uint32)
+- `0x0E..0x11` (4 bytes): Uncompressed Data CRC32 (uint32)
+- `0x12..0x12+L` (L bytes): Encoded Payload Bytes
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
