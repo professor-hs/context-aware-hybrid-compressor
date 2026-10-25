@@ -4,6 +4,7 @@
 #include "cacz/analyzer.hpp"
 #include "cacz/media_detector.hpp"
 #include "cacz/orchestrator.hpp"
+#include "cacz/server.hpp"
 #include <iostream>
 #include <cassert>
 #include <string>
@@ -295,6 +296,66 @@ bool test_cross_compatibility_with_python() {
     return true;
 }
 
+bool test_server_helpers() {
+    // 1. Filename sanitization
+    TEST_ASSERT(sanitize_filename("../../../etc/passwd") == "passwd", "Strip path traversal Unix");
+    TEST_ASSERT(sanitize_filename("C:\\Windows\\System32\\calc.exe") == "calc.exe", "Strip path traversal Windows");
+    TEST_ASSERT(sanitize_filename("my%20data%20file.csv") == "my data file.csv", "URL decode spaces");
+    TEST_ASSERT(sanitize_filename("bad<name>:\"file\".bin") == "bad_name___file_.bin", "Strip illegal chars");
+    TEST_ASSERT(sanitize_filename("   ...   ") == "upload.bin", "Fallback on empty dots/spaces");
+    TEST_ASSERT(sanitize_filename("") == "upload.bin", "Fallback on empty string");
+
+    // 2. HTTP status reasons
+    TEST_ASSERT(std::string(http_status_reason(200)) == "OK", "Status 200");
+    TEST_ASSERT(std::string(http_status_reason(400)) == "Bad Request", "Status 400");
+    TEST_ASSERT(std::string(http_status_reason(404)) == "Not Found", "Status 404");
+    TEST_ASSERT(std::string(http_status_reason(413)) == "Payload Too Large", "Status 413");
+    TEST_ASSERT(std::string(http_status_reason(500)) == "Internal Server Error", "Status 500");
+    return true;
+}
+
+bool test_large_binary_with_null_bytes() {
+    // 128 KB binary payload (> 65,536 buffer) with embedded zeroes and repetitive patterns
+    const size_t size = 128 * 1024;
+    std::vector<uint8_t> data(size);
+    for (size_t i = 0; i < size; ++i) {
+        if (i % 8 == 0) data[i] = 0x00; // embedded zero bytes
+        else data[i] = static_cast<uint8_t>((i / 16) & 0xFF);
+    }
+
+    std::string test_in = "temp_large_binary.bin";
+    std::string test_arc = "temp_large_binary.cacz";
+    std::string test_out = "temp_large_binary_restored.bin";
+
+    std::ofstream out(test_in, std::ios::binary);
+    out.write(reinterpret_cast<const char*>(data.data()), data.size());
+    out.close();
+
+    Container::compress_file(test_in, test_arc);
+
+    std::string verify_err;
+    bool ok = Container::verify(test_arc, &verify_err);
+    TEST_ASSERT(ok, "Large binary archive verification passed");
+
+    ArchiveInspection rep = Container::inspect(test_arc);
+    TEST_ASSERT(rep.header.original_size == size, "Original size matches in inspection");
+    TEST_ASSERT(rep.archive_size < size, "Size reduced on repetitive structured binary");
+
+    Container::decompress_file(test_arc, test_out);
+
+    std::ifstream in(test_out, std::ios::binary);
+    std::vector<uint8_t> restored((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
+    in.close();
+
+    std::error_code ec;
+    std::filesystem::remove(test_in, ec);
+    std::filesystem::remove(test_arc, ec);
+    std::filesystem::remove(test_out, ec);
+
+    TEST_ASSERT(restored == data, "128 KB binary with embedded null bytes exact match");
+    return true;
+}
+
 int main() {
     std::cout << "========================================================\n";
     std::cout << "  CACZ C++20 Test Suite: Native Verification Engine\n";
@@ -308,6 +369,8 @@ int main() {
     RUN_TEST(test_container_roundtrip);
     RUN_TEST(test_container_corruption_detection);
     RUN_TEST(test_cross_compatibility_with_python);
+    RUN_TEST(test_server_helpers);
+    RUN_TEST(test_large_binary_with_null_bytes);
 
     std::cout << "========================================================\n";
     std::cout << "  Tests Completed: " << g_tests_passed << " / " << g_tests_run << " PASSED\n";
