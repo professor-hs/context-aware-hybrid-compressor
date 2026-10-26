@@ -74,8 +74,8 @@ const getInitialApiBase = (): string => {
     if (saved !== null && saved.trim() !== '') return saved.trim();
   } catch (_) {}
   const envVal = (import.meta as any).env?.VITE_API_BASE_URL;
-  if (envVal && typeof envVal === 'string') return envVal.trim();
-  return '';
+  if (envVal && typeof envVal === 'string' && envVal.trim() !== '') return envVal.trim();
+  return 'https://context-aware-hybrid-compressor.onrender.com';
 };
 
 export default function App() {
@@ -131,12 +131,47 @@ export default function App() {
     fetch(`${cleanBase}/api/model/status`)
       .then(res => res.json())
       .then(data => setAiStatus(data))
-      .catch(() => setAiStatus({ available: false, endpoint: 'http://127.0.0.1:11434 (offline)' }));
+      .catch(() => setAiStatus({ available: false, endpoint: 'Local AI service (offline)' }));
   };
 
   useEffect(() => {
-    refreshBackend(apiBaseUrl);
-  }, [apiBaseUrl]);
+    const probeAndConnect = async () => {
+      try {
+        const saved = localStorage.getItem('cacz_api_base_url');
+        if (saved && saved.trim() !== '') {
+          refreshBackend(saved.trim());
+          return;
+        }
+      } catch (_) {}
+
+      const candidates = [
+        'https://context-aware-hybrid-compressor.onrender.com',
+        'https://context-aware-compressor.onrender.com',
+        'https://cacz-backend.onrender.com',
+        '' // Relative /api via Netlify proxy
+      ];
+
+      for (const url of candidates) {
+        try {
+          const clean = url.replace(/\/+$/, '');
+          const res = await fetch(`${clean}/api/health`, { mode: 'cors' });
+          if (res.ok) {
+            const data = await res.json();
+            if (data.status === 'healthy') {
+              setApiBaseUrl(clean);
+              setApiUrlInput(clean);
+              refreshBackend(clean);
+              return;
+            }
+          }
+        } catch (_) {}
+      }
+
+      refreshBackend('https://context-aware-hybrid-compressor.onrender.com');
+    };
+
+    probeAndConnect();
+  }, []);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -772,7 +807,7 @@ export default function App() {
               </span>
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', marginBottom: '12px' }}>
-              Connect this web interface to your deployed Render backend (e.g. <code>https://YOUR-APP.onrender.com</code>) or local C++ server (<code>http://127.0.0.1:8080</code>).
+              Connect this web interface to your deployed Render backend (e.g. <code>https://context-aware-hybrid-compressor.onrender.com</code>).
             </p>
             <div className="form-group">
               <label>Backend API Base URL (saved in browser)</label>
@@ -781,7 +816,7 @@ export default function App() {
                   type="text"
                   value={apiUrlInput}
                   onChange={e => setApiUrlInput(e.target.value)}
-                  placeholder="e.g. https://cacz-backend.onrender.com or leave empty for relative /api"
+                  placeholder="e.g. https://context-aware-hybrid-compressor.onrender.com or /api"
                   style={{ flex: 1 }}
                 />
                 <button

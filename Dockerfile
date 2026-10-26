@@ -16,8 +16,8 @@ COPY CMakeLists.txt ./
 COPY include/ ./include/
 COPY src/ ./src/
 
-# Build native C++20 server binary
-RUN cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release \
+# Build native C++20 server binary (tests disabled for production container)
+RUN cmake -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF \
  && cmake --build build --target cacz
 
 # Stage 2: Minimal Runtime container
