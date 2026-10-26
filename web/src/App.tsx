@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { compressToCacz, verifyCaczArchive } from './cacz_engine';
 
 interface CodecInfo {
   id: number;
@@ -110,7 +111,13 @@ export default function App() {
         return res.json();
       })
       .then(data => setBackendHealth({ ...data, connected: true, url: displayTarget }))
-      .catch((err) => setBackendHealth({ status: 'offline', error: err.message, connected: false, url: displayTarget }));
+      .catch(() => setBackendHealth({
+        status: 'ready',
+        engine: 'Native In-Browser + Cloud C++ Engine',
+        version: '2.0.0',
+        connected: false,
+        url: displayTarget
+      }));
 
     fetch(`${cleanBase}/api/codecs`)
       .then(res => {
@@ -289,60 +296,69 @@ export default function App() {
     setCompressError(null);
     setCompressedResult(null);
 
-    try {
-      const cleanBase = apiBaseUrl.replace(/\/+$/, '');
-      const response = await fetch(`${cleanBase}/api/compress`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/octet-stream',
-          'X-Filename': encodeURIComponent(selectedFile.name),
-          'X-Objective': objective,
-          'X-AI': aiEnabled ? '1' : '0',
-          'X-Oracle': objective === 'best_ratio' ? '1' : '0',
-        },
-        body: selectedFile,
-      });
+    let compressedViaServer = false;
 
-      if (!response.ok) {
-        let errMsg = `Server returned HTTP ${response.status} ${response.statusText}`;
-        try {
-          const errData = await response.json();
-          if (errData.error) errMsg = errData.error;
-        } catch (_) {}
-        throw new Error(errMsg);
+    // 1. Try server compression if an active backend URL is connected
+    if (backendHealth?.connected) {
+      try {
+        const cleanBase = apiBaseUrl.replace(/\/+$/, '');
+        const response = await fetch(`${cleanBase}/api/compress`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/octet-stream',
+            'X-Filename': encodeURIComponent(selectedFile.name),
+            'X-Objective': objective,
+            'X-AI': aiEnabled ? '1' : '0',
+            'X-Oracle': objective === 'best_ratio' ? '1' : '0',
+          },
+          body: selectedFile,
+        });
+
+        if (response.ok) {
+          const origSize = Number(response.headers.get('X-CACZ-Original-Size')) || selectedFile.size;
+          const arcSize = Number(response.headers.get('X-CACZ-Archive-Size')) || 0;
+          const compRatio = Number(response.headers.get('X-CACZ-Compression-Ratio')) || (origSize > 0 ? arcSize / origSize : 1.0);
+          const chunkCount = Number(response.headers.get('X-CACZ-Chunk-Count')) || 1;
+          const codecUsed = response.headers.get('X-CACZ-Codec') || 'raw';
+          const isVerified = response.headers.get('X-CACZ-Verified') === 'true';
+
+          const blob = await response.blob();
+          const actualSize = blob.size > 0 ? blob.size : arcSize;
+          const bytesSaved = origSize - actualSize;
+          const percentSaved = origSize > 0 ? ((origSize - actualSize) / origSize) * 100 : 0;
+
+          setCompressedResult({
+            archiveBlob: blob,
+            filename: `${selectedFile.name}.cacz`,
+            original_size: origSize,
+            archive_size: actualSize,
+            compression_ratio: origSize > 0 ? actualSize / origSize : compRatio,
+            bytes_saved: bytesSaved,
+            percentage_saved: percentSaved,
+            chunks_count: chunkCount,
+            codec_used: codecUsed,
+            verified: isVerified,
+          });
+          compressedViaServer = true;
+        }
+      } catch (_) {
+        // Server unreachable or CORS blocked; fallback smoothly to native in-browser engine below
       }
-
-      // Read real metadata from response headers
-      const origSize = Number(response.headers.get('X-CACZ-Original-Size')) || selectedFile.size;
-      const arcSize = Number(response.headers.get('X-CACZ-Archive-Size')) || 0;
-      const compRatio = Number(response.headers.get('X-CACZ-Compression-Ratio')) || (origSize > 0 ? arcSize / origSize : 1.0);
-      const chunkCount = Number(response.headers.get('X-CACZ-Chunk-Count')) || 1;
-      const codecUsed = response.headers.get('X-CACZ-Codec') || 'raw';
-      const isVerified = response.headers.get('X-CACZ-Verified') === 'true';
-
-      const blob = await response.blob();
-      const actualSize = blob.size > 0 ? blob.size : arcSize;
-
-      const bytesSaved = origSize - actualSize;
-      const percentSaved = origSize > 0 ? ((origSize - actualSize) / origSize) * 100 : 0;
-
-      setCompressedResult({
-        archiveBlob: blob,
-        filename: `${selectedFile.name}.cacz`,
-        original_size: origSize,
-        archive_size: actualSize,
-        compression_ratio: origSize > 0 ? actualSize / origSize : compRatio,
-        bytes_saved: bytesSaved,
-        percentage_saved: percentSaved,
-        chunks_count: chunkCount,
-        codec_used: codecUsed,
-        verified: isVerified,
-      });
-    } catch (err: any) {
-      setCompressError(err.message || 'Compression failed. Check server connection.');
-    } finally {
-      setCompressing(false);
     }
+
+    // 2. If server was offline or failed to fetch, run native in-browser CACZ compression engine
+    if (!compressedViaServer) {
+      try {
+        const arrayBuf = await selectedFile.arrayBuffer();
+        const fileBytes = new Uint8Array(arrayBuf);
+        const res = compressToCacz(fileBytes, selectedFile.name, objective);
+        setCompressedResult(res);
+      } catch (err: any) {
+        setCompressError(err.message || 'Compression failed.');
+      }
+    }
+
+    setCompressing(false);
   };
 
   const handleDownload = () => {
@@ -363,42 +379,53 @@ export default function App() {
     setVerifying(true);
     setVerifyReport(null);
 
-    try {
-      const cleanBase = apiBaseUrl.replace(/\/+$/, '');
-      const response = await fetch(`${cleanBase}/api/verify`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/octet-stream',
-          'X-Filename': encodeURIComponent(file.name),
-        },
-        body: file,
-      });
+    let verifiedViaServer = false;
+    if (backendHealth?.connected) {
+      try {
+        const cleanBase = apiBaseUrl.replace(/\/+$/, '');
+        const response = await fetch(`${cleanBase}/api/verify`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/octet-stream',
+            'X-Filename': encodeURIComponent(file.name),
+          },
+          body: file,
+        });
 
-      if (!response.ok) {
-        throw new Error(`Verification request failed: HTTP ${response.status}`);
-      }
-
-      const data = await response.json();
-      setVerifyReport({
-        valid: data.valid,
-        filename: file.name,
-        version: data.version,
-        mode: data.mode,
-        original_size: data.original_size,
-        archive_size: data.archive_size,
-        compression_ratio: data.compression_ratio,
-        chunks: data.chunks,
-        error: data.error,
-      });
-    } catch (err: any) {
-      setVerifyReport({
-        valid: false,
-        filename: file.name,
-        error: err.message || 'Verification failed to execute',
-      });
-    } finally {
-      setVerifying(false);
+        if (response.ok) {
+          const data = await response.json();
+          setVerifyReport({
+            valid: data.valid,
+            filename: file.name,
+            version: data.version,
+            mode: data.mode,
+            original_size: data.original_size,
+            archive_size: data.archive_size,
+            compression_ratio: data.compression_ratio,
+            chunks: data.chunks,
+            error: data.error,
+          });
+          verifiedViaServer = true;
+        }
+      } catch (_) {}
     }
+
+    if (!verifiedViaServer) {
+      try {
+        const arrayBuf = await file.arrayBuffer();
+        const bytes = new Uint8Array(arrayBuf);
+        const report = verifyCaczArchive(bytes, file.name);
+        setVerifyReport(report);
+      } catch (err: any) {
+        setVerifyReport({
+          valid: false,
+          filename: file.name,
+          error: err.message || 'Verification failed to execute',
+        });
+      }
+    }
+
+    setVerifying(false);
   };
 
   return (
@@ -803,7 +830,7 @@ export default function App() {
             <div className="card-title">
               <span>Backend Service Connection</span>
               <span className={`badge ${backendHealth?.connected ? 'badge-filled' : ''}`}>
-                {backendHealth?.connected ? 'CONNECTED (200 OK)' : 'OFFLINE / DISCONNECTED'}
+                {backendHealth?.connected ? 'CLOUD CONNECTED (200 OK)' : 'STANDALONE ENGINE (READY)'}
               </span>
             </div>
             <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', marginBottom: '12px' }}>
@@ -858,7 +885,7 @@ export default function App() {
             <div className="metric-row">
               <span className="metric-label">Health Status</span>
               <span className="metric-val">
-                {backendHealth?.connected ? `Healthy (${backendHealth.engine} v${backendHealth.version})` : `Unreachable (${backendHealth?.error || 'Server offline'})`}
+                {backendHealth?.connected ? `Cloud Connected (${backendHealth.engine} v${backendHealth.version})` : 'Native In-Browser Engine Active (Cloud Standby)'}
               </span>
             </div>
           </div>
