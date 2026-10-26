@@ -21,9 +21,12 @@
 #ifdef _WIN32
 #include <winsock2.h>
 #include <ws2tcpip.h>
+using socklen_t = int;
 #else
+#include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <arpa/inet.h>
 #include <unistd.h>
 #define closesocket close
 typedef int SOCKET;
@@ -149,7 +152,7 @@ void send_response(
        << "Content-Length: " << body.size() << "\r\n"
        << "Access-Control-Allow-Origin: *\r\n"
        << "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
-       << "Access-Control-Allow-Headers: Content-Type, X-Filename, X-Objective, X-Oracle, X-AI\r\n"
+       << "Access-Control-Allow-Headers: Content-Type, Content-Length, X-Filename, X-Objective, X-Oracle, X-AI, X-Requested-With\r\n"
        << "Access-Control-Expose-Headers: Content-Disposition, X-CACZ-Original-Size, X-CACZ-Archive-Size, X-CACZ-Compression-Ratio, X-CACZ-Chunk-Count, X-CACZ-Verified, X-CACZ-Codec\r\n";
 
     for (const auto& [k, v] : extra_headers) {
@@ -240,9 +243,9 @@ void handle_client(SOCKET client) {
         }
     }
 
-    // 3. Handle OPTIONS for CORS
+    // 3. Handle OPTIONS for CORS preflight
     if (method == "OPTIONS") {
-        send_response(client, 200, "text/plain", "");
+        send_response(client, 204, "text/plain", "");
         closesocket(client);
         return;
     }
@@ -418,6 +421,13 @@ void handle_client(SOCKET client) {
         if (ai_it != headers.end() && (ai_it->second == "1" || ai_it->second == "true")) {
             options.ai_orchestration = true;
         }
+        auto obj_it = headers.find("x-objective");
+        if (obj_it != headers.end() && !obj_it->second.empty()) {
+            options.objective = objective_from_name(obj_it->second);
+            if (options.objective == Objective::BestRatio) {
+                options.oracle_search = true;
+            }
+        }
 
         // Create temporary paths with RAII guard
         TempFileGuard guard;
@@ -532,7 +542,7 @@ void handle_client(SOCKET client) {
            << "Content-Length: " << archive_size << "\r\n"
            << "Access-Control-Allow-Origin: *\r\n"
            << "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
-           << "Access-Control-Allow-Headers: Content-Type, X-Filename, X-Objective, X-Oracle, X-AI\r\n"
+           << "Access-Control-Allow-Headers: Content-Type, Content-Length, X-Filename, X-Objective, X-Oracle, X-AI, X-Requested-With\r\n"
            << "Access-Control-Expose-Headers: Content-Disposition, X-CACZ-Original-Size, X-CACZ-Archive-Size, X-CACZ-Compression-Ratio, X-CACZ-Chunk-Count, X-CACZ-Verified, X-CACZ-Codec\r\n";
 
         for (const auto& [k, v] : headers_out) {
@@ -671,11 +681,11 @@ int run_http_server(uint16_t port) {
         return 1;
     }
 
-    std::cout << "CACZ Native C++20 HTTP Server listening at http://127.0.0.1:" << port << "\n";
+    std::cout << "CACZ Native C++20 HTTP Server listening on 0.0.0.0:" << port << "\n";
 
     while (true) {
         sockaddr_in client_addr{};
-        int client_len = sizeof(client_addr);
+        socklen_t client_len = sizeof(client_addr);
         SOCKET client_sock = accept(server_sock, reinterpret_cast<sockaddr*>(&client_addr), &client_len);
         if (client_sock != INVALID_SOCKET) {
             std::thread([client_sock]() {

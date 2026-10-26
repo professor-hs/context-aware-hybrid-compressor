@@ -1,0 +1,20 @@
+# Netlify Configuration for CACZ Frontend
+[build]
+  base = "web"
+  publish = "dist"
+  command = "npm run build"
+
+# Single-Page Application (SPA) routing fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# API Reverse Proxy (Optional):
+# When your Render backend is deployed, you can uncomment this block
+# and replace YOUR-RENDER-APP-NAME with your Render service name:
+# [[redirects]]
+#   from = "/api/*"
+#   to = "https://YOUR-RENDER-APP-NAME.onrender.com/api/:splat"
+#   status = 200
+#   force = true

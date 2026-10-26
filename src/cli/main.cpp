@@ -322,6 +322,17 @@ int main(int argc, char* argv[]) {
         return cmd_benchmark(argv[2]);
     } else if (cmd == "server") {
         uint16_t port = 8080;
+        // Read Render / Cloud hosting PORT environment variable if available
+        if (const char* env_port = std::getenv("PORT")) {
+            try {
+                int p = std::stoi(env_port);
+                if (p > 0 && p <= 65535) {
+                    port = static_cast<uint16_t>(p);
+                }
+            } catch (...) {
+                // Ignore parse errors and retain default
+            }
+        }
         for (int i = 2; i < argc; ++i) {
             if (std::string(argv[i]) == "--port" && i + 1 < argc) {
                 port = static_cast<uint16_t>(std::stoi(argv[++i]));

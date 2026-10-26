@@ -54,6 +54,7 @@ struct CompressionOptions {
     size_t chunk_size{DEFAULT_CHUNK_SIZE};
     bool oracle_search{false};
     bool ai_orchestration{false};
+    Objective objective{Objective::Balanced};
     std::function<void(size_t chunk_idx, size_t total_chunks, CodecId selected_codec)> progress_callback;
 };
 

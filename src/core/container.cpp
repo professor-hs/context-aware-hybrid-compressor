@@ -46,7 +46,7 @@ void Container::compress_file(const std::filesystem::path& input_path,
     }
 
     uint16_t flags = options.mode_flags;
-    if (options.oracle_search) {
+    if (options.oracle_search || options.objective == Objective::BestRatio) {
         flags = FLAG_MODE_ORACLE;
     } else if (options.ai_orchestration) {
         flags = FLAG_MODE_AI;
@@ -92,7 +92,9 @@ void Container::compress_file(const std::filesystem::path& input_path,
         CodecId chosen_codec_id = CodecId::Raw;
         std::vector<uint8_t> chosen_payload;
 
-        if (options.oracle_search) {
+        bool run_oracle = options.oracle_search || (options.objective == Objective::BestRatio);
+
+        if (run_oracle) {
             // Oracle mode: evaluate candidate codecs and pick the smallest payload
             size_t best_size = raw_chunk.size();
             chosen_payload.assign(raw_chunk.begin(), raw_chunk.end());
@@ -100,6 +102,11 @@ void Container::compress_file(const std::filesystem::path& input_path,
 
             for (CodecId cid : standard_codecs) {
                 if (cid == CodecId::Raw) continue;
+                // If fastest or minimum_memory objective, skip expensive LZ77
+                if ((options.objective == Objective::Fastest || options.objective == Objective::MinimumMemory) &&
+                    cid == CodecId::Lz77) {
+                    continue;
+                }
                 try {
                     const Codec* c = registry.get(cid);
                     std::vector<uint8_t> enc = c->encode(raw_chunk);
@@ -116,6 +123,20 @@ void Container::compress_file(const std::filesystem::path& input_path,
             // Heuristic mode: analyze chunk characteristics
             ByteCharacteristics chars = Analyzer::analyze(raw_chunk);
             CodecId recommended = Analyzer::recommend_codec(chars);
+
+            // Objective adjustments
+            if (options.objective == Objective::Fastest && recommended == CodecId::Lz77) {
+                // For fastest throughput, favor high-speed codecs
+                if (chars.run_length_ratio > 0.15) {
+                    recommended = CodecId::Rle;
+                } else if (chars.delta_variance < 150.0) {
+                    recommended = CodecId::Delta;
+                } else {
+                    recommended = CodecId::Huffman;
+                }
+            } else if (options.objective == Objective::MinimumMemory && recommended == CodecId::Lz77) {
+                recommended = CodecId::Huffman;
+            }
 
             if (recommended == CodecId::Raw) {
                 chosen_codec_id = CodecId::Raw;

@@ -38,6 +38,9 @@ add_library(cacz_core STATIC ${CACZ_CORE_SOURCES})
 
 if(WIN32)
     target_link_libraries(cacz_core PUBLIC ws2_32)
+else()
+    find_package(Threads REQUIRED)
+    target_link_libraries(cacz_core PUBLIC Threads::Threads)
 endif()
 
 # CLI Executable

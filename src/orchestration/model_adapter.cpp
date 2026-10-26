@@ -11,10 +11,16 @@
 #pragma comment(lib, "ws2_32.lib")
 #endif
 #else
+#include <sys/types.h>
 #include <sys/socket.h>
+#include <netinet/in.h>
 #include <arpa/inet.h>
 #include <netdb.h>
 #include <unistd.h>
+#define closesocket close
+typedef int SOCKET;
+#define INVALID_SOCKET (-1)
+#define SOCKET_ERROR (-1)
 #endif
 
 namespace cacz {
@@ -79,6 +85,16 @@ bool ModelAdapter::send_http_post(const std::string& host, uint16_t port, const 
     DWORD tv = timeout_ms;
     setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, reinterpret_cast<const char*>(&tv), sizeof(tv));
     setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, reinterpret_cast<const char*>(&tv), sizeof(tv));
+#else
+    SOCKET sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
+    if (sock == INVALID_SOCKET) return false;
+
+    struct timeval tv{};
+    tv.tv_sec = timeout_ms / 1000;
+    tv.tv_usec = (timeout_ms % 1000) * 1000;
+    setsockopt(sock, SOL_SOCKET, SO_RCVTIMEO, reinterpret_cast<const char*>(&tv), sizeof(tv));
+    setsockopt(sock, SOL_SOCKET, SO_SNDTIMEO, reinterpret_cast<const char*>(&tv), sizeof(tv));
+#endif
 
     sockaddr_in addr{};
     addr.sin_family = AF_INET;
@@ -117,9 +133,6 @@ bool ModelAdapter::send_http_post(const std::string& host, uint16_t port, const 
         response_body = resp;
     }
     return !response_body.empty();
-#else
-    return false;
-#endif
 }
 
 bool ModelAdapter::check_availability() const {

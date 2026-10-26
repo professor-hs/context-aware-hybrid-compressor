@@ -68,6 +68,16 @@ interface VerificationReport {
   error?: string;
 }
 
+const getInitialApiBase = (): string => {
+  try {
+    const saved = localStorage.getItem('cacz_api_base_url');
+    if (saved !== null && saved.trim() !== '') return saved.trim();
+  } catch (_) {}
+  const envVal = (import.meta as any).env?.VITE_API_BASE_URL;
+  if (envVal && typeof envVal === 'string') return envVal.trim();
+  return '';
+};
+
 export default function App() {
   const [activeTab, setActiveTab] = useState<'compress' | 'decompress' | 'benchmarks' | 'status'>('compress');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -80,18 +90,33 @@ export default function App() {
   const [backendHealth, setBackendHealth] = useState<any>(null);
   const [codecs, setCodecs] = useState<CodecInfo[]>([]);
 
+  // Backend connection & AI status
+  const [apiBaseUrl, setApiBaseUrl] = useState<string>(getInitialApiBase);
+  const [apiUrlInput, setApiUrlInput] = useState<string>(getInitialApiBase);
+  const [apiUrlSaveMsg, setApiUrlSaveMsg] = useState<string | null>(null);
+  const [aiStatus, setAiStatus] = useState<{ available: boolean; endpoint: string } | null>(null);
+
   // Decompress / Verify Tab State
   const [verifying, setVerifying] = useState<boolean>(false);
   const [verifyReport, setVerifyReport] = useState<VerificationReport | null>(null);
 
-  useEffect(() => {
-    fetch('/api/health')
-      .then(res => res.json())
-      .then(data => setBackendHealth(data))
-      .catch(() => setBackendHealth({ status: 'offline', engine: 'Native C++20 Core' }));
+  const refreshBackend = (targetUrl: string) => {
+    const cleanBase = targetUrl.replace(/\/+$/, '');
+    const displayTarget = cleanBase || '(Default Relative: /api)';
 
-    fetch('/api/codecs')
-      .then(res => res.json())
+    fetch(`${cleanBase}/api/health`)
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then(data => setBackendHealth({ ...data, connected: true, url: displayTarget }))
+      .catch((err) => setBackendHealth({ status: 'offline', error: err.message, connected: false, url: displayTarget }));
+
+    fetch(`${cleanBase}/api/codecs`)
+      .then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
       .then(data => setCodecs(data))
       .catch(() => {
         setCodecs([
@@ -102,7 +127,16 @@ export default function App() {
           { id: 4, name: 'delta', description: 'Modulo-256 byte diffing coupled with RLE', lossless: true },
         ]);
       });
-  }, []);
+
+    fetch(`${cleanBase}/api/model/status`)
+      .then(res => res.json())
+      .then(data => setAiStatus(data))
+      .catch(() => setAiStatus({ available: false, endpoint: 'http://127.0.0.1:11434 (offline)' }));
+  };
+
+  useEffect(() => {
+    refreshBackend(apiBaseUrl);
+  }, [apiBaseUrl]);
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
@@ -221,7 +255,8 @@ export default function App() {
     setCompressedResult(null);
 
     try {
-      const response = await fetch('/api/compress', {
+      const cleanBase = apiBaseUrl.replace(/\/+$/, '');
+      const response = await fetch(`${cleanBase}/api/compress`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/octet-stream',
@@ -294,7 +329,8 @@ export default function App() {
     setVerifyReport(null);
 
     try {
-      const response = await fetch('/api/verify', {
+      const cleanBase = apiBaseUrl.replace(/\/+$/, '');
+      const response = await fetch(`${cleanBase}/api/verify`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/octet-stream',
@@ -406,6 +442,16 @@ export default function App() {
                     Enable Local AI Algorithm Orchestration (Port 11434)
                   </label>
                 </div>
+
+                {aiEnabled && (
+                  <div style={{ fontSize: '11px', fontFamily: 'var(--font-mono)', marginBottom: '12px', padding: '6px 10px', border: '1px solid #000000', background: '#fafafa' }}>
+                    {aiStatus?.available ? (
+                      <span>● Local AI Online: Connected to Ollama on port 11434</span>
+                    ) : (
+                      <span>○ Local AI Offline: Ollama (port 11434) not detected. Engine will use native C++ deterministic heuristics.</span>
+                    )}
+                  </div>
+                )}
 
                 {compressError && (
                   <div style={{ padding: '8px 12px', border: '1px solid #000000', marginBottom: '12px', background: '#fafafa' }}>
@@ -717,50 +763,120 @@ export default function App() {
       )}
 
       {activeTab === 'status' && (
-        <div className="card">
-          <div className="card-title">
-            <span>Engine & Architecture Status</span>
-            <span className="badge badge-filled">Online</span>
-          </div>
-          <div className="metric-row">
-            <span className="metric-label">Native Core Engine</span>
-            <span className="metric-val">{backendHealth ? backendHealth.engine : 'C++20 Native Compiler'}</span>
-          </div>
-          <div className="metric-row">
-            <span className="metric-label">Container Version</span>
-            <span className="metric-val">CACZ v1 / v2 Compatible</span>
-          </div>
-          <div className="metric-row">
-            <span className="metric-label">Local AI Model Runner</span>
-            <span className="metric-val">http://127.0.0.1:11434 (OpenAI / Ollama API)</span>
-          </div>
-          <div className="metric-row">
-            <span className="metric-label">Deterministic Fallback</span>
-            <span className="metric-val">Always Active & Verified</span>
+        <div>
+          <div className="card">
+            <div className="card-title">
+              <span>Backend Service Connection</span>
+              <span className={`badge ${backendHealth?.connected ? 'badge-filled' : ''}`}>
+                {backendHealth?.connected ? 'CONNECTED (200 OK)' : 'OFFLINE / DISCONNECTED'}
+              </span>
+            </div>
+            <p style={{ fontFamily: 'var(--font-mono)', fontSize: '12px', marginBottom: '12px' }}>
+              Connect this web interface to your deployed Render backend (e.g. <code>https://YOUR-APP.onrender.com</code>) or local C++ server (<code>http://127.0.0.1:8080</code>).
+            </p>
+            <div className="form-group">
+              <label>Backend API Base URL (saved in browser)</label>
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input
+                  type="text"
+                  value={apiUrlInput}
+                  onChange={e => setApiUrlInput(e.target.value)}
+                  placeholder="e.g. https://cacz-backend.onrender.com or leave empty for relative /api"
+                  style={{ flex: 1 }}
+                />
+                <button
+                  className="btn-primary"
+                  style={{ width: 'auto', marginTop: 0, padding: '6px 14px' }}
+                  onClick={() => {
+                    const trimmed = apiUrlInput.trim();
+                    try { localStorage.setItem('cacz_api_base_url', trimmed); } catch (_) {}
+                    setApiBaseUrl(trimmed);
+                    setApiUrlSaveMsg('Backend URL saved and applied!');
+                    setTimeout(() => setApiUrlSaveMsg(null), 3000);
+                  }}
+                >
+                  Save & Connect
+                </button>
+                <button
+                  className="btn-secondary"
+                  onClick={() => {
+                    try { localStorage.removeItem('cacz_api_base_url'); } catch (_) {}
+                    setApiUrlInput('');
+                    setApiBaseUrl('');
+                    setApiUrlSaveMsg('Reset to default relative API routing.');
+                    setTimeout(() => setApiUrlSaveMsg(null), 3000);
+                  }}
+                >
+                  Reset
+                </button>
+              </div>
+              {apiUrlSaveMsg && (
+                <div style={{ marginTop: '6px', fontSize: '11px', fontFamily: 'var(--font-mono)', color: '#000000' }}>
+                  ✓ {apiUrlSaveMsg}
+                </div>
+              )}
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Active API Target</span>
+              <span className="metric-val">{backendHealth?.url || '(Relative /api)'}</span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Health Status</span>
+              <span className="metric-val">
+                {backendHealth?.connected ? `Healthy (${backendHealth.engine} v${backendHealth.version})` : `Unreachable (${backendHealth?.error || 'Server offline'})`}
+              </span>
+            </div>
           </div>
 
-          <div style={{ marginTop: '20px' }}>
-            <span className="badge">Registered Native Codecs</span>
-            <table>
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Lossless</th>
-                  <th>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {codecs.map(c => (
-                  <tr key={c.id}>
-                    <td>0x0{c.id}</td>
-                    <td><strong>{c.name.toUpperCase()}</strong></td>
-                    <td>{c.lossless ? 'YES' : 'NO'}</td>
-                    <td>{c.description}</td>
+          <div className="card">
+            <div className="card-title">
+              <span>Engine & Architecture Status</span>
+              <span className={`badge ${backendHealth?.connected ? 'badge-filled' : ''}`}>
+                {backendHealth?.connected ? 'Online' : 'Offline'}
+              </span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Native Core Engine</span>
+              <span className="metric-val">{backendHealth?.engine || 'C++20 Native Compiler'}</span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Container Version</span>
+              <span className="metric-val">CACZ v1 / v2 Compatible</span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Local AI Model Runner</span>
+              <span className="metric-val">
+                {aiStatus?.available ? 'Online (Ollama port 11434)' : 'Not Detected (Native C++ Heuristics Active)'}
+              </span>
+            </div>
+            <div className="metric-row">
+              <span className="metric-label">Deterministic Fallback</span>
+              <span className="metric-val">Always Active & Verified</span>
+            </div>
+
+            <div style={{ marginTop: '20px' }}>
+              <span className="badge">Registered Native Codecs</span>
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Lossless</th>
+                    <th>Description</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {codecs.map(c => (
+                    <tr key={c.id}>
+                      <td>0x0{c.id}</td>
+                      <td><strong>{c.name.toUpperCase()}</strong></td>
+                      <td>{c.lossless ? 'YES' : 'NO'}</td>
+                      <td>{c.description}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       )}

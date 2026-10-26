@@ -69,6 +69,41 @@ enum class CodecId : uint8_t {
     Zstd    = 0x06
 };
 
+// --- Optimization Objectives ---
+enum class Objective {
+    BestRatio,
+    Fastest,
+    Balanced,
+    Lossless,
+    MinimumMemory,
+    MediaAware,
+    CustomLossyTarget
+};
+
+inline const char* objective_to_name(Objective obj) noexcept {
+    switch (obj) {
+        case Objective::BestRatio:         return "best_ratio";
+        case Objective::Fastest:           return "fastest";
+        case Objective::Balanced:          return "balanced";
+        case Objective::Lossless:          return "lossless";
+        case Objective::MinimumMemory:     return "minimum_memory";
+        case Objective::MediaAware:        return "media_aware";
+        case Objective::CustomLossyTarget: return "custom_lossy";
+        default:                           return "balanced";
+    }
+}
+
+inline Objective objective_from_name(std::string_view name) noexcept {
+    if (name == "best_ratio")     return Objective::BestRatio;
+    if (name == "fastest")        return Objective::Fastest;
+    if (name == "balanced")       return Objective::Balanced;
+    if (name == "lossless")       return Objective::Lossless;
+    if (name == "minimum_memory") return Objective::MinimumMemory;
+    if (name == "media_aware")    return Objective::MediaAware;
+    if (name == "custom_lossy")   return Objective::CustomLossyTarget;
+    return Objective::Balanced;
+}
+
 inline const char* codec_id_to_name(CodecId id) noexcept {
     switch (id) {
         case CodecId::Raw:     return "raw";

@@ -1,0 +1,10 @@
+.git
+build
+out
+web/node_modules
+web/dist
+__pycache__
+*.pyc
+*.cacz
+.venv
+temp_*

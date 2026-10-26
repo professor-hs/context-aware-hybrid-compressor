@@ -41,7 +41,9 @@ def wait_for_server(url: str, timeout_sec: float = 10.0) -> bool:
     return False
 
 def run_tests():
-    exe_path = os.path.join("out", "cacz.exe")
+    exe_path = os.path.join("out", "cacz_static.exe")
+    if not os.path.exists(exe_path):
+        exe_path = os.path.join("out", "cacz.exe")
     if not os.path.exists(exe_path):
         exe_path = os.path.join("build", "cacz.exe")
     if not os.path.exists(exe_path):
