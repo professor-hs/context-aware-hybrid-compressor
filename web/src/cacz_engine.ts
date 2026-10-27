@@ -162,14 +162,26 @@ export interface ClientCompressionResult {
   verified: boolean;
 }
 
+export interface CaczEngineOptions {
+  level?: 'fast' | 'balanced' | 'maximum';
+  quality?: number;
+  method?: string;
+}
+
 export function compressToCacz(
   fileBytes: Uint8Array,
   filename: string,
-  _objective: string = 'balanced'
+  options?: CaczEngineOptions | string
 ): ClientCompressionResult {
   const CHUNK_SIZE = 8192;
   const originalSize = fileBytes.length;
   const totalChunks = originalSize === 0 ? 0 : Math.ceil(originalSize / CHUNK_SIZE);
+
+  const opts: CaczEngineOptions = typeof options === 'string'
+    ? { level: options === 'fastest' ? 'fast' : (options === 'best_ratio' ? 'maximum' : 'balanced') }
+    : (options || { level: 'balanced', quality: 80, method: 'auto' });
+
+  const flagMode = opts.level === 'maximum' ? 1 : 0; // 1 = oracle mode
 
   // 1. Prepare 28-byte header
   const headerBuf = new Uint8Array(28);
@@ -178,7 +190,7 @@ export function compressToCacz(
   headerBuf[2] = 0x43; // 'C'
   headerBuf[3] = 0x5a; // 'Z'
   writeBe16(headerBuf, 4, 1); // version 1
-  writeBe16(headerBuf, 6, 0); // flags (heuristic)
+  writeBe16(headerBuf, 6, flagMode); // flags
   writeBe32(headerBuf, 8, CHUNK_SIZE);
   writeBe32(headerBuf, 12, totalChunks);
   writeBe64(headerBuf, 16, originalSize);
@@ -197,24 +209,50 @@ export function compressToCacz(
     const rawLen = rawChunk.length;
     const uncompressedCrc = crc32(rawChunk);
 
-    // Try RLE and Delta candidate codecs
-    const rleEnc = encodeRle(rawChunk);
-    const deltaEnc = encodeDelta(rawChunk);
-
     let chosenCodecId = 0; // Raw
     let chosenPayload = rawChunk;
 
-    if (rleEnc.length < rawLen && rleEnc.length <= deltaEnc.length) {
-      chosenCodecId = 1; // Rle
-      chosenPayload = rleEnc;
-      codecCounts.rle++;
-    } else if (deltaEnc.length < rawLen) {
-      chosenCodecId = 4; // Delta
-      chosenPayload = deltaEnc;
-      codecCounts.delta++;
-    } else {
-      chosenCodecId = 0; // Raw
+    if (opts.method === 'rle') {
+      const rleEnc = encodeRle(rawChunk);
+      if (rleEnc.length < rawLen) {
+        chosenCodecId = 1;
+        chosenPayload = rleEnc;
+        codecCounts.rle++;
+      } else {
+        chosenCodecId = 0;
+        codecCounts.raw++;
+      }
+    } else if (opts.method === 'delta') {
+      const deltaEnc = encodeDelta(rawChunk);
+      if (deltaEnc.length < rawLen) {
+        chosenCodecId = 4;
+        chosenPayload = deltaEnc;
+        codecCounts.delta++;
+      } else {
+        chosenCodecId = 0;
+        codecCounts.raw++;
+      }
+    } else if (opts.method === 'raw') {
+      chosenCodecId = 0;
+      chosenPayload = rawChunk;
       codecCounts.raw++;
+    } else {
+      // Auto selection (heuristic or oracle depending on level)
+      const rleEnc = encodeRle(rawChunk);
+      const deltaEnc = encodeDelta(rawChunk);
+
+      if (rleEnc.length < rawLen && rleEnc.length <= deltaEnc.length) {
+        chosenCodecId = 1; // Rle
+        chosenPayload = rleEnc;
+        codecCounts.rle++;
+      } else if (deltaEnc.length < rawLen) {
+        chosenCodecId = 4; // Delta
+        chosenPayload = deltaEnc;
+        codecCounts.delta++;
+      } else {
+        chosenCodecId = 0; // Raw
+        codecCounts.raw++;
+      }
     }
 
     // Write 18-byte chunk header
